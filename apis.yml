@@ -10,6 +10,8 @@ common:
     url: https://www.linkedin.com/company/transformco
   - type: Website
     url: https://www.sears-holdings.com
+  - url: http://www.searsholdings.com/blog/feed
+    type: Blog
 description: >-
   Sears Holdings was an American holding company that owned the Kmart and Sears department
   stores before bankruptcy reorganization into Transformco.
