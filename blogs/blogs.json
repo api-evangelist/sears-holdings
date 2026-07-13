@@ -1,0 +1,14 @@
+{
+  "repo": "sears-holdings",
+  "feeds": [
+    {
+      "source": "http://www.searsholdings.com/blog/feed",
+      "feed_url": "http://www.searsholdings.com/blog/feed",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 16
+}
