@@ -1,0 +1,152 @@
+generated: '2026-08-28'
+method: derived
+source: xsd/_index.yml + https://marketplace.sears.com/docs/api-guide/
+api: Sears Marketplace Seller API
+note: >-
+  Standards assertions for the Sears Marketplace Seller API. Every entry is judged against the
+  provider's published contract - the 33 XSDs in xsd/ and the API Guide - not against a marketing
+  claim. Negative entries are as deliberate as positive ones.
+standards:
+  - id: xml-schema-1.0
+    name: W3C XML Schema (XSD)
+    conforms: true
+    evidence: >-
+      33 XSD documents published at https://seller.marketplace.sears.com/SellerPortal/s/schema/,
+      each fetched with HTTP 200 anonymously on 2026-08-28 and saved to xsd/. Every API in the
+      guide names its XSD and a matching sample XML document.
+  - id: openapi
+    name: OpenAPI
+    conforms: false
+    evidence: >-
+      No OpenAPI or Swagger document on any host. Probed /openapi.json, /swagger.json,
+      /openapi.yaml, /api-docs and /v2/api-docs on seller.marketplace.sears.com and
+      marketplace.sears.com on 2026-08-28 - all 404.
+  - id: graphql
+    name: GraphQL
+    conforms: false
+    evidence: >-
+      seller.marketplace.sears.com/graphql returns 404. www.sears.com/graphql returns HTTP 200
+      with the site's 72KB SPA HTML shell, which is a catch-all and not a GraphQL endpoint.
+  - id: soap-wsdl
+    name: SOAP / WSDL
+    conforms: false
+    evidence: >-
+      Probed ?wsdl on the seller portal API paths on 2026-08-28 - 404. The API is XML over plain
+      HTTP GET/PUT, not SOAP; there is no envelope, no SOAPAction and no WSDL.
+  - id: rfc9457
+    name: RFC 9457 Problem Details
+    conforms: false
+    evidence: >-
+      Errors are XML, not application/problem+json, and are returned with HTTP 200 rather than a
+      4xx status. See errors/sears-holdings-problem-types.yml.
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    evidence: >-
+      Authentication is a custom HMAC-SHA256 signature over "sellerId:email:timestamp" in an
+      Authorization header. /.well-known/oauth-authorization-server returns 404 on every host.
+  - id: oidc
+    name: OpenID Connect
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404 on every host probed 2026-08-28.
+  - id: rfc9116
+    name: RFC 9116 security.txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 or 403 on every host. See well-known/sears-holdings-well-known.yml.
+  - id: rfc8594
+    name: RFC 8594 Sunset header
+    conforms: false
+    partial: true
+    evidence: >-
+      No Sunset or Deprecation HTTP header. The provider does, however, carry an optional
+      <deprecated> element typed xs:date in the shared api-response envelope
+      (xsd/sears-holdings-shared-api-response-v1.xsd), which is the same idea expressed in the
+      payload rather than in a header.
+  - id: rate-limit-headers
+    name: IETF RateLimit header fields
+    conforms: false
+    evidence: No X-RateLimit-*, RateLimit-* or Retry-After header is documented or observed.
+  - id: idempotency-key
+    name: IETF Idempotency-Key header
+    conforms: false
+    evidence: No idempotency key, request de-duplication or replay-safety statement anywhere in the contract.
+  - id: asyncapi
+    name: AsyncAPI
+    conforms: false
+    evidence: >-
+      There is no event surface to describe. The provider ships no webhooks, no streaming endpoint
+      and no message broker; asynchronous notification is delivered by email
+      (mp_notifications@transformco.com ASN rejection notices) and by polling the processing report.
+  - id: mcp
+    name: Model Context Protocol
+    conforms: false
+    evidence: No MCP server exists. See mcp/sears-holdings-mcp.yml.
+  - id: a2a
+    name: A2A Agent Card
+    conforms: false
+    evidence: >-
+      /.well-known/agent-card.json and /.well-known/agent.json probed on all six hosts on
+      2026-08-28 - 404 or 403, no card served.
+domain_standards:
+  - id: gs1-gtin-upc
+    name: GS1 GTIN / UPC product identification
+    conforms: true
+    declared_in_contract: true
+    evidence:
+      - >-
+        xsd/sears-holdings-rest-catalog-import-v25-lmp-item.xsd defines a dedicated
+        simpleType "upc-type" restricted to a numeric pattern, referenced by the item element.
+      - >-
+        The provider's error reference enforces GS1 semantics explicitly - a UPC must be 12 or 13
+        numeric digits and must pass check-digit validation ("'UPC' 000000000000 did not pass check
+        digit validation"), and a UPC already used by another product is rejected marketplace-wide.
+      - >-
+        xsd/sears-holdings-rest-oms-export-v19-purchase-order.xsd carries a required
+        "ucc-barcode" element on the pickup and shipment structures - the UCC (now GS1) shipping
+        container barcode.
+    buyer_impact: >-
+      A seller who already maintains GS1 GTINs and GS1-128 shipping labels can list and ship on
+      Sears Marketplace without a bespoke identifier mapping. One that identifies products by an
+      internal SKU alone cannot.
+  - id: edi-x12
+    name: ANSI X12 retail EDI (850 / 856 / 810)
+    conforms: false
+    note: >-
+      The document set is a faithful functional analogue of retail EDI - purchase order export,
+      advance ship notice import, remittance report - but the provider nowhere declares X12,
+      EDIFACT or any transaction-set number, and the payloads are bespoke XML with a
+      Sears-specific namespace. Recorded as a NON-conformance deliberately: the resemblance is
+      real and asserting conformance from it would be exactly the kind of invented standard this
+      artifact is supposed to prevent.
+  - id: gs1-eancom
+    name: GS1 EANCOM / GS1 XML
+    conforms: false
+    evidence: Namespaces are http://seller.marketplace.sears.com/*, not GS1 XML.
+compliance:
+  certifications_published: false
+  trust_center: false
+  note: >-
+    No SOC 2, ISO 27001, PCI DSS, HIPAA or FedRAMP claim is published on the seller-facing surface,
+    and no trust center exists at trust.sears.com or on transformco.com. probe-security-programs.py
+    found no vulnerability disclosure program and no trust center on 2026-08-28. No Compliance and
+    no TrustCenter pointer is emitted. The only compliance-adjacent content in the contract is
+    product-regulatory rather than corporate - the item schema carries California emissions,
+    Energy Star, choke-hazard, restricted-item, alcohol and tobacco flags.
+  product_regulatory_fields:
+    schema: xsd/sears-holdings-rest-catalog-import-v25-lmp-item.xsd
+    fields:
+      - california-emissions
+      - energy-star-compliant
+      - choke-hazard-small-parts
+      - choke-hazard-balloons
+      - choke-hazard-small-ball
+      - choke-hazard-contains-small-ball
+      - choke-hazard-contains-marble
+      - choke-hazard-other
+      - safety-warning-other
+      - is-restricted
+      - perishable
+      - requires-refrigeration
+      - requires-freezing
+      - contains-alcohol
+      - contains-tobacco

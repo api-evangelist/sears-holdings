@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://seller.marketplace.sears.com/oms/v1" xmlns="http://seller.marketplace.sears.com/oms/v1"
+	elementFormDefault="qualified">
+	<xs:element name="shipping-carriers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="shipping-carrier-details" type="shipping-carrier-details-type"
+					minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="shipping-carrier-details-type">
+		<xs:sequence>
+			<xs:element name="shipping-carrier" type="xs:string"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="shipping-carrier-description" type="xs:string"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="shipping-methods" type="shipping-methods-type"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="shipping-methods-type">
+		<xs:sequence>
+			<xs:element name="shipping-method-details" type="shipping-method-details-type"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="shipping-method-details-type">
+		<xs:sequence>
+			<xs:element name="shipping-method" type="xs:string"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="shipping-method-description" type="xs:string"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

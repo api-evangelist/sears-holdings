@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/shared/v1"
+           targetNamespace="http://seller.marketplace.sears.com/shared/v1" elementFormDefault="qualified">
+
+    <!-- definition of complex types -->
+    <xs:complexType name="summary-type">
+        <xs:sequence>
+   	        <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="record-count" type="xs:positiveInteger" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="records-with-warnings" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="records-with-errors" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="records-accepted" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="detail-type">
+        <xs:sequence>
+   	        <xs:element name="warnings" type="warnings-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="errors" type="errors-type" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+     <xs:complexType name="warning-type">
+        <xs:sequence>
+   	        <xs:element name="warning-info" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="record-id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="error-type">
+        <xs:sequence>
+   	        <xs:element name="error-info" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="record-id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+     <xs:complexType name="warnings-type">
+        <xs:sequence>
+        	<xs:element name="warning" type="warning-type" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="errors-type">
+        <xs:sequence>
+        	<xs:element name="error" type="error-type" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+ 
+    <xs:complexType name="deals-info-type">
+        <xs:sequence>
+        	<xs:element name="deal" type="deal-type" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="deal-type">
+        <xs:attributeGroup ref="deal-attr" />
+    </xs:complexType>
+ 
+    <xs:complexType name="report-type">
+        <xs:sequence>
+	        <xs:element name="summary" type="summary-type" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="detail" type="detail-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="deals-info" type="deals-info-type" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- definition of complex elements -->
+    <xs:element name="processing-report">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="deprecated" type="xs:date" maxOccurs="1" minOccurs="0"/>
+                <xs:element name="document-id" type="xs:positiveInteger" maxOccurs="1" minOccurs="1"/>
+      			<xs:choice minOccurs="1" maxOccurs="1">
+            		<xs:element name="report" type="report-type"/>
+       	    		<xs:element name="status" type="xs:string"/>
+        		</xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Attribute definitions -->
+    <xs:attributeGroup name="deal-attr">
+		<xs:attribute name="seller-deal-id" type="external-id-type" use="required">
+			<xs:annotation>
+				<xs:documentation>
+					It refers to seller provided unique deal id.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="id" type="id-type" use="required">
+			<xs:annotation>
+				<xs:documentation>
+						It refers to deal id provided by SellerPortal system. This id should be used for all the subsequent operations on deal.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	
+	<!-- Simple type definitions -->
+	<xs:simpleType name="external-id-type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+			<xs:maxLength value="50" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="id-type">
+		<xs:restriction base="xs:positiveInteger" />
+	</xs:simpleType>
+
+</xs:schema>

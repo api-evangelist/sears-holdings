@@ -1,0 +1,119 @@
+generated: '2026-08-28'
+method: derived
+source: xsd/_index.yml + https://marketplace.sears.com/docs/api-guide/
+status: candidate
+note: >-
+  No MCP server of any kind exists for Sears Marketplace. Searched 2026-08-28: no hosted endpoint,
+  no npx or pip package, no mention anywhere in the provider docs, and every /.well-known/ probe on
+  every host missed (see well-known/sears-holdings-well-known.yml). The tools below are a CANDIDATE
+  surface derived from the operations the provider's own XSDs and API Guide describe - what an MCP
+  server for this API would expose if someone built one. Nothing here is callable today and no
+  MCPServer pointer is wired into apis.yml.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: derived
+server:
+  name: sears-marketplace-seller
+  transport: n/a
+  published: false
+tools:
+  - name: get_purchase_orders
+    description: Retrieve new purchase orders for a seller.
+    backing: GET /SellerPortal/api/oms/purchaseorder/v19?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-export-v19-purchase-order.xsd
+  - name: put_asn
+    description: Send an advance ship notice / shipment update closing a purchase order line.
+    backing: PUT /SellerPortal/api/oms/asn/v7?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-import-v7-asn.xsd
+  - name: put_order_cancellation
+    description: Cancel a purchase order line with one of the nine documented cancellation reasons.
+    backing: PUT /SellerPortal/api/oms/order/cancel/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-import-v1-order-cancel.xsd
+  - name: put_order_adjustment
+    description: Issue a full or partial refund, or record a return, against an order.
+    backing: PUT /SellerPortal/api/oms/order/adjustment/v5?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-import-v5-order-adjustment.xsd
+  - name: get_refund_status
+    description: Look up whether a submitted refund or return completed or failed.
+    backing: GET /SellerPortal/api/oms/orderadjustment/v3?sellerId={}&ponumber={}&podate={}
+    schema: null
+  - name: get_customer_cancellation_requests
+    description: List cancellations customers requested through the online order center.
+    backing: GET /SellerPortal/api/oms/cancellationrequest/v1?sellerId={}&status={}&fromdate={}&todate={}
+    schema: xsd/sears-holdings-rest-oms-export-v1-order-cancellation-request-to-seller.xsd
+  - name: get_customer_returns
+    description: List customer-initiated return requests awaiting a seller response.
+    backing: GET /SellerPortal/api/oms/returnsrequest/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-export-v1-order-return-request-to-seller.xsd
+  - name: put_returns_response
+    description: Respond to a customer return request.
+    backing: PUT /SellerPortal/api/oms/returnsresponse/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-import-v1-order-returns-response-from-seller.xsd
+  - name: put_items
+    description: Create or update catalog items.
+    backing: PUT /SellerPortal/api/catalog/fbm/v25?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-catalog-import-v25-lmp-item.xsd
+  - name: put_skinny_items
+    description: Create contentless "skinny" offers against an existing Sears catalog item.
+    backing: PUT /SellerPortal/api/catalog/skinny-fbm/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-contentless-offers-import-v1-skinny-fbm.xsd
+  - name: put_service_items
+    description: Publish delivery and installation service options and zip-code pricing.
+    backing: PUT /SellerPortal/api/catalog/service-item/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-catalog-import-v1-service-item.xsd
+  - name: put_inventory
+    description: Update on-hand inventory quantities in bulk.
+    backing: PUT /SellerPortal/api/inventory/fbm/v7?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-inventory-import-v7-inventory.xsd
+  - name: put_inventory_single
+    description: Update inventory for one item (1x1 inbound).
+    backing: PUT /SellerPortal/api/inventory/1x1/fbm/v1?sellerId={sellerId}
+    schema: null
+  - name: get_inventory
+    description: Export current inventory for the seller.
+    backing: GET /SellerPortal/api/inventory/v5?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-inventory-export-v5-item-inventory-public.xsd
+  - name: put_pricing
+    description: Update item prices.
+    backing: PUT /SellerPortal/api/pricing/fbm/v6?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-pricing-import-v6-pricing.xsd
+  - name: get_item_classes
+    description: Export the Sears item class library.
+    backing: GET /SellerPortal/api/itemclasses/v2?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-itemclass-export-v2-itemclass-library.xsd
+  - name: get_attributes
+    description: Export the attribute library for an item class.
+    backing: GET /SellerPortal/api/attributes/v4/?itemClassId={id}
+    schema: xsd/sears-holdings-rest-attribute-export-v4-attribute-library.xsd
+  - name: put_order_prep_time
+    description: Set item-level order prep / lead time.
+    backing: PUT /SellerPortal/api/sopt/import/v3?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-sopt-import-v3-item-sopt-details.xsd
+  - name: get_processing_report
+    description: Check whether a previously PUT file processed cleanly, by document id.
+    backing: GET /SellerPortal/api/reports/v1/processing-report/{document-id}?sellerId={sellerId}
+    schema: xsd/sears-holdings-shared-seller-error-report-v1.xsd
+  - name: get_remittance_report
+    description: Retrieve the remittance / settlement report.
+    backing: GET /SellerPortal/api/oms/remittance/v9?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-export-v9-remittance-response.xsd
+  - name: get_removed_items_report
+    description: Retrieve items Sears removed from the catalog.
+    backing: GET /SellerPortal/api/reports/removedItems/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-reports-export-v1-removed-items-report.xsd
+  - name: get_content_match_report
+    description: Retrieve the content-match processing report for Sears-catalog item creation.
+    backing: GET /SellerPortal/api/reports/contentMatch/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-reports-export-v1-content-match-report.xsd
+  - name: get_shipping_carriers
+    description: Retrieve the accepted shipping carrier and shipping method list.
+    backing: GET /SellerPortal/api/oms/shipping-carrier/v1?sellerId={sellerId}
+    schema: xsd/sears-holdings-rest-oms-export-v1-shipping-carrier.xsd
+crosswalk_note: >-
+  No mcp/sears-holdings-tool-crosswalk.yml is written. The crosswalk binds MCP tools to backing
+  OpenAPI operationIds, and this provider has neither an MCP server nor an OpenAPI - the backing
+  column above is the raw HTTP path from the API Guide, which is as far as an honest mapping goes.

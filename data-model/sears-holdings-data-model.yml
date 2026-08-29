@@ -1,0 +1,304 @@
+generated: '2026-08-28'
+method: derived
+source: xsd/_index.yml
+docs: https://marketplace.sears.com/docs/api-guide/
+api: Sears Marketplace Seller API
+note: >-
+  Entity graph derived from the 33 XML Schema Definitions the provider publishes, not from an
+  OpenAPI - there is none. Relationships are read from XSD element nesting and from the identifier
+  fields that cross document boundaries (item-id, po-number plus po-date, seller-id, item-class-id,
+  document-id). Because the API is document-oriented, each "entity" below is the root of a feed or
+  export document; there are no addressable per-resource URLs to reference.
+identifier_conventions:
+  - id: seller-id
+    scope: account
+    carried_as: query parameter sellerId on every call
+    note: The tenant key. Present on every request; there is no path-level tenancy.
+  - id: item-id
+    scope: catalog
+    note: >-
+      Seller-assigned SKU. Joins catalog, inventory, pricing, order-prep-time and order lines.
+      Uniqueness is enforced per seller and store - a repeat raises "Duplicate item and store id".
+  - id: item-class-id
+    scope: taxonomy
+    note: >-
+      Sears-assigned classification. Selects which attribute set is valid and which commission
+      rate applies. Must be the numeric id, not the human-readable path.
+  - id: po-number + po-date
+    scope: order
+    note: >-
+      Orders are addressed by the COMPOSITE of purchase order number and purchase order date. The
+      refund status lookup requires both. A client that stores only the number cannot query.
+  - id: document-id
+    scope: submission
+    note: >-
+      Server-assigned handle returned from every PUT, and the only key for retrieving the
+      processing report that says whether the submission actually succeeded.
+  - id: oms-order-item-id
+    scope: order line
+    note: Order management system line identifier, with oms-parent-order-item-id linking variants and bundles.
+  - id: upc
+    scope: catalog
+    note: Globally unique across the whole marketplace - a UPC already used by another product is rejected.
+entities:
+  - name: Item
+    root: lmp-item
+    schema: xsd/sears-holdings-rest-catalog-import-v25-lmp-item.xsd
+    direction: import
+    key: item-id
+  - name: SkinnyOffer
+    root: skinny-fbm
+    schema: xsd/sears-holdings-rest-contentless-offers-import-v1-skinny-fbm.xsd
+    direction: import
+    note: A contentless offer against an item that already exists in the Sears catalog.
+  - name: ServiceItem
+    root: service-item
+    schema: xsd/sears-holdings-rest-catalog-import-v1-service-item.xsd
+    direction: import
+    note: Delivery and installation service options with zip-code level pricing.
+  - name: ItemClass
+    root: itemclass-library
+    schema: xsd/sears-holdings-rest-itemclass-export-v2-itemclass-library.xsd
+    direction: export
+    key: item-class-id
+  - name: Attribute
+    root: attribute-library
+    schema: xsd/sears-holdings-rest-attribute-export-v4-attribute-library.xsd
+    direction: export
+  - name: Inventory
+    root: inventory
+    schema: xsd/sears-holdings-rest-inventory-import-v7-inventory.xsd
+    direction: import
+  - name: StoreInventory
+    root: store-inventory
+    schema: xsd/sears-holdings-rest-inventory-import-v7-store-inventory.xsd
+    direction: import
+    note: Location-scoped inventory, keyed by locationId as well as item-id.
+  - name: ItemInventory
+    root: item-inventory
+    schema: xsd/sears-holdings-rest-inventory-export-v5-item-inventory-public.xsd
+    direction: export
+  - name: Pricing
+    root: pricing
+    schema: xsd/sears-holdings-rest-pricing-import-v6-pricing.xsd
+    direction: import
+  - name: OrderPrepTime
+    root: item-sopt-details
+    schema: xsd/sears-holdings-rest-sopt-import-v3-item-sopt-details.xsd
+    direction: import
+  - name: PurchaseOrder
+    root: po-response / purchase-order
+    schema: xsd/sears-holdings-rest-oms-export-v19-purchase-order.xsd
+    direction: export
+    key: po-number + po-date
+    fields:
+      - po-type
+      - expected-ship-date
+      - shipping-detail
+      - ship-to-store-detail
+      - customer-name
+      - po-line
+      - order-total-sell-price
+      - total-commission
+      - total-shipping-handling
+      - total-sales-tax
+      - balance-due
+      - po-shipment-info
+      - tax-reference
+      - total-shipping-tax
+      - total-order-value
+      - tax-remitted-to-seller
+      - lease-order
+  - name: PurchaseOrderLine
+    root: po-line
+    parent: PurchaseOrder
+    key: oms-order-item-id
+    fields:
+      - item-id
+      - item-class-id
+      - oms-order-item-id
+      - oms-parent-order-item-id
+      - handling-instructions
+      - unit-cost
+      - order-quantity
+      - commission
+      - sales-tax
+      - shipping-and-handling
+      - shipping-tax
+      - fees
+      - shipping-commission
+      - customer-cancellation-warning
+  - name: ASN
+    root: asn
+    schema: xsd/sears-holdings-rest-oms-import-v7-asn.xsd
+    direction: import
+    note: Advance ship notice; closes purchase order lines. Multiple packages per line are supported.
+  - name: OrderCancellation
+    root: order-cancel
+    schema: xsd/sears-holdings-rest-oms-import-v1-order-cancel.xsd
+    direction: import
+    enumeration:
+      field: cancellation reason
+      values:
+        - DISCONTINUED-ITEM
+        - OUT-OF-STOCK
+        - CUSTOMER-CHANGED-THEIR-MIND
+        - WRONG-ITEM-WAS-ORDERED
+        - LEAD-TIME-IS-TOO-LONG
+        - ITEM-FOUND-SOMEWHERE-ELSE
+        - INVALID-METHOD-SHIPMENT
+        - INVALID-ITEM-SKU
+        - OTHER
+      note: OTHER marks the cancellation as seller-initiated, which is a different commercial outcome.
+  - name: CustomerCancellationRequest
+    root: order-cancellation-request-to-seller
+    schema: xsd/sears-holdings-rest-oms-export-v1-order-cancellation-request-to-seller.xsd
+    direction: export
+  - name: OrderAdjustment
+    root: order-adjustment-feed
+    schema: xsd/sears-holdings-rest-oms-import-v5-order-adjustment.xsd
+    direction: import
+    note: >-
+      Carries two distinct sections with different meanings - <refund> keeps the item with the
+      customer, <return> means the item came back. Shipping refunds go in <shipping-adjustment>
+      with reason "Shipping Charge", once per order, never per line.
+  - name: OrderAdjustmentStatus
+    root: order-adjustments
+    direction: export
+    key: po-number + po-date
+    fields:
+      - return-status
+      - return-amount
+      - return-amount-details/sale-price-refund-amount
+      - return-amount-details/sales-tax-refund-amount
+      - return-amount-details/shipping-price-refund-amount
+      - return-amount-details/shipping-tax-refund-amount
+      - return-amount-details/fees-refund/fee-refund-amount
+      - return-reason
+      - return-source
+      - return-date
+      - quantity
+      - memo
+  - name: CustomerReturnRequest
+    root: order-return-request-to-seller
+    schema: xsd/sears-holdings-rest-oms-export-v1-order-return-request-to-seller.xsd
+    direction: export
+  - name: ReturnsResponse
+    root: order-returns-response-from-seller
+    schema: xsd/sears-holdings-rest-oms-import-v1-order-returns-response-from-seller.xsd
+    direction: import
+  - name: ShippingCarrier
+    root: shipping-carrier
+    schema: xsd/sears-holdings-rest-oms-export-v1-shipping-carrier.xsd
+    direction: export
+    note: Shared marketplace-wide reference list of carriers and their shipping methods.
+  - name: RemittanceResponse
+    root: remittance-response
+    schema: xsd/sears-holdings-rest-oms-export-v9-remittance-response.xsd
+    direction: export
+  - name: RemovedItemsReport
+    root: removed-items-report
+    schema: xsd/sears-holdings-rest-reports-export-v1-removed-items-report.xsd
+    direction: export
+  - name: ContentMatchReport
+    root: content-match-report
+    schema: xsd/sears-holdings-rest-reports-export-v1-content-match-report.xsd
+    direction: export
+  - name: ProcessingReport
+    root: report
+    schema: xsd/sears-holdings-shared-seller-error-report-v1.xsd
+    direction: export
+    key: document-id
+  - name: ApiResponse
+    root: api-response
+    schema: xsd/sears-holdings-shared-api-response-v1.xsd
+    note: Shared synchronous envelope for every call - document-id, error-detail or processing-message, plus an optional deprecated date.
+relationships:
+  - from: Item
+    to: ItemClass
+    type: belongs_to
+    via: item-class-id
+  - from: ItemClass
+    to: Attribute
+    type: has_many
+    via: itemClassId query parameter on the attribute export
+  - from: Item
+    to: Inventory
+    type: has_one
+    via: item-id
+  - from: Item
+    to: Pricing
+    type: has_one
+    via: item-id
+  - from: Item
+    to: OrderPrepTime
+    type: has_one
+    via: item-id
+  - from: Item
+    to: SkinnyOffer
+    type: has_one
+    via: item-id
+  - from: Item
+    to: ServiceItem
+    type: has_many
+    via: item-id
+  - from: PurchaseOrder
+    to: PurchaseOrderLine
+    type: has_many
+    via: po-line
+  - from: PurchaseOrderLine
+    to: Item
+    type: belongs_to
+    via: item-id
+  - from: PurchaseOrderLine
+    to: PurchaseOrderLine
+    type: belongs_to
+    via: oms-parent-order-item-id
+  - from: PurchaseOrder
+    to: ASN
+    type: has_many
+    via: po-number + po-date
+  - from: PurchaseOrder
+    to: OrderCancellation
+    type: has_many
+    via: po-number + po-date
+  - from: PurchaseOrder
+    to: OrderAdjustment
+    type: has_many
+    via: po-number + po-date
+  - from: OrderAdjustment
+    to: OrderAdjustmentStatus
+    type: has_one
+    via: po-number + po-date
+  - from: PurchaseOrder
+    to: CustomerCancellationRequest
+    type: has_many
+    via: po-number + po-date
+  - from: PurchaseOrder
+    to: CustomerReturnRequest
+    type: has_many
+    via: po-number + po-date
+  - from: CustomerReturnRequest
+    to: ReturnsResponse
+    type: has_one
+    via: po-number + po-date
+  - from: PurchaseOrder
+    to: RemittanceResponse
+    type: belongs_to
+    via: po-number + po-date
+  - from: ASN
+    to: ShippingCarrier
+    type: belongs_to
+    via: ship-method and carrier
+  - from: Item
+    to: RemovedItemsReport
+    type: has_many
+    via: item-id
+  - from: Item
+    to: ContentMatchReport
+    type: has_many
+    via: item-id
+  - from: ApiResponse
+    to: ProcessingReport
+    type: has_one
+    via: document-id

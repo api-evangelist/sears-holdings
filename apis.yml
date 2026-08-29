@@ -1,31 +1,262 @@
 aid: sears-holdings
 name: "Sears Holdings"
+deliveryModel:
+  model: platform
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Commercial marketplace seller-integration API on a vendor-operated host
+  confidence: medium
+  source:
+  - https://marketplace.sears.com/docs/api-guide/
+  - https://seller.marketplace.sears.com/SellerPortal/api/oms/purchaseorder/v19
+  generated: '2026-08-28'
+  method: probed
 specificationVersion: '0.23'
+x-status: defunct
+x-status-detail: Filed Chapter 11 in October 2018; retail operations acquired 2019 by Transform Holdco LLC
+  (Transformco), which still operates sears.com and the Sears Marketplace API profiled here.
 accessModel:
-  pricing: unknown
-  onboarding: unknown
+  pricing: paid
+  onboarding: application
   trial: false
   try_now: false
-  public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  public: true
+  label: Public docs, seller-account gated credentials, $39.99/mo program fee plus category commission
+  confidence: medium
+  source:
+  - https://marketplace.sears.com/sell-on-sears/program-fees/
+  - https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/credentials-and-authentication/
+  generated: '2026-08-28'
+  method: searched
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sears-holdings.png
 tags:
   - Fortune 100
+  - Retail
+  - E-Commerce
+  - Marketplace
+  - Order Management
+  - Inventory
+  - Product Catalog
+  - Seller Integration
+  - XML
 url: 
   https://raw.githubusercontent.com/api-evangelist/sears-holdings/refs/heads/main/apis.yml
-modified: '2026-03-24'
-apis: []
+created: '2026-03-24'
+modified: '2026-08-28'
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com
+description: >-
+  Sears Holdings was the American holding company behind the Sears and Kmart department store
+  chains. It filed for Chapter 11 in October 2018 and its retail operations were acquired in 2019
+  by Transform Holdco LLC, which trades as Transformco (Transform SR Brands LLC), the entity that
+  operates Sears.com, Kmart.com and ShopYourWay.com today. The live developer surface carried
+  forward from that estate is the Sears Marketplace Seller API — a versioned XML-over-HTTPS
+  integration for third-party sellers covering catalog and item management, item class and
+  attribute libraries, inventory, pricing, purchase order retrieval, order cancellations, returns
+  and partial or full refunds, ASN and shipment updates, order prep time, installation service
+  items, and remittance, removed-item, content-match and processing reports. Every API is
+  published with a downloadable XSD and a sample XML document, both fetchable without credentials
+  from seller.marketplace.sears.com, and calls are signed with an HMAC-SHA256 authorization
+  header rather than OAuth. There is no OpenAPI, GraphQL, MCP server or A2A agent card on any
+  Sears, Kmart or Transformco host.
+apis:
+  - name: Sears Marketplace Seller API
+    description: >-
+      Versioned XML-over-HTTPS API for third-party sellers on Sears Marketplace (Sears.com,
+      Kmart.com, ShopYourWay.com). GET calls export purchase orders, inventory, item classes,
+      attributes, cancellation requests, return requests and remittance/removed-item/content-match
+      reports; PUT calls import items, inventory, pricing, ASNs, order cancellations, order
+      adjustments (returns and refunds), order prep time and service-item configurations. Every
+      operation is described by a published XSD. Authorization is an HMAC-SHA256 signature over
+      "sellerId:emailaddress:timestamp" with a 30-minute timestamp validity.
+    humanURL: https://marketplace.sears.com/docs/api-guide/
+    baseURL: https://seller.marketplace.sears.com/SellerPortal/api
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sears-holdings.png
+    tags:
+      - Marketplace
+      - Order Management
+      - Inventory
+      - Product Catalog
+      - Returns
+      - Remittance
+      - XML
+    properties:
+      - type: APIReference
+        url: https://marketplace.sears.com/docs/api-guide/
+      - type: Documentation
+        url: https://marketplace.sears.com/docs/
+      - type: GettingStarted
+        url: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/
+      - type: XMLSchema
+        url: xsd/sears-holdings-rest-oms-export-v19-purchase-order.xsd
+      - type: Examples
+        url: examples/_index.yml
+      - type: Authentication
+        url: authentication/sears-holdings-authentication.yml
+      - type: RateLimits
+        url: rate-limits/sears-holdings-rate-limits.yml
+      - type: ErrorCatalog
+        url: errors/sears-holdings-problem-types.yml
+      - type: Sandbox
+        url: sandbox/sears-holdings-sandbox.yml
+      - type: Conventions
+        url: conventions/sears-holdings-conventions.yml
+      - type: DataModel
+        url: data-model/sears-holdings-data-model.yml
+      - type: Lifecycle
+        url: lifecycle/sears-holdings-lifecycle.yml
+      - type: ChangeLog
+        url: changelog/sears-holdings-changelog.yml
+      - type: Conformance
+        url: conformance/sears-holdings-conformance.yml
 common:
+  - type: DomainSecurity
+    url: security/sears-holdings-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/transformco
   - type: Website
-    url: https://www.sears-holdings.com
-  - url: http://www.searsholdings.com/blog/feed
-    type: Blog
-description: >-
-  Sears Holdings was an American holding company that owned the Kmart and Sears department
-  stores before bankruptcy reorganization into Transformco.
+    url: https://www.sears.com/
+  - type: Blog
+    url: https://www.sears.com//blog
+  - type: BlogRSS
+    url: https://www.sears.com//blog/feed/
+  - type: DeveloperPortal
+    url: https://marketplace.sears.com/
+  - type: Documentation
+    url: https://marketplace.sears.com/docs/
+  - type: APIReference
+    url: https://marketplace.sears.com/docs/api-guide/
+  - type: GettingStarted
+    url: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/
+  - type: Support
+    url: https://marketplace.sears.com/support/
+  - type: HelpCenter
+    url: https://marketplace.sears.com/seller-support/
+  - type: SignUp
+    url: https://marketplace.sears.com/sell-on-sears/
+  - type: Login
+    url: https://marketplace.sears.com/login/
+  - type: Pricing
+    url: https://marketplace.sears.com/sell-on-sears/program-fees/
+  - type: TermsOfService
+    url: https://marketplace.sears.com/terms-of-use/
+  - type: PrivacyPolicy
+    url: https://www.sears.com/en_us/customer-service/policies/privacy-policy.html
+  - type: Plans
+    url: plans/sears-holdings-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/sears-holdings-rate-limits.yml
+  - type: Authentication
+    url: authentication/sears-holdings-authentication.yml
+  - type: ErrorCatalog
+    url: errors/sears-holdings-problem-types.yml
+  - type: Conventions
+    url: conventions/sears-holdings-conventions.yml
+  - type: DataModel
+    url: data-model/sears-holdings-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/sears-holdings-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/sears-holdings-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/sears-holdings-changelog.yml
+  - type: Conformance
+    url: conformance/sears-holdings-conformance.yml
+  - type: Sandbox
+    url: sandbox/sears-holdings-sandbox.yml
+  - type: LLMsTxt
+    url: llms/sears-holdings-llms.txt
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: XMLSchema
+    url: xsd/_index.yml
+  - type: Packages
+    url: packages/sears-holdings-packages.yml
+x-pointer-verification:
+  checked: '2026-08-28'
+  method: probed
+  note: >-
+    Every common[] and properties[] URL in this file was fetched on 2026-08-28 with a browser
+    User-Agent and its status recorded. Two pointers were removed as confirmed dead and replaced.
+  removed:
+    - type: Website
+      url: https://www.sears-holdings.com
+      status: 0
+      reason: >-
+        TLS handshake fails outright - the host presents a certificate for transformco.com whose
+        subjectAltName does not match, so no browser can reach it either. Repointed at
+        https://www.sears.com/ (200).
+    - type: Blog
+      url: http://www.searsholdings.com/blog/feed
+      status: 200
+      reason: >-
+        Served, but only over plain HTTP (the same TLS failure applies) and it returns the
+        Transformco blog feed under a Sears Holdings hostname. Repointed at
+        https://www.sears.com//blog (200) and https://www.sears.com//blog/feed/ (200).
+  probed:
+    - url: https://www.sears.com/
+      status: 200
+    - url: https://www.sears.com//blog
+      status: 200
+    - url: https://www.sears.com//blog/feed/
+      status: 200
+    - url: https://www.linkedin.com/company/transformco
+      status: 200
+    - url: https://marketplace.sears.com/
+      status: 200
+    - url: https://marketplace.sears.com/docs/
+      status: 200
+    - url: https://marketplace.sears.com/docs/api-guide/
+      status: 200
+    - url: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/
+      status: 200
+    - url: https://marketplace.sears.com/support/
+      status: 200
+    - url: https://marketplace.sears.com/seller-support/
+      status: 200
+    - url: https://marketplace.sears.com/sell-on-sears/
+      status: 200
+    - url: https://marketplace.sears.com/login/
+      status: 200
+    - url: https://marketplace.sears.com/sell-on-sears/program-fees/
+      status: 200
+    - url: https://marketplace.sears.com/terms-of-use/
+      status: 200
+    - url: https://www.sears.com/en_us/customer-service/policies/privacy-policy.html
+      status: 200
+    - url: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sears-holdings.png
+      status: 200
+    - url: https://seller.marketplace.sears.com/SellerPortal/api/oms/purchaseorder/v19
+      status: 200
+  not_emitted:
+    - type: GitHubOrganization
+      candidate: https://github.com/transformco
+      status: 200
+      reason: >-
+        The org exists but has zero public repositories, no name, no linked website and nothing
+        tying it to Transform SR Brands. Ownership could not be established, so no pointer was
+        emitted rather than asserting one.
+    - type: StatusPage
+      reason: No status page exists; status.sears.com does not resolve.
+    - type: Security
+      reason: probe-security-programs.py found no security.txt, disclosure page or bug bounty.
+    - type: Compliance
+      reason: No certifications or compliance program published on any public surface.
+    - type: WellKnown
+      reason: Every /.well-known/ path on every host returned 404 or 403. See well-known/.
+    - type: AgentCard
+      reason: No agent card served at either well-known path on any host.
+    - type: MCPServer
+      reason: No MCP server exists; mcp/ holds a derived candidate surface only.
+    - type: SDKs
+      reason: No first-party client library exists in any registry.
+    - type: Idempotency
+      reason: The API has no idempotency mechanism; conventions/ records this as unsupported.
+x-enrichment:
+  date: '2026-08-28'
+  status: enriched
+  artifacts_added: 79
+  pass: local-v1

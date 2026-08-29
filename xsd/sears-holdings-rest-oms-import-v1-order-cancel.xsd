@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/oms/v1"
+           targetNamespace="http://seller.marketplace.sears.com/oms/v1" elementFormDefault="qualified">
+
+	<xs:element name="order-cancel-feed">
+	   <xs:complexType>
+        <xs:sequence>   
+         <xs:element name="order-cancel" type="order-cancel-type" minOccurs="1" maxOccurs="unbounded"/>
+         </xs:sequence>
+    	</xs:complexType>
+    </xs:element>   
+    <xs:complexType name="order-cancel-type">
+        <xs:sequence>
+            <xs:element name="header"   minOccurs="1" maxOccurs="1" type="header-type" />
+            <xs:element name="detail"  minOccurs="1" maxOccurs="unbounded" type="detail-type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="header-type">
+        <xs:sequence>
+            <xs:element name="po-number" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="po-date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="detail-type">
+        <xs:sequence>
+            <xs:element name="line-number" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="item-id" type="item-id-type" minOccurs="1" maxOccurs="1"/>
+      		<xs:element name="cancel" type="cancel-type"/>
+        </xs:sequence>
+    </xs:complexType>
+ 	<xs:complexType name="cancel-type" >
+ 		<xs:sequence>
+	   		<xs:element name="line-status" minOccurs="1" maxOccurs="1" type="xs:string" fixed="Canceled"/>
+	   		<xs:element name="cancel-reason" type="cancel-reason-type" minOccurs="1" maxOccurs="1"/>
+   		</xs:sequence>
+   	</xs:complexType>
+   <xs:simpleType name="cancel-reason-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DISCONTINUED-ITEM" />
+			<xs:enumeration value="OUT-OF-STOCK" />
+			<xs:enumeration value="CUSTOMER-CHANGED-THEIR-MIND" />
+			<xs:enumeration value="WRONG-ITEM-WAS-ORDERED" />
+			<xs:enumeration value="LEAD-TIME-IS-TOO-LONG" />
+			<xs:enumeration value="ITEM-FOUND-SOMEWHERE-ELSE" />
+			<xs:enumeration value="INVALID-METHOD-SHIPMENT" />
+			<xs:enumeration value="INVALID-ITEM-SKU" />
+			<xs:enumeration value="OTHER" />
+		</xs:restriction>
+	</xs:simpleType>
+	  	 <xs:simpleType name="item-id-type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>  	
+</xs:schema>

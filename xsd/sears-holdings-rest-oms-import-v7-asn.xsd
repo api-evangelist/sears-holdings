@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://seller.marketplace.sears.com/oms/v7" targetNamespace="http://seller.marketplace.sears.com/oms/v7"
+	elementFormDefault="qualified">
+	<xs:include schemaLocation="../../../../shared/oms/common-fields-v7.xsd" />
+	<xs:element name="shipment-feed">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="deprecated" type="xs:date" minOccurs="0"
+					maxOccurs="1" />
+				<xs:element name="shipment" type="shipment-type"
+					minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="shipment-type">
+		<xs:sequence>
+			<xs:element name="header" type="header-type" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="detail" type="detail-type" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="header-type">
+		<xs:sequence>
+			<xs:element name="asn-number" type="asn-number-type"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element ref="po-number" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="po-date" minOccurs="1" maxOccurs="1" />
+			<xs:element name="po-time" type="xs:string" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element ref="unit" minOccurs="0" maxOccurs="1" />
+			<xs:element ref="site" minOccurs="0" maxOccurs="1" />
+			<xs:element ref="channel" minOccurs="0" maxOccurs="1" />
+			<xs:element ref="location-id" minOccurs="0" maxOccurs="1" />
+
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="detail-type">
+		<xs:sequence>
+			<xs:element name="tracking-number" type="tracking-number-type"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="ship-date" type="xs:date" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="shipping-carrier" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="shipping-method" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="package-detail" type="package-type"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="package-type">
+		<xs:sequence>
+			<xs:element ref="line-number" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="item-id" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="quantity" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="tracking-number-type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="45" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="asn-number-type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

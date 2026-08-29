@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://seller.marketplace.sears.com/oms/v1" targetNamespace="http://seller.marketplace.sears.com/oms/v1"
+           elementFormDefault="qualified">
+    <!--  Order Returns Authorization Request from Sellers :
+             This import feed contains the seller response for the customer submitted returns request.
+             If Seller authorizes the request <return-label> must be provided to the request.
+             The seller can reject the order returns request, and the response will be sent to customer.
+         order-returns-response -
+             return-request-id  - returns-request-id which is exported from customer returns request API -
+              {https://seller.marketplace.sears.com/SellerPortal/api/oms/returnsrequest/v1?email=xxxx&password=xxx&status=PENDING}.
+             return-approval-status - If Authorized, return-label must be submitted as part of this request.
+             return-reject-reason - If Rejected - This value must be filled from reject reason enumeration.
+             seller-comments - non-mandatory field to enter seller comments which will be visible to the customer.
+             return-label - Valid returns shipping label(only pdf format) in base64Binary format.
+             -->
+
+    <xs:element name="order-returns-response-feed">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="order-returns-response" type="order-returns-response-type" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="order-returns-response-type">
+        <xs:sequence>
+            <xs:element name="return-request-id" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="return-approval-status" type="return-approval-status-type" minOccurs="1" maxOccurs="1" />
+            <xs:element name="return-reject-reason" type="return-reject-reason-type"	minOccurs="0" maxOccurs="1" />
+            <xs:element name="seller-comments" type="xs:string"	minOccurs="0" maxOccurs="1" />
+            <xs:element name="return-label" type="xs:base64Binary" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="return-approval-status-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AUTHORIZED" />
+            <xs:enumeration value="REJECTED" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="return-reject-reason-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PRODUCT-TYPE-NOT-ELIGIBLE-FOR-RETURN" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

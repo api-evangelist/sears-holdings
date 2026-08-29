@@ -1,0 +1,136 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/docs/api-guide/
+host: https://seller.marketplace.sears.com
+note: >-
+  Provider-published sample XML request/response documents for the Sears Marketplace Seller API,
+  one per XSD. Fetched verbatim and unauthenticated on 2026-08-28. These are the API's in-contract
+  examples; because the contract is XSD rather than OpenAPI, examples ship as separate documents
+  rather than inline in a spec.
+count: 25
+examples:
+  - path: /SellerPortal/s/schema/samples/rest/attribute/export/v4/attribute-library.xml
+    file: examples/sears-holdings-samples-rest-attribute-export-v4-attribute-library.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/attribute/export/v4/attribute-library.xml
+    status: 200
+    bytes: 111456
+  - path: /SellerPortal/s/schema/samples/rest/catalog/import/v1/service-item.xml
+    file: examples/sears-holdings-samples-rest-catalog-import-v1-service-item.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/catalog/import/v1/service-item.xml
+    status: 200
+    bytes: 1764
+  - path: /SellerPortal/s/schema/samples/rest/contentless-offers/import/v1/skinny-fbm.xml
+    file: examples/sears-holdings-samples-rest-contentless-offers-import-v1-skinny-fbm.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/contentless-offers/import/v1/skinny-fbm.xml
+    status: 200
+    bytes: 3099
+  - path: /SellerPortal/s/schema/samples/rest/inventory/export/v5/item-inventory-public.xml
+    file: examples/sears-holdings-samples-rest-inventory-export-v5-item-inventory-public.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/inventory/export/v5/item-inventory-public.xml
+    status: 200
+    bytes: 3468
+  - path: /SellerPortal/s/schema/samples/rest/inventory/import/v7/inventory.xml
+    file: examples/sears-holdings-samples-rest-inventory-import-v7-inventory.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/inventory/import/v7/inventory.xml
+    status: 200
+    bytes: 697
+  - path: /SellerPortal/s/schema/samples/rest/inventory/import/v7/store-inventory.xml
+    file: examples/sears-holdings-samples-rest-inventory-import-v7-store-inventory.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/inventory/import/v7/store-inventory.xml
+    status: 200
+    bytes: 2054
+  - path: /SellerPortal/s/schema/samples/rest/itemclass/export/v2/itemclass-library.xml
+    file: examples/sears-holdings-samples-rest-itemclass-export-v2-itemclass-library.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/itemclass/export/v2/itemclass-library.xml
+    status: 200
+    bytes: 1221
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v1/order-cancellation-request-to-seller.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v1-order-cancellation-request-to-seller.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v1/order-cancellation-request-to-seller.xml
+    status: 200
+    bytes: 969
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v1/order-return-request-to-seller.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v1-order-return-request-to-seller.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v1/order-return-request-to-seller.xml
+    status: 200
+    bytes: 4390
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v1/shipping-carrier.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v1-shipping-carrier.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v1/shipping-carrier.xml
+    status: 200
+    bytes: 46474
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v5/remittance-response.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v5-remittance-response.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v5/remittance-response.xml
+    status: 200
+    bytes: 3657
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v6/remittance-response.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v6-remittance-response.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v6/remittance-response.xml
+    status: 200
+    bytes: 2348
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v7/remittance-response.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v7-remittance-response.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v7/remittance-response.xml
+    status: 200
+    bytes: 2545
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v8/remittance-response.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v8-remittance-response.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v8/remittance-response.xml
+    status: 200
+    bytes: 2483
+  - path: /SellerPortal/s/schema/samples/rest/oms/export/v9/remittance-response.xml
+    file: examples/sears-holdings-samples-rest-oms-export-v9-remittance-response.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/export/v9/remittance-response.xml
+    status: 200
+    bytes: 3987
+  - path: /SellerPortal/s/schema/samples/rest/oms/import/v1/order-cancel.xml
+    file: examples/sears-holdings-samples-rest-oms-import-v1-order-cancel.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/import/v1/order-cancel.xml
+    status: 200
+    bytes: 643
+  - path: /SellerPortal/s/schema/samples/rest/oms/import/v1/order-returns-response-from-seller.xml
+    file: examples/sears-holdings-samples-rest-oms-import-v1-order-returns-response-from-seller.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/import/v1/order-returns-response-from-seller.xml
+    status: 200
+    bytes: 23897
+  - path: /SellerPortal/s/schema/samples/rest/oms/import/v2/order-adjustment-for-price-refund.xml
+    file: examples/sears-holdings-samples-rest-oms-import-v2-order-adjustment-for-price-refund.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/import/v2/order-adjustment-for-price-refund.xml
+    status: 200
+    bytes: 1724
+  - path: /SellerPortal/s/schema/samples/rest/oms/import/v2/order-adjustment-for-return.xml
+    file: examples/sears-holdings-samples-rest-oms-import-v2-order-adjustment-for-return.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/import/v2/order-adjustment-for-return.xml
+    status: 200
+    bytes: 1761
+  - path: /SellerPortal/s/schema/samples/rest/oms/import/v5/order-adjustment-v5.xml
+    file: examples/sears-holdings-samples-rest-oms-import-v5-order-adjustment-v5.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/import/v5/order-adjustment-v5.xml
+    status: 200
+    bytes: 1664
+  - path: /SellerPortal/s/schema/samples/rest/oms/import/v7/asn.xml
+    file: examples/sears-holdings-samples-rest-oms-import-v7-asn.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/oms/import/v7/asn.xml
+    status: 200
+    bytes: 4228
+  - path: /SellerPortal/s/schema/samples/rest/pricing/import/v6/pricing.xml
+    file: examples/sears-holdings-samples-rest-pricing-import-v6-pricing.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/pricing/import/v6/pricing.xml
+    status: 200
+    bytes: 2617
+  - path: /SellerPortal/s/schema/samples/rest/reports/export/v1/removed-items-report.xml
+    file: examples/sears-holdings-samples-rest-reports-export-v1-removed-items-report.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/reports/export/v1/removed-items-report.xml
+    status: 200
+    bytes: 2280
+  - path: /SellerPortal/s/schema/samples/rest/sopt/import/v3/item-sopt-details.xml
+    file: examples/sears-holdings-samples-rest-sopt-import-v3-item-sopt-details.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/rest/sopt/import/v3/item-sopt-details.xml
+    status: 200
+    bytes: 1013
+  - path: /SellerPortal/s/schema/samples/seller-error-report-v1-example.xml
+    file: examples/sears-holdings-samples-seller-error-report-v1-example.xml
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/samples/seller-error-report-v1-example.xml
+    status: 200
+    bytes: 1386

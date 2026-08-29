@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/inventory/v7"
+           targetNamespace="http://seller.marketplace.sears.com/inventory/v7" elementFormDefault="qualified">
+
+    <!-- definition of complex types -->
+    <xs:complexType name="item-inventory-details">
+        <xs:sequence>
+            <xs:element name="quantity" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="low-inventory-threshold" type="xs:integer" maxOccurs="1" minOccurs="0"/>
+            <!-- To update inventory please provide the latest inventory-timestamp. If inventory-timestamp is earlier than available in Seller Portal, the update will be ignored -->
+            <xs:element name="inventory-timestamp" type="xs:dateTime" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="item-id" type="itemIdType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="fbm-inventory-type">
+        <xs:sequence>
+            <xs:element name="item" type="item-inventory-details" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- definition of complex elements -->
+    <xs:element name="inventory-feed">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fbm-inventory" type="fbm-inventory-type" maxOccurs="1" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- definition of simple types -->
+    <xs:simpleType name="itemIdType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

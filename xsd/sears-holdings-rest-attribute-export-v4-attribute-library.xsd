@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://seller.marketplace.sears.com/catalog/v4" targetNamespace="http://seller.marketplace.sears.com/catalog/v4"
+	elementFormDefault="qualified">
+
+	<!-- definition of attribute group -->
+	<xs:attributeGroup name="id-attr">
+		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+	</xs:attributeGroup>
+	<xs:element name="name" type="xs:string" />
+	<!-- definition of complex types -->
+	<xs:complexType name="value-type">
+		<xs:sequence>
+			<xs:element ref="name" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attributeGroup ref="id-attr" />
+	</xs:complexType>
+	<xs:complexType name="allowed-value-ids-type">
+		<xs:sequence>
+			<xs:element name="value" type="value-type" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="allowed-value-flags-type">
+		<xs:sequence>
+			<xs:element name="flag" type="xs:boolean" minOccurs="1"
+				maxOccurs="2" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="allowed-value-regex-type">
+		<xs:sequence>
+			<xs:element name="regex" type="xs:string" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="attribute-type">
+		<xs:sequence>
+			<xs:element ref="name" minOccurs="1" maxOccurs="1" />
+			<xs:element name="type" minOccurs="1" maxOccurs="3">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:annotation>
+							<xs:documentation>Type represents whether the attribute is used
+								for SEARCH, LABEL (also known as COMPARE) and/or VARIATION.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:enumeration value="SEARCH" />
+						<xs:enumeration value="LABEL" />
+						<xs:enumeration value="VARIATION" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="required-flag" type="xs:boolean"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>This flag defines whether an attribute is
+						required or not for the requested item class.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="trademark-flag" type="xs:boolean"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>This flag defines whether an attribute represents
+						TradeMark Color.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="important-flag" type="xs:boolean"
+				minOccurs="0" maxOccurs="1" />
+
+			<xs:element name="multivalue-flag" type="xs:boolean"
+				minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>This flag defines whether an attribute has
+						multi-value.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:choice minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>An attribute will have one of 3 different allowed
+						values.
+						allowed-value-ids - Allowed value ids will be populated
+						allowed-value-flags - Allowed value flags will be populated
+						allowed-value-regex - value will be free text but the free text
+						must meet the
+						populated regex format.
+
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="allowed-value-ids" type="allowed-value-ids-type" />
+				<xs:element name="allowed-value-flags" type="allowed-value-flags-type" />
+				<xs:element name="allowed-value-regex" type="allowed-value-regex-type" />
+
+			</xs:choice>
+		</xs:sequence>
+		<xs:attributeGroup ref="id-attr" />
+	</xs:complexType>
+	<xs:complexType name="attributes-type" mixed="true">
+		<xs:sequence>
+			<xs:element name="attribute" type="attribute-type"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="item-class-id" type="xs:positiveInteger"
+			use="required" />
+	</xs:complexType>
+	<!-- definition of complex elements -->
+	<xs:element name="attribute-library">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="deprecated" type="xs:date" minOccurs="0"
+					maxOccurs="1" />
+				<xs:element name="attributes" type="attributes-type"
+					maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

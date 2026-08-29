@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order-cancel-request-feed xmlns="http://seller.marketplace.sears.com/oms/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://seller.marketplace.sears.com/oms/v1 order-cancellation-request-to-seller.xsd ">
+  <order-cancel-request>
+    <order-cancel-request-header>
+      <po-number>7845651</po-number>
+      <po-date>2014-05-01</po-date>
+    </order-cancel-request-header>
+    <order-cancel-request-detail>
+      <com-line-number>1</com-line-number>
+      <quantity>1</quantity>
+      <cancel-detail>
+        <cancel-request-id>112</cancel-request-id>
+        <cancel-date>2014-05-03</cancel-date>
+        <cancel-reason>CUSTOMER-CHANGED-THEIR-MIND</cancel-reason>
+        <cancel-status>PENDING</cancel-status>
+        <customer-comments>Urgent cancel, please !!</customer-comments>
+      </cancel-detail>
+    </order-cancel-request-detail>
+  </order-cancel-request>
+</order-cancel-request-feed>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://seller.marketplace.sears.com/oms/v1" targetNamespace="http://seller.marketplace.sears.com/oms/v1"
+	elementFormDefault="qualified">
+	<!-- 5.Cancellation requests GET API to sellers : 
+	     This export feed populates all the order cancellation requests for a particular seller within a date range.
+	     The response shows whether the cancellation request is CREATED, IN-PROGRESS, COMPLETED,ERRORED-OUT -->
+	<xs:element name="order-cancel-request-feed">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="order-cancel-request" type="order-cancel-request-type" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="order-cancel-request-type">
+		<xs:sequence>
+			<xs:element name="order-cancel-request-header" type="order-cancel-request-header-type" minOccurs="1" maxOccurs="1" />
+			<xs:element name="order-cancel-request-detail" type="order-cancel-request-detail-type" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="order-cancel-request-header-type">
+		<xs:sequence>
+			<xs:element name="po-number" type="xs:positiveInteger"	minOccurs="1" maxOccurs="1" />
+			<xs:element name="po-date" type="xs:date" minOccurs="1"	maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="order-cancel-request-detail-type">
+		<xs:sequence>
+			<xs:element name="com-line-number" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+			<xs:element name="quantity" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+			<xs:element name="cancel-detail" type="order-cancel-detail-type" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="order-cancel-detail-type">
+		<xs:sequence>
+			<xs:element name="cancel-request-id" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+			<xs:element name="cancel-date" type="xs:date" minOccurs="1"	maxOccurs="1" />
+			<xs:element name="cancel-reason" type="cancel-reason-type"	minOccurs="1" maxOccurs="1" />
+			<xs:element name="cancel-status" type="cancel-status-type"	minOccurs="1" maxOccurs="1" />
+			<xs:element name="customer-comments" type="xs:string" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="cancel-reason-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CUSTOMER-CANCEL-ACCURATE-ORDER-STATUS-INFORMATION-WAS-NOT-AVAILABLE" />
+			<xs:enumeration value="CUSTOMER-CANCEL-COULD-NOT-MODIFY-DELIVERY-ADDRESS" />
+			<xs:enumeration value="CUSTOMER-CANCEL-COULD-NOT-MODIFY-ITEM-QUANTITY-COLOR" />
+			<xs:enumeration value="CUSTOMER-CANCEL-DID-NOT-LIKE-RETURNS-POLICY" />
+			<xs:enumeration value="CUSTOMER-CANCEL-DID-NOT-WANT-THE-PRODUCT-ANY-LONGER" />
+			<xs:enumeration value="CUSTOMER-CANCEL-DO-NOT-WANT-TO-BUY-THIS-FROM-MARKETPLACE-OR-THIRD-PARTY-SELLER" />
+			<xs:enumeration value="CUSTOMER-CANCEL-FOUND-A-BETTER-PRODUCT" />
+			<xs:enumeration value="CUSTOMER-CANCEL-FOUND-BETTER-PRICING-OF-SAME-PRODUCT" />
+			<xs:enumeration value="CUSTOMER-CANCEL-I-WANT-TO-CHANGE-MY-PAYMENT-METHOD" />
+			<xs:enumeration value="CUSTOMER-CANCEL-I-WANT-TO-CHANGE-MY-SHIPPING-SPEED" />
+			<xs:enumeration value="CUSTOMER-CANCEL-NOT_AUTHORIZED-PURCHASE" />
+			<xs:enumeration value="CUSTOMER-CANCEL-SHIPPING-OR-DELIVERY-TIME-TOO-LONG" />
+			<xs:enumeration value="CUSTOMER-CANCEL-THE-MARKETPLACE-SELLER-IS-NOT-RESPONDING-TO-MY-REQUESTS" />
+			<xs:enumeration value="CUSTOMER-CANCEL-OTHER" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cancel-status-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="INITIAL" />
+			<!--<xs:enumeration value="PENDING ORDER" /> Might not make sense to sellers-->
+			<xs:enumeration value="FOUND_ORDER_IN_SELLPO" />
+			<xs:enumeration value="SELLER_REJECTED" />
+			<xs:enumeration value="SELLER_APPROVED" />
+			<xs:enumeration value="SYSTEM_APPROVED" />
+			<xs:enumeration value="FAILURE" />
+			<xs:enumeration value="ORDER_CANCELLED_ON_ARRIVAL" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

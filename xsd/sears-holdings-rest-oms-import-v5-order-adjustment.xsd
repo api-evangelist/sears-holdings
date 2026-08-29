@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/oms/v5"
+		   targetNamespace="http://seller.marketplace.sears.com/oms/v5" elementFormDefault="qualified">
+
+	<!--An Order adjustment feed coming from a seller will include adjustment details of an order
+		date-time-stamp - the date and time the file was created. This must present one time in each file.
+		oa-header -
+				po-number - Seller Portal's purchase order number, which will be available to sellers via purchase-order API
+				po-date - Seller Portal's purchase order date, which will be available to sellers via purchase-order API
+		oa-detail -
+				shipping-adjustment - refund type (There should be only one shipping adjustment for the whole order. No Line level adjustments.)
+
+				sale-adjustment
+					line-number - Seller Portal's line number, which will be available to sellers via purchase-order API
+					item-id - Unique identifier of an item, which was provided by sellers during item creation
+
+					Sale Adjustment can be either refund or return
+					refund -
+							refund-amount - amount to be refunded to the customer
+							refund-reason - one of the reason from the adjustment-reason-type enumeration
+							refund-date - date when refund is provided by seller
+							memo - internal memo - viewable only for sellers, external memo - viewable for sellers as well as customer
+					return -
+							return amount - amount to be refunded to the customer
+							return-reason - one of the reason from the adjustment-reason-type enumeration
+							return-date - date when return is provided by seller
+							quantity - quantity returned
+							memo - internal memo - viewable only for sellers, external memo - viewable for sellers as well as customer
+	 -->
+
+	<xs:element name="order-adjustment-feed">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="date-time-stamp" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="order-adjustment" type="order-adjustment-type" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="order-adjustment-type">
+		<xs:sequence>
+			<xs:element name="oa-header" type="oa-header-type" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="oa-detail" type="oa-detail-type" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="oa-header-type">
+		<xs:sequence>
+			<xs:element name="po-number" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="po-date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="oa-detail-type">
+		<xs:sequence>
+			<xs:element name="shipping-adjustment" type="refund-type-shipping" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sale-adjustment" type="sale-adjustment-type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="sale-adjustment-type">
+		<xs:sequence>
+			<xs:element name="line-number" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="item-id" type="external-item-id-type" minOccurs="1" maxOccurs="1"/>
+			<xs:choice  minOccurs="1" maxOccurs="1">
+				<xs:element name="refund" type="refund-type"/>
+				<xs:element name="return" type="return-type"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="refund-type" >
+		<xs:sequence>
+			<xs:element name="adjustment-unique-id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="refund-amount" type="adjustment-amount-type" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="refund-reason" type="adjustment-reason-type" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="refund-date" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="memo" type="memo-type" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="refund-type-shipping" >
+		<xs:sequence>
+			<xs:element name="adjustment-unique-id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="refund-amount" type="adjustment-amount-type" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="refund-reason" type="adjustment-reason-type-shipping" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="refund-date" type="xs:date" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="memo" type="memo-type" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="adjustment-amount-type" >
+		<xs:sequence>
+			<xs:choice  minOccurs="1" maxOccurs="1">
+				<xs:element name="amount-in-dollars" type="xs:decimal"/>
+				<xs:element name="amount-in-percentage" type="xs:decimal"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="memo-type" >
+		<xs:sequence>
+			<xs:element name="internal-memo" type="xs:string" minOccurs="0" maxOccurs="1" />
+			<xs:element name="external-memo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="return-type" >
+		<xs:sequence>
+			<xs:element name="return-unique-id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="return-amount" type="adjustment-amount-type" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="return-reason" type="adjustment-reason-type" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="return-date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="quantity" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="memo" type="memo-type" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="adjustment-reason-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="WRONG-ITEM-SHIPPED"/>
+			<xs:enumeration value="WRONG-QUANTITY-SHIPPED"/>
+			<xs:enumeration value="DAMAGED-IN-SHIPMENT"/>
+			<xs:enumeration value="COULD-NOT-SHIP"/>
+			<xs:enumeration value="ARRIVED-TOO-LATE"/>
+			<xs:enumeration value="WRONG-QUANTITY-ORDERED"/>
+			<xs:enumeration value="WRONG-ITEM-ORDERED"/>
+			<xs:enumeration value="MERCHANDISE-SHIPPED-BUT-NOT-RECEIVED"/>
+			<xs:enumeration value="MERCHANDISE-NOT-AS-DESCRIBED"/>
+			<xs:enumeration value="PRICING-ERROR"/>
+			<xs:enumeration value="GENERAL-ADJUSTMENT"/>
+			<xs:enumeration value="DUPLICATE-SHIPMENT"/>
+			<xs:enumeration value="WRONG-MERCHANDISE-ORDERED"/>
+			<xs:enumeration value="PRODUCT-QUALITY-NOT-ACCEPTABLE"/>
+			<xs:enumeration value="DEFECTIVE-PRODUCT"/>
+			<xs:enumeration value="TOO-SMALL"/>
+			<xs:enumeration value="TOO-LARGE"/>
+			<xs:enumeration value="NOT-SATISFIED-WITH-SIZING"/>
+			<xs:enumeration value="NOT-SATISFIED-WITH-COLOR"/>
+			<xs:enumeration value="MP-SUBSCRIPTION-ITEM-CANCELLED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	     <xs:simpleType name="adjustment-reason-type-shipping">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Shipping Charge"/>
+					</xs:restriction>
+	</xs:simpleType>
+	    
+		<xs:simpleType name="external-item-id-type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

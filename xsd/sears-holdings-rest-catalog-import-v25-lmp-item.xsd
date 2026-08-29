@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/catalog/v25" targetNamespace="http://seller.marketplace.sears.com/catalog/v25" elementFormDefault="qualified">
+
+    <!-- definition of attribute group -->
+    <xs:attributeGroup name="item-attr">
+        <xs:attribute name="item-id" type="item-id-type" use="required"/>
+    </xs:attributeGroup>
+    <xs:attributeGroup name="image-attr">
+        <xs:attribute name="height" type="xs:positiveInteger"/>
+        <xs:attribute name="width" type="xs:positiveInteger"/>
+    </xs:attributeGroup>
+
+    <!-- definition of groups -->
+    <xs:group name="choking-hazards-group">
+        <xs:sequence>
+            <xs:element name="choke-hazard-small-parts" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="choke-hazard-balloons" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="choke-hazard-small-ball" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="choke-hazard-contains-small-ball" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="choke-hazard-contains-marble" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="choke-hazard-other" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="safety-warning-other" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="no-warning" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:group name="seals-of-approval-group">
+        <xs:sequence>
+            <xs:element name="energy-star-compliant" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="good-house-keeping-approved" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:group name="operational-flags-group">
+        <xs:sequence>
+            <xs:element ref="shipping-restrictions" maxOccurs="1" minOccurs="0"/>
+            <xs:group ref="choking-hazards-group" maxOccurs="1" minOccurs="0"/>
+            <xs:group ref="seals-of-approval-group" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="california-emissions" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="web-exclusive" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+	    	<xs:element name="prop65-warning" type="prop65-warning-type" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!-- definition of simple types -->
+    <xs:simpleType name="item-id-type">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="upc-type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="map-price-indicator-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="strict"/>
+            <xs:enumeration value="non-strict"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="shipping-method-status-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="enabled"/>
+            <xs:enumeration value="disabled"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="prop65-warning-code-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1">
+				<xs:annotation>
+			        <xs:documentation>
+						No. The item does not contain any CA Prop 65 listed chemicals and does not otherwise require a Prop 65 warning.
+				    </xs:documentation>
+				</xs:annotation>
+	    	</xs:enumeration>
+            <xs:enumeration value="2">
+				<xs:annotation>
+			       <xs:documentation>
+						No. The item may contain CA Prop 65 listed chemicals but they do not exceed the limits set by CA OEHHA or any related Prop 65 settlement/ consent decrees, therefore a CA Prop 65 warning is not required.
+				    </xs:documentation>
+				</xs:annotation>	
+            </xs:enumeration>   	
+            <xs:enumeration value="3">
+				<xs:annotation>
+			       	<xs:documentation>
+						Yes. The item may contain one or more CA Prop 65 listed chemicals and a CA Prop 65 warning is required/needed.
+				    </xs:documentation>
+				</xs:annotation>
+  	   		</xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- definition of complex types -->
+    <xs:complexType name="shipping-provider-type" mixed="true">
+        <xs:sequence>
+            <xs:element ref="shipping-cost" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="status" type="shipping-method-status-type" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="shipping-override-type">
+        <xs:sequence>
+            <xs:element name="shipping-method-ground" type="ground-shipping-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="shipping-method-expedited" type="shipping-provider-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="shipping-method-premium" type="shipping-provider-type" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ground-shipping-type">
+        <xs:sequence>
+            <xs:element ref="shipping-cost" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="free-shipping" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="status" type="shipping-method-status-type" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="local-marketplace-flags-type">
+        <xs:sequence>
+            <xs:element name="is-restricted" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="perishable" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="requires-refrigeration" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="requires-freezing" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="contains-alcohol" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="contains-tobacco" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="item-type">
+        <xs:sequence>
+            <xs:element ref="title" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="short-desc" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="mature-content" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="upc" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="item-class" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="your-categorization" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="seller-tags" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="long-desc" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="model-number" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="manufacturer-name" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="standard-price" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="sale" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="recycle-fee-item-count" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="shipping-override" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="ship-to-store-method" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="syw-max-shipping-method" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="map-price-indicator" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="brand" type="xs:string" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-length" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-width" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-height" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-weight" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:group ref="operational-flags-group"/>
+            <xs:element name="local-marketplace-flags" type="local-marketplace-flags-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="image-url" type="image-type" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="swatch-image-url" type="image-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="feature-image-url" type="image-type" maxOccurs="6" minOccurs="0"/>
+            <xs:element name="no-warranty-available" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="product-assets" type="product-assets-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="attributes" type="attributes-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="offer-condition" type="offer-condition-type" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="gift-message-eligible" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="publish-start-date" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="package-quantity" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="seller-customized-bundle" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="collectible" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="subscription-eligible" maxOccurs="1" minOccurs="0"/>
+
+
+        </xs:sequence>
+        <xs:attributeGroup ref="item-attr"/>
+    </xs:complexType>
+    <xs:complexType name="offer-condition-type">
+        <xs:sequence>
+            <xs:element name="condition" type="condition-type" maxOccurs="1" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Item condition must follow mapping
+                        between item class and its corresponding allowed
+                        item condition.
+
+                        [Item class : Allowed item conditions]
+
+                        1.Appliances and Automotive : New, New - Other, New - Blemished, Refurbished -
+                        Seller,
+                        Refurbished - Manufacturer Authorized
+
+                        2.Books : New, New - Other, New - Blemished, Used - Like New, Used - Very
+                        Good, Used - Good, Used - Acceptable,
+                        Used-Poor
+
+                        3.Cameras and Camcorders, Cell Phones and Accessories : New, New - Other,
+                        New - Blemished, Refurbished - Seller,
+                        Refurbished - Manufacturer Authorized, Used -
+                        Like New, Used - Very Good, Used - Good, Used -
+                        Acceptable,
+                        Used-Poor
+
+                        4.Clothing and Shoes : New, New - Other, New - Blemished
+
+                        5.Computers : New, New - Other, New - Blemished, Refurbished - Seller,
+                        Refurbished - Manufacturer Authorized,
+                        Used - Like New, Used - Very Good, Used - Good, Used - Acceptable,
+                        Used-Poor
+
+                        6.Electronics : New, New - Other, New - Blemished, Refurbished - Seller,
+                        Refurbished - Manufacturer Authorized,
+                        Used - Like New, Used - Very Good, Used - Good, Used - Acceptable,
+                        Used-Poor
+
+                        7.Tools : New, New - Other, New - Blemished, Refurbished - Seller,
+                        Refurbished - Manufacturer Authorized,
+                        Used - Like New, Used - Very Good, Used - Good, Used - Acceptable,
+                        Used-Poor
+
+                        8.Video, DVD and Blu-ray Discs : New, New - Other, New - Blemished, Used -
+                        Like New, Used - Very Good,
+                        Used - Good, Used - Acceptable, Used-Poor
+
+                        9.Others : New
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="condition-comments" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="condition-image-url" type="image-type" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="condition-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NEW"/>
+            <xs:enumeration value="NEW_OTHER"/>
+            <xs:enumeration value="NEW_BLEMISHED"/>
+            <xs:enumeration value="REFURBISHED_SELLER"/>
+            <xs:enumeration value="REFURBISHED_MANUFACTURER_AUTHORIZED"/>
+            <xs:enumeration value="USED_LIKE_NEW"/>
+            <xs:enumeration value="USED_VERY_GOOD"/>
+            <xs:enumeration value="USED_GOOD"/>
+            <xs:enumeration value="USED_ACCEPTABLE"/>
+            <xs:enumeration value="USED_POOR"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="product-assets-type">
+        <xs:sequence>
+            <xs:element name="product-asset" type="product-asset-type" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="product-asset-type">
+        <xs:sequence>
+            <xs:element name="type" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="ENERGY_GUIDE"/>
+                        <xs:enumeration value="PRODUCT_WARRANTY"/>
+                        <xs:enumeration value="SPANISH_WARRANTY"/>
+                        <xs:enumeration value="ENGLISH_OWNER_MANUAL"/>
+                        <xs:enumeration value="SPANISH_OWNER_MANUAL"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="url" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="height" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="width" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="item-class-type">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="variation-attributes-type">
+        <xs:sequence>
+            <xs:element ref="variation-attribute" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="seller-tag-type">
+        <xs:sequence>
+            <xs:element name="seller-tag" type="xs:string" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="variation-group-type">
+        <xs:sequence>
+            <xs:element ref="title" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="short-desc" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="mature-content" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="item-class" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="your-categorization" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="long-desc" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="model-number" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="manufacturer-name" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="map-price-indicator" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="brand" type="xs:string" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-length" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-width" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-height" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="shipping-weight" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:group ref="operational-flags-group"/>
+            <xs:element name="local-marketplace-flags" type="local-marketplace-flags-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="feature-image-url" type="image-type" maxOccurs="6" minOccurs="0"/>
+            <xs:element name="no-warranty-available" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="product-assets" type="product-assets-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="attributes" type="attributes-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="gift-message-eligible" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="variation-items" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="variation-group-id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="variation-item-type">
+        <xs:sequence>
+            <xs:element ref="upc" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="standard-price" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="sale" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="recycle-fee-item-count" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="shipping-override" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="ship-to-store-method" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="syw-max-shipping-method" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="image-url" type="image-type" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="swatch-image-url" type="image-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="seller-tags" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="variation-attributes" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="offer-condition" type="offer-condition-type" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="publish-start-date" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="model-number" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="package-quantity" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="seller-customized-bundle" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="collectible" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="subscription-eligible" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="item-attr"/>
+    </xs:complexType>
+    <xs:complexType name="variation-items-type">
+        <xs:sequence>
+            <xs:element name="variation-item" type="variation-item-type" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="attribute-type">
+        <xs:sequence>
+            <xs:element name="attribute-id" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="attribute-value-id" type="attribute-value-id-type"/>
+                <xs:element name="attribute-value-free" type="xs:string"/>
+                <xs:element name="attribute-value-flag" type="xs:boolean"/>
+            </xs:choice>
+            <xs:element name="trademark" type="xs:string" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>free text value</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="attribute-value-id-type">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="attributes-type">
+        <xs:sequence>
+            <xs:element name="attribute" type="attribute-type" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="items-type">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="item" type="item-type"/>
+            <xs:element name="variation-group" type="variation-group-type"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="item-reference-type">
+        <xs:attributeGroup ref="item-attr"/>
+    </xs:complexType>
+    <xs:complexType name="items-to-delete-type">
+        <xs:sequence>
+            <xs:element ref="item-to-delete" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="items-to-inactivate-type">
+        <xs:sequence>
+            <xs:element ref="item-to-inactivate" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="sale-type">
+        <xs:sequence>
+            <xs:element name="sale-price" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="sale-start-date" type="xs:date" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="sale-end-date" type="xs:date" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="promotional-text" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="free-shipping-type">
+        <xs:sequence>
+            <xs:element name="free-shipping-start-date" type="xs:date" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="free-shipping-end-date" type="xs:date" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="free-shipping-promotional-text" type="xs:string" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="fbm-catalog-type">
+        <xs:sequence>
+            <xs:element ref="items" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="items-to-delete" maxOccurs="1" minOccurs="0"/>
+            <xs:element ref="items-to-inactivate" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="image-type">
+        <xs:sequence>
+            <xs:element name="url" type="xs:string"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="image-attr"/>
+    </xs:complexType>
+    <xs:complexType name="syw-max-shipping-method-type">
+        <xs:sequence>
+            <xs:element name="two-day-free-shipping" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ship-to-store-method-type">
+        <xs:sequence>
+            <xs:element name="ship-to-store-eligible" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="prop65-warning-type">
+        <xs:sequence>
+            <xs:element name="prop65-warning-code" type="prop65-warning-code-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="package-has-prop65-label" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="prop65-warning-text" type="xs:string" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>    
+    <!-- definition of simple elements -->
+    <xs:element name="items" type="items-type"/>
+    <xs:element name="items-to-delete" type="items-to-delete-type"/>
+    <xs:element name="item-to-delete" type="item-reference-type"/>
+    <xs:element name="items-to-inactivate" type="items-to-inactivate-type"/>
+    <xs:element name="item-to-inactivate" type="item-reference-type"/>
+    <xs:element name="variation-items" type="variation-items-type"/>
+    <xs:element name="variation-attribute" type="attribute-type"/>
+    <xs:element name="variation-attributes" type="variation-attributes-type"/>
+    <xs:element name="shipping-restrictions" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Comma separated list of state codes for
+                shipping
+                exclusion
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="mature-content" type="xs:boolean"/>
+    <xs:element name="shipping-override" type="shipping-override-type"/>
+    <xs:element name="free-shipping" type="free-shipping-type"/>
+    <xs:element name="promotional-text" type="xs:string"/>
+    <xs:element name="shipping-cost" type="xs:decimal"/>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="short-desc" type="xs:string"/>
+    <xs:element name="upc" type="upc-type"/>
+    <xs:element name="item-class" type="item-class-type"/>
+    <xs:element name="your-categorization" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>You may provide your own categorization
+                (categorization on your web site) of the item in
+                the form of level
+                1-level 2-level 3, etc.
+                For example, Beauty-Skin Care-Moisturizers.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="seller-tags" type="seller-tag-type">
+        <xs:annotation>
+            <xs:documentation>You may provide a list of keywords, which
+                may be
+                used to help manage your products in Seller Portal and to help
+                improve the chances of your products being discovered by customers.
+                For example, Hawaiian T-shirt, silver ring etc
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="long-desc" type="xs:string"/>
+    <xs:element name="model-number" type="xs:string"/>
+    <xs:element name="manufacturer-name" type="xs:string"/>
+    <xs:element name="standard-price" type="xs:decimal"/>
+    <xs:element name="sale" type="sale-type"/>
+    <xs:element name="recycle-fee-item-count" type="xs:nonNegativeInteger">
+        <xs:annotation>
+            <xs:documentation>
+                Description: Count of recycle fees required for unit. A set with a mattress and
+                box spring is a count of 2; A mattress with bed frame is
+                a count of 1
+                Supported for a certain mattress eligible item classes. Allowed value range
+                is from 1 to 10. Default value is 1.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="map-price-indicator" type="map-price-indicator-type"/>
+    <xs:element name="syw-max-shipping-method" type="syw-max-shipping-method-type"/>
+    <xs:element name="ship-to-store-method" type="ship-to-store-method-type"/>
+    <xs:element name="publish-start-date" type="xs:date">
+        <xs:annotation>
+            <xs:documentation>Seller's can create items in advance and
+                enter a
+                future start date to publish these items at a later date
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="package-quantity" type="xs:positiveInteger"/>
+    <xs:element name="seller-customized-bundle" type="xs:boolean"/>
+    <xs:element name="collectible" type="xs:boolean"/>
+    <xs:element name="subscription-eligible" type="xs:boolean"/>
+    <!-- definition of complex elements -->
+    <xs:element name="catalog-feed">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="deprecated" type="xs:date" maxOccurs="1" minOccurs="0"/>
+                <xs:element name="fbm-catalog" type="fbm-catalog-type" maxOccurs="1" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="gift-message-eligible" type="xs:boolean"/>
+
+</xs:schema>

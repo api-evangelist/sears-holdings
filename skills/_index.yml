@@ -1,0 +1,37 @@
+generated: '2026-08-28'
+method: generated
+source: xsd/_index.yml + https://marketplace.sears.com/docs/api-guide/
+api: Sears Marketplace Seller API
+grounding: >-
+  Sears Marketplace publishes no OpenAPI, so these skills are grounded in the provider's own
+  published operation URLs and the 33 XML Schema Definitions harvested into xsd/ rather than in
+  operationIds. Every endpoint, header format, enumeration value, field limit, rate cap and error
+  string quoted in a skill traces to https://marketplace.sears.com/docs/api-guide/ or to a fetched
+  XSD. Nothing was invented, and no skill asserts a time window the provider does not state.
+provider_published_skills: false
+provider_published_agents_md: false
+count: 3
+skills:
+  - name: sears-holdings-fulfill-purchase-order
+    file: skills/sears-holdings-fulfill-purchase-order.md
+    flow: Order fulfilment
+    summary: >-
+      Pull purchase orders, resolve carrier and method from the reference list, send the ASN, and
+      verify through the processing report - including the 30-day auto-cancellation deadline.
+    consequential: true
+  - name: sears-holdings-refunds-and-returns
+    file: skills/sears-holdings-refunds-and-returns.md
+    flow: Refunds, returns and cancellations
+    summary: >-
+      Issue refunds and returns, cancel lines with the correct reason code, respond to customer
+      requests, and confirm via the refund status lookup that an accepted file actually processed.
+    consequential: true
+    irreversible: true
+  - name: sears-holdings-catalog-inventory-pricing
+    file: skills/sears-holdings-catalog-inventory-pricing.md
+    flow: Catalog, inventory, pricing and lead time
+    summary: >-
+      Resolve the item class taxonomy, create items to the schema's field rules, then sync
+      inventory, price and prep time in the required order - and choose deactivate over delete
+      when the retirement needs to be reversible.
+    consequential: true

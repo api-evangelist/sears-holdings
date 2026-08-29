@@ -1,0 +1,56 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/credentials-and-authentication/
+docs: https://marketplace.sears.com/seller-support/api-authentication-process/
+api: Sears Marketplace Seller API
+base_url: https://seller.marketplace.sears.com/SellerPortal/api
+note: >-
+  Derived by hand from the provider's own published API Guide rather than from an OpenAPI
+  securitySchemes block, because Sears Marketplace publishes no OpenAPI. The scheme is a custom
+  HMAC signature, not OAuth, not OpenID Connect and not a bearer token, so there is no scopes/
+  artifact for this provider.
+schemes:
+  - id: hmac-sha256-authorization
+    type: http
+    scheme: custom
+    in: header
+    name: Authorization
+    algorithm: HMAC-SHA256
+    label: HMAC-SHA256 request signing
+    header_format: "HMAC-SHA256 emailaddress=<email address>,timestamp=<timestamp>,signature=<signature>"
+    string_to_sign: "<sellerId>:<emailaddress>:<currentTimestamp>"
+    timestamp_format: "yyyy-MM-dd'T'HH:mm:ss'Z' (UTC)"
+    timestamp_validity: 30 minutes
+    signature_encoding: hexadecimal
+    secret: base64-encoded seller secret key, self-generated in Seller Portal under Account Info
+    credential_scope: per seller account; secondary users must generate their own key
+    documented: true
+    source: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/credentials-and-authentication/
+oauth2: false
+openid_connect: false
+mutual_tls: false
+api_keys: false
+scopes_published: false
+credential_acquisition:
+  self_service: false
+  requires_account: true
+  steps:
+    - Apply to sell on Sears Marketplace at https://marketplace.sears.com/sell-on-sears/
+    - Log in to Seller Portal at https://seller.marketplace.sears.com
+    - Open your name menu (upper right) -> Account Info and generate the base64 secret key
+    - Compute the HMAC-SHA256 signature per request and send it in the Authorization header
+deprecated_schemes:
+  - id: email-password-in-url
+    retired: '2016-03-31'
+    note: >-
+      Before 2016-03-31 API URLs carried an email address and password. Those calls are now
+      rejected outright; the provider states this explicitly in the API Guide.
+unauthenticated_behavior:
+  probe: https://seller.marketplace.sears.com/SellerPortal/api/oms/purchaseorder/v19?sellerId=1234
+  observed: '2026-08-28'
+  http_status: 200
+  content_type: application/xml;charset=UTF-8
+  body: "<api-response><error-detail>Missing Authorization header in request</error-detail></api-response>"
+  note: >-
+    The API answers an unauthenticated call with HTTP 200 and an in-body error element rather than
+    401/403. Clients cannot rely on the status line to detect an auth failure.

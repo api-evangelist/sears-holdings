@@ -1,0 +1,71 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/sell-on-sears/program-fees/
+docs: https://marketplace.sears.com/seller-support/sears-marketplace-cost/
+api: Sears Marketplace Seller API
+plan_count: 1
+currency: USD
+model: subscription + per-transaction commission
+note: >-
+  Sears Marketplace prices seller access as a single program, not as API tiers. There is no
+  developer-facing plan ladder, no free tier and no usage-metered API pricing; API access is a
+  feature of a paid seller account. Commission is charged on both the product price and the
+  shipping price of every item sold.
+plans:
+  - name: Sears Marketplace Seller Program
+    price: 39.99
+    currency: USD
+    period: month
+    billing_trigger: charged once monthly gross sales reach USD 400
+    included: Unlimited orders, Seller Portal access, seller support resources, full API access, sandbox access
+    api_access: true
+    overage: none
+    limits_ref: rate-limits/sears-holdings-rate-limits.yml
+    source: https://marketplace.sears.com/sell-on-sears/program-fees/
+commissions:
+  basis: applied to both product price and shipping price
+  source: https://marketplace.sears.com/sell-on-sears/program-fees/
+  rates:
+    - category: Appliances
+      rate_percent: 15
+    - category: Automotive
+      rate_percent: 12
+    - category: Baby
+      rate_percent: 15
+    - category: Beauty
+      rate_percent: 15
+    - category: Clothing
+      rate_percent: 15
+    - category: Consumables
+      rate_percent: 9
+    - category: Fitness & Sports
+      rate_percent: 15
+    - category: Gaming Consoles
+      rate_percent: 8
+    - category: Health & Wellness
+      rate_percent: 15
+    - category: Home
+      rate_percent: 15
+    - category: Jewelry
+      rate_percent: 20
+    - category: Lawn & Garden
+      rate_percent: 15
+    - category: Office Supplies
+      rate_percent: 15
+    - category: Outdoor Living
+      rate_percent: 15
+    - category: Seasonal
+      rate_percent: 17
+    - category: Shoes
+      rate_percent: 15
+    - category: Tools
+      rate_percent: 15
+    - category: Toys & Games
+      rate_percent: 15
+    - category: Watches
+      rate_percent: 15
+    - category: Workwear & Uniforms
+      rate_percent: 15
+  exact_rates_note: >-
+    Per-subcategory rates are published only inside Seller Portal as a downloadable Item Class
+    Commissions Table, which requires a seller login. The category rates above are the public set.

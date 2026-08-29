@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processing-report xmlns="http://seller.marketplace.sears.com/shared/v1"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://seller.marketplace.sears.com/SellerPortal/s/schema/shared/seller-error-report-v1.xsd">
+    <deprecated>2009-12-30</deprecated>
+    <document-id>77</document-id>
+    <report>
+    	<summary>
+			<description>Pricing Feed - XML</description>
+			<record-count>2</record-count>
+			<records-with-warnings>0</records-with-warnings>
+			<records-with-errors>1</records-with-errors>
+			<records-accepted>1</records-accepted>
+		</summary>
+		<detail>
+			<warnings>
+				<warning record-id="2">
+					<warning-info>Item length reached maximum.</warning-info>
+				</warning>
+			</warnings>
+			<errors>
+				<error record-id="1">
+					<error-info>Item with such id does not exist</error-info>
+				</error>
+			</errors>
+		</detail>
+		<!-- The following section would appear only in case of Deals processing report service -->
+		<deals-info>
+			<deal seller-deal-id="abc1234" id="12345" />
+			<deal seller-deal-id="abcd1234" id="13345" />
+			<deal seller-deal-id="abcf1234" id="12545" />
+			<deal seller-deal-id="abcg1234" id="12345" />
+		</deals-info>
+	</report>
+	<!-- either status or report must present in the processing-report. 	
+	<status>In Process</status> -->
+</processing-report>

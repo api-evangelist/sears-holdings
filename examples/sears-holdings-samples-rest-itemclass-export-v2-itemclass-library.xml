@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item-class-library xmlns="http://seller.marketplace.sears.com/catalog/v2" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://seller.marketplace.sears.com/catalog/v2 itemclass-library.xsd ">
+  <item-class id="548">
+		<name><![CDATA[Appliances|Air Treatment Equipment|Dehumidifiers]]></name>
+		<used-or-refurbished-eligibility>
+			<program>fbm</program>
+		</used-or-refurbished-eligibility>
+	</item-class>
+	<item-class id="549">
+		<name><![CDATA[Appliances|Air Treatment Equipment|Humidifiers]]></name>
+		<used-or-refurbished-eligibility>
+			<program>fbs</program>
+		</used-or-refurbished-eligibility>
+	</item-class>
+	<item-class id="2158">
+		<name><![CDATA[Bed Bath & Home|Dining|Picnic Sets]]></name>
+		<commission-rates>
+			<commission-rate site-name="Sears" program-type="cpc">0.10</commission-rate>
+			<commission-rate site-name="Sears" program-type="fbm">0.10</commission-rate>	
+			<commission-rate site-name="Sears" program-type="fbs">0.10</commission-rate>		
+		</commission-rates>
+		<used-or-refurbished-eligibility>
+			<program>fbm</program>
+			<program>fbs</program>
+		</used-or-refurbished-eligibility>
+	</item-class>
+</item-class-library>

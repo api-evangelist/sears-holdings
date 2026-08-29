@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://seller.marketplace.sears.com/inventory/v5"
+           targetNamespace="http://seller.marketplace.sears.com/inventory/v5"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="seller-product-id-type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="program-type-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FBM"/>
+            <xs:enumeration value="FBS"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- definition of complex types -->
+    <xs:complexType name="inventory-levels-type">
+        <xs:sequence>
+            <xs:element name="on-hand-quantity" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="reserved-quantity" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="available-quantity" type="xs:integer" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="low-inventory-threshold" type="xs:integer" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="location-type">
+        <xs:sequence>
+            <xs:element name="inventory-levels" type="inventory-levels-type" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="pick-up-now-eligible" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="inventory-timestamp" type="xs:dateTime" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="location-id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="locations-type">
+        <xs:sequence>
+            <xs:element name="location" type="location-type" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="item-type">
+        <xs:sequence>
+            <xs:element name="locations" type="locations-type" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="seller-product-id" type="seller-product-id-type" use="required"/>
+        <xs:attribute name="variation-group-id" type="xs:string" use="optional"/>
+        <xs:attribute name="program-type" type="program-type-type" use="required"/>
+    </xs:complexType>
+
+    <!-- definition of complex elements -->
+    <xs:element name="inventory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="deprecated" type="xs:date" maxOccurs="1" minOccurs="0"/>
+                <xs:element name="item" type="item-type" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="seller-id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

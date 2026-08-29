@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<store-item-details xmlns="http://seller.marketplace.sears.com/catalog/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://seller.marketplace.sears.com/catalog/v3 ../../../../../rest/sopt/import/v3/item-sopt-details.xsd">
+	<item item-id="10">
+        <locations>
+            <location location-id="20">
+                <order-prep-time>
+                	<time>12096</time>
+                	<units>MINUTES</units>
+                </order-prep-time>
+            </location>
+            <location location-id="22">
+                <order-prep-time>
+                	<time>14</time>
+                	<units>DAYS</units>
+                </order-prep-time>
+            </location>
+        </locations>
+    </item>
+    <item item-id="100">
+        <locations>
+            <location location-id="120">
+                <clear-order-prep-time>true</clear-order-prep-time>
+            </location>
+        </locations>
+    </item>
+</store-item-details>

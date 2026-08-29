@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/catalog/v7"
+           targetNamespace="http://seller.marketplace.sears.com/catalog/v7"
+           elementFormDefault="qualified">
+    <xs:attributeGroup name="location-id-attr">
+        <xs:attribute name="location-id" type="xs:string" use="required"/>
+    </xs:attributeGroup>
+    <xs:simpleType name="item-id-type">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- definition of complex types -->
+    <xs:complexType name="location-type">
+        <xs:sequence>
+            <xs:element name="quantity" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="low-inventory-threshold" type="xs:integer" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="pick-up-now-eligible" type="xs:boolean" maxOccurs="1" minOccurs="1"/>
+            <!-- To update inventory please provide the latest inventory-timestamp. If inventory-timestamp is earlier than available in Seller Portal, the update will be ignored -->
+            <xs:element name="inventory-timestamp" type="xs:dateTime" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="location-id-attr"/>
+    </xs:complexType>
+    <xs:complexType name="locations-type">
+        <xs:sequence>
+            <xs:element name="location" type="location-type" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="item-type">
+        <xs:sequence>
+            <xs:element name="locations" type="locations-type" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="item-id" type="item-id-type" use="required"/>
+    </xs:complexType>
+
+    <!-- definition of complex elements -->
+    <xs:element name="store-inventory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="deprecated" type="xs:date" maxOccurs="1" minOccurs="0"/>
+                <xs:element name="item" type="item-type" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

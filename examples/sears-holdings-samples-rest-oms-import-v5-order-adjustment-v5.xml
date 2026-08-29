@@ -1,0 +1,53 @@
+<order-adjustment-feed xmlns="http://seller.marketplace.sears.com/oms/v5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://seller.marketplace.sears.com/oms/v5 order-adjustment.xsd ">
+<date-time-stamp>2013-01-28T12:00:00</date-time-stamp>
+<order-adjustment>
+<oa-header>
+<po-number>5225664477743</po-number>
+<po-date>2013-01-18</po-date>
+</oa-header>
+<oa-detail>
+<shipping-adjustment>
+<adjustment-unique-id>784567_shipping</adjustment-unique-id>
+<refund-amount>
+<amount-in-dollars>1.6000</amount-in-dollars>
+</refund-amount>
+<refund-reason>Shipping Charge</refund-reason>
+<refund-date>2013-01-29</refund-date>
+</shipping-adjustment>
+<sale-adjustment>
+<line-number>1</line-number>
+<item-id>ZZZ-601633</item-id>
+<return>
+<return-unique-id>784567</return-unique-id>
+<return-amount>
+<amount-in-dollars>77.34</amount-in-dollars>
+</return-amount>
+<return-reason>MP-SUBSCRIPTION-ITEM-CANCELLED</return-reason>
+<return-date>2013-01-29</return-date>
+<quantity>10</quantity>
+<memo>
+<internal-memo>Wrong shipping method</internal-memo>
+<external-memo>Shipping Delay</external-memo>
+</memo>
+</return>
+</sale-adjustment>
+<sale-adjustment>
+<line-number>2</line-number>
+<item-id>productForOrder1</item-id>
+<return>
+<return-unique-id>984567</return-unique-id>
+<return-amount>
+<amount-in-dollars>77.34</amount-in-dollars>
+</return-amount>
+<return-reason>GENERAL-ADJUSTMENT</return-reason>
+<return-date>2013-01-29</return-date>
+<quantity>10</quantity>
+<memo>
+<internal-memo>Wrong shipping method</internal-memo>
+<external-memo>Shipping Delay</external-memo>
+</memo>
+</return>
+</sale-adjustment>
+</oa-detail>
+</order-adjustment>
+</order-adjustment-feed>

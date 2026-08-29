@@ -1,0 +1,131 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/docs/api-guide/current-api-versions/
+docs: https://marketplace.sears.com/docs/api-guide/
+api: Sears Marketplace Seller API
+versioning:
+  scheme: per-API integer version in the URL path and the XML target namespace
+  global_version: false
+  current_by_api:
+    - api: Item Management
+      version: 25
+      released: '2018-10-31'
+    - api: Item Management using Sears Catalog
+      version: 1
+    - api: Item Class Library
+      version: 2
+    - api: Attribute Library
+      version: 4
+      released: '2014-09-10'
+    - api: Inventory Management
+      version: 7
+      released: '2015-04-15'
+    - api: Pricing Management
+      version: 6
+      released: '2017-07-12'
+    - api: FBM Purchase Order Management
+      version: 19
+      released: '2022-12-15'
+    - api: Order Cancellation
+      version: 1
+    - api: Customer Cancellation API Management
+      version: 1
+      released: '2014-11-19'
+    - api: FBM Order Adjustment Management (Refunds and Returns)
+      version: 5
+      released: '2019-03-13'
+    - api: Customer Order Returns REST GET
+      version: 1
+      released: '2016-01-13'
+    - api: FBM Order Returns Response
+      version: 1
+      released: '2016-01-13'
+    - api: FBM ASN / Shipment Updates Management
+      version: 7
+      released: '2015-10-28'
+    - api: Shipping Carrier and Shipping Method List
+      version: 1
+      released: '2015-10-28'
+    - api: Order Prep Time / Lead Time
+      version: 3
+    - api: Service Item API
+      version: 1
+      released: '2021-04-15'
+    - api: Remittance Report
+      version: 9
+      released: '2022-12-15'
+    - api: Removed Items Report
+      version: 1
+      released: '2013-11-13'
+    - api: Processing Report
+      version: 2
+    - api: Create Purchase Order (sandbox only)
+      version: 1
+      released: '2015-09-23'
+deprecation:
+  policy_published: true
+  policy_url: https://marketplace.sears.com/docs/api-guide/current-api-versions/
+  mechanism: >-
+    Deprecation is expressed in two places. The published Current API Versions table lists every
+    still-supported version of each API alongside the current one and marks superseded ones, and
+    the shared api-response envelope carries an optional <deprecated> element typed xs:date - so a
+    live call can tell a client, in-band, the date its version stops being supported.
+  in_band_signal:
+    element: deprecated
+    type: xs:date
+    schema: xsd/sears-holdings-shared-api-response-v1.xsd
+    note: >-
+      This is a real machine-readable deprecation signal in the contract itself. It is the RFC 8594
+      Deprecation header idea expressed as an XML element rather than an HTTP header.
+  sunset_header: false
+  rfc8594: false
+  multi_version_support: >-
+    Multiple versions of the same API remain callable at once - purchase order v13, v15, v18 and
+    v19 are all listed as current. Deprecations are announced against the older ones (the guide
+    marks Order Adjustment v4 as "will be deprecated" and notes that all versions before Item
+    Management v22 and Inventory v7 are already deprecated) rather than removed abruptly.
+  deprecated_versions:
+    - api: FBM Order Adjustment Management
+      version: 4
+      status: announced for deprecation
+    - api: Item Management
+      note: all versions before v22 are deprecated
+    - api: Inventory Management
+      note: all versions before v7 are deprecated
+    - api: Authentication via email/password in the URL
+      retired: '2016-03-31'
+      status: removed, calls rejected
+    - api: Program types DSS and FBS
+      status: no longer supported; only FBM remains
+status_page:
+  published: false
+  probed:
+    - url: https://status.sears.com
+      status: 0
+      note: no DNS/TLS listener
+  note: >-
+    No status page, uptime dashboard or incident feed is published for the Seller API. Operational
+    notice is delivered by email instead - the provider sends ASN rejection notices from
+    mp_notifications@transformco.com and release announcements the week of an anticipated release.
+    No StatusPage pointer is emitted, because none exists.
+sla:
+  published: false
+  note: >-
+    No availability or response-time SLA is published on the public seller docs. The only stated
+    timing commitments are operational deadlines on the SELLER - an ASN error corrected before the
+    top of the hour avoids the rejection email, and an unclosed order is auto-cancelled at 30 days
+    overdue with no payment.
+release_communication:
+  channel: email to registered Seller Portal users
+  cadence: irregular, announced the week of an anticipated release date
+  changelog: changelog/sears-holdings-changelog.yml
+corporate_lifecycle:
+  note: >-
+    Worth recording for a company profiled under the name Sears Holdings. Sears Holdings
+    Corporation filed for Chapter 11 in October 2018; its retail operations were acquired in 2019
+    by Transform Holdco LLC (Transformco / Transform SR Brands LLC), which operates Sears.com,
+    Kmart.com and ShopYourWay.com today and owns the API documented here. The former corporate
+    hosts have not survived - https://www.sears-holdings.com and https://www.searsholdings.com
+    both fail TLS entirely, serving a certificate for transformco.com that does not match the
+    requested host, so the previous Website pointer in this profile was dead and has been
+    repointed at https://transformco.com.

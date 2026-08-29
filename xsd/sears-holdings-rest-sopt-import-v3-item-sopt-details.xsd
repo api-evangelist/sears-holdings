@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/catalog/v3" 
+	targetNamespace="http://seller.marketplace.sears.com/catalog/v3"
+    elementFormDefault="qualified"
+>
+
+    <xs:attributeGroup name="location-id-attr">
+        <xs:attribute name="location-id" type="xs:string" use="required" />
+    </xs:attributeGroup>
+    <xs:simpleType name="item-id-type">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+		    <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- definition of complex types -->
+    <xs:complexType name="order-prep-time-type">
+        <xs:sequence>
+            <xs:element name="time" type="xs:nonNegativeInteger" maxOccurs="1" minOccurs="1" />
+            <xs:element name="units" maxOccurs="1" minOccurs="1">
+            	<xs:simpleType>
+        			<xs:restriction base="xs:string">
+			            <xs:enumeration value="DAYS" />
+			            <xs:enumeration value="Days" />
+			            <xs:enumeration value="days" />
+            			<xs:enumeration value="HOURS" />
+            			<xs:enumeration value="Hours" />
+            			<xs:enumeration value="hours" />
+            			<xs:enumeration value="MINUTES" />
+            			<xs:enumeration value="Minutes" />
+            			<xs:enumeration value="minutes" />
+			        </xs:restriction>
+    			</xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="location-type">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="1">
+            	<xs:annotation>
+                	<xs:documentation>
+                		If order-prep-time element is populated in the XML then it overrides the seller level shipping order-prep-time or order-prep-time value for the given location. Max of 14 days.
+                			1. For shipping/ware house location, the time must be in days only.
+                			2. For pick-up location, the time can be in one of these formats: days, hours, and minutes.
+                		If clear-order-prep-time = true in the XML then existing item level order-prep-time will be cleared. System uses seller level order-prep-time for the given location.
+                	</xs:documentation>
+               	</xs:annotation>
+				<xs:element name="order-prep-time" type="order-prep-time-type" /> 
+				<xs:element name="clear-order-prep-time" type="xs:boolean" />
+			</xs:choice>      		
+        </xs:sequence>
+        <xs:attributeGroup ref="location-id-attr" />
+    </xs:complexType>
+    <xs:complexType name="locations-type">
+        <xs:sequence>
+            <xs:element name="location" type="location-type" maxOccurs="unbounded" minOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="item-type">
+        <xs:sequence>
+            <xs:element name="locations" type="locations-type" maxOccurs="1" minOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="item-id" type="item-id-type" use="required" />
+    </xs:complexType>
+
+    <!-- definition of complex elements -->
+    <xs:element name="store-item-details">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="deprecated" type="xs:date" maxOccurs="1" minOccurs="0" />
+                <xs:element name="item" type="item-type" maxOccurs="unbounded" minOccurs="0" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory xmlns="http://seller.marketplace.sears.com/inventory/v5"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://seller.marketplace.sears.com/inventory/v5 ../../../../../rest/inventory/export/v5/item-inventory-public.xsd"
+           seller-id="1001">
+    <deprecated>2001-01-01</deprecated>
+    <item program-type="FBM" seller-product-id="10">
+        <locations>
+            <location location-id="20">
+                <inventory-levels>
+                    <on-hand-quantity>20</on-hand-quantity>
+                    <reserved-quantity>5</reserved-quantity>
+                    <available-quantity>15</available-quantity>
+                    <low-inventory-threshold>5</low-inventory-threshold>
+                </inventory-levels>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+                <inventory-timestamp>2012-03-30T09:05:30</inventory-timestamp>
+            </location>
+            <location location-id="21">
+                <inventory-levels>
+                    <on-hand-quantity>20</on-hand-quantity>
+                    <reserved-quantity>5</reserved-quantity>
+                    <available-quantity>15</available-quantity>
+                    <low-inventory-threshold>5</low-inventory-threshold>
+                </inventory-levels>
+                <pick-up-now-eligible>false</pick-up-now-eligible>
+                <inventory-timestamp>2012-03-30T09:07:20</inventory-timestamp>
+            </location>
+            <location location-id="22">
+                <inventory-levels>
+                    <on-hand-quantity>20</on-hand-quantity>
+                    <reserved-quantity>9</reserved-quantity>
+                    <available-quantity>11</available-quantity>
+                    <low-inventory-threshold>5</low-inventory-threshold>
+                </inventory-levels>
+                <pick-up-now-eligible>false</pick-up-now-eligible>
+                <inventory-timestamp>2012-03-30T09:05:30</inventory-timestamp>
+            </location>
+        </locations>
+    </item>
+    <item program-type="FBM" seller-product-id="101" variation-group-id="VAR123">
+        <locations>
+            <location location-id="20">
+                <inventory-levels>
+                    <on-hand-quantity>20</on-hand-quantity>
+                    <reserved-quantity>5</reserved-quantity>
+                    <available-quantity>15</available-quantity>
+                    <low-inventory-threshold>5</low-inventory-threshold>
+                </inventory-levels>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+                <inventory-timestamp>2013-09-17T09:05:30</inventory-timestamp>
+            </location>
+        </locations>
+    </item>
+    <item program-type="FBM" seller-product-id="102" variation-group-id="VAR123">
+        <locations>
+            <location location-id="20">
+                <inventory-levels>
+                    <on-hand-quantity>20</on-hand-quantity>
+                    <reserved-quantity>5</reserved-quantity>
+                    <available-quantity>15</available-quantity>
+                    <low-inventory-threshold>5</low-inventory-threshold>
+                </inventory-levels>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+                <inventory-timestamp>2013-09-17T09:05:30</inventory-timestamp>
+            </location>
+        </locations>
+    </item>
+</inventory>

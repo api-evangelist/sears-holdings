@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://seller.marketplace.sears.com/catalog/v1" targetNamespace="http://seller.marketplace.sears.com/catalog/v1" elementFormDefault="qualified">
+	<xs:element name="catalog-feed">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="service-catalog" type="service-catalog-type" maxOccurs="1" minOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="service-catalog-type">
+		<xs:sequence>
+			<xs:element ref="items" maxOccurs="1" minOccurs="0"/>
+			<xs:element ref="items-to-delete" maxOccurs="1" minOccurs="0"/>
+			<xs:element ref="items-to-inactivate" maxOccurs="1" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="items" type="items-type"/>
+	<xs:element name="items-to-delete" type="items-to-delete" />
+	<xs:element name="items-to-inactivate" type="items-to-inactivate" />
+	
+	<xs:complexType name="items-to-delete">
+		<xs:sequence>
+			<xs:element name="item-to-delete" type="item-to-delete" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="items-to-inactivate">
+		<xs:sequence>
+			<xs:element name="item-to-inactivate" type="item-to-inactivate" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="item-to-delete">
+		<xs:sequence>
+			<xs:element ref="item-id" maxOccurs="unbounded" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="item-to-inactivate">
+		<xs:sequence>
+			<xs:element ref="item-id" maxOccurs="unbounded" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="items-type">
+		<xs:sequence>
+			<xs:element name="item" type="item-type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="item-type">
+		<xs:sequence>
+			<xs:element ref="item-id" maxOccurs="1" minOccurs="1"/>
+			<xs:element ref="item-class-id" maxOccurs="1" minOccurs="1"/>
+			<xs:element ref="zipcodes"  maxOccurs="1" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="item-class-id" type="item-class-type"/>
+	<xs:element name="item-id" type="item-id-type"/>
+	<xs:element name="zipcodes" type="zipcodes-type"/>
+	<xs:simpleType name="item-id-type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="item-class-type">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="zipcodes-type">
+		<xs:sequence>
+			<xs:element name="zipcode" type="zipcode-type" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zipcode-type">
+		<xs:sequence>
+			<xs:element name="id" type="zipcode-id-type" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="price" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="status" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="zipcode-id-type">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]+"/>
+			<xs:minLength value="5"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,18 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://seller.marketplace.sears.com/shared/v1" targetNamespace="http://seller.marketplace.sears.com/shared/v1"
+	elementFormDefault="qualified">
+
+	<!-- definition of complex elements -->
+	<xs:element name="api-response">
+		<xs:complexType>
+			<xs:sequence>
+                <xs:element name="deprecated" type="xs:date" maxOccurs="1" minOccurs="0"/>
+				<xs:choice minOccurs="1" maxOccurs="1">
+					<xs:element name="document-id" type="xs:positiveInteger" />
+					<xs:element name="error-detail" type="xs:string" />
+					<xs:element name="processing-message" type="xs:string" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

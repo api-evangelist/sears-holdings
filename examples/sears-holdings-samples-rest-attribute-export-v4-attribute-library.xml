@@ -1,0 +1,4174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<attribute-library xmlns="http://seller.marketplace.sears.com/catalog/v4"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://env05.ca.s.com/SellerPortal/s/schema/rest/attribute/export/v4/attribute-library.xsd"><!--Generated on host [app1] -->
+	<attributes item-class-id="3080">
+		<attribute id="284601">
+			<name><![CDATA[Impact or Standard]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="3568">
+					<name><![CDATA[Impact]]></name>
+				</value>
+				<value id="1268101">
+					<name><![CDATA[Impact/Standard]]></name>
+				</value>
+				<value id="134">
+					<name><![CDATA[Standard]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="194">
+			<name><![CDATA[Kit/Set Type]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="41247">
+					<name><![CDATA[Pencil sharpener kit]]></name>
+				</value>
+				<value id="41055">
+					<name><![CDATA[All-purpose set]]></name>
+				</value>
+				<value id="33785">
+					<name><![CDATA[Compound Leverage Offset Aviation Snips]]></name>
+				</value>
+				<value id="33702">
+					<name><![CDATA[Standard, Metric, and Torx(R) Sets]]></name>
+				</value>
+				<value id="34943">
+					<name><![CDATA[Wood Carving Kit]]></name>
+				</value>
+				<value id="33817">
+					<name><![CDATA[Combination Line Clamp and Plug Pliers Set]]></name>
+				</value>
+				<value id="33276">
+					<name><![CDATA[Compound Miter Saw Kit]]></name>
+				</value>
+				<value id="33335">
+					<name><![CDATA[Scumbuster scrubber kit]]></name>
+				</value>
+				<value id="33436">
+					<name><![CDATA[Orbital Wax and Polish Kit]]></name>
+				</value>
+				<value id="33439">
+					<name><![CDATA[Scroll saw sign layout kit]]></name>
+				</value>
+				<value id="32970">
+					<name><![CDATA[Cable Splicer Kit]]></name>
+				</value>
+				<value id="33144">
+					<name><![CDATA[Miter Saw Clamp Kit]]></name>
+				</value>
+				<value id="33176">
+					<name><![CDATA[Driver Light (TM) Set]]></name>
+				</value>
+				<value id="33237">
+					<name><![CDATA[Masonry Drill Bit Set]]></name>
+				</value>
+				<value id="32839">
+					<name><![CDATA[Pilot Arbor Set]]></name>
+				</value>
+				<value id="32890">
+					<name><![CDATA[Changing Pad Set]]></name>
+				</value>
+				<value id="32893">
+					<name><![CDATA[Drywall Tool Kit]]></name>
+				</value>
+				<value id="32910">
+					<name><![CDATA[Power Groove Set]]></name>
+				</value>
+				<value id="32403">
+					<name><![CDATA[Mini Tools]]></name>
+				</value>
+				<value id="32471">
+					<name><![CDATA[Jig Saw Kit]]></name>
+				</value>
+				<value id="32546">
+					<name><![CDATA[Airbrush Kit]]></name>
+				</value>
+				<value id="32635">
+					<name><![CDATA[Inflation Kit]]></name>
+				</value>
+				<value id="696101">
+					<name><![CDATA[Ignition wrench set]]></name>
+				</value>
+				<value id="9475">
+					<name><![CDATA[Home owners set]]></name>
+				</value>
+				<value id="9427">
+					<name><![CDATA[Dust collection kit]]></name>
+				</value>
+				<value id="9505">
+					<name><![CDATA[Universal joint set]]></name>
+				</value>
+				<value id="9478">
+					<name><![CDATA[Hex bit socket set]]></name>
+				</value>
+				<value id="9690">
+					<name><![CDATA[Voltage tester kit]]></name>
+				</value>
+				<value id="9634">
+					<name><![CDATA[Punch set]]></name>
+				</value>
+				<value id="10508">
+					<name><![CDATA[Pit crew tool set]]></name>
+				</value>
+				<value id="10064">
+					<name><![CDATA[Woodworkers set]]></name>
+				</value>
+				<value id="8753">
+					<name><![CDATA[Scraper set]]></name>
+				</value>
+				<value id="8752">
+					<name><![CDATA[Gear puller set]]></name>
+				</value>
+				<value id="9036">
+					<name><![CDATA[Foundation frame kit]]></name>
+				</value>
+				<value id="8934">
+					<name><![CDATA[Conversion kit]]></name>
+				</value>
+				<value id="9038">
+					<name><![CDATA[Concrete anchor kit]]></name>
+				</value>
+				<value id="9037">
+					<name><![CDATA[Ground anchor kit]]></name>
+				</value>
+				<value id="9236">
+					<name><![CDATA[Storage kit]]></name>
+				</value>
+				<value id="9067">
+					<name><![CDATA[Safety kit]]></name>
+				</value>
+				<value id="8392">
+					<name><![CDATA[Bolt extractor]]></name>
+				</value>
+				<value id="8422">
+					<name><![CDATA[Disconnect kit]]></name>
+				</value>
+				<value id="8539">
+					<name><![CDATA[Lighting]]></name>
+				</value>
+				<value id="8658">
+					<name><![CDATA[Sanding disc set]]></name>
+				</value>
+				<value id="8697">
+					<name><![CDATA[Weight set]]></name>
+				</value>
+				<value id="8739">
+					<name><![CDATA[SAE ball hex bit socket set]]></name>
+				</value>
+				<value id="8740">
+					<name><![CDATA[Metric ball hex bit socket set]]></name>
+				</value>
+				<value id="8748">
+					<name><![CDATA[Pen turning set]]></name>
+				</value>
+				<value id="8274">
+					<name><![CDATA[Telescope gauge set]]></name>
+				</value>
+				<value id="8288">
+					<name><![CDATA[Torque screwdriver set]]></name>
+				</value>
+				<value id="8295">
+					<name><![CDATA[Diamond wheel point set]]></name>
+				</value>
+				<value id="8296">
+					<name><![CDATA[Punch and alignment set]]></name>
+				</value>
+				<value id="8308">
+					<name><![CDATA[Ratcheting wrench set]]></name>
+				</value>
+				<value id="8330">
+					<name><![CDATA[Adapter set]]></name>
+				</value>
+				<value id="8333">
+					<name><![CDATA[Drift punch set]]></name>
+				</value>
+				<value id="8370">
+					<name><![CDATA[Air tool accessory kit]]></name>
+				</value>
+				<value id="25552">
+					<name><![CDATA[Regulator and hose kit]]></name>
+				</value>
+				<value id="25545">
+					<name><![CDATA[Scraper kit]]></name>
+				</value>
+				<value id="25239">
+					<name><![CDATA[Healthcare organizer set]]></name>
+				</value>
+				<value id="24419">
+					<name><![CDATA[Joist hanger]]></name>
+				</value>
+				<value id="32387">
+					<name><![CDATA[Bumper Set]]></name>
+				</value>
+				<value id="31355">
+					<name><![CDATA[Micro screwdrivers]]></name>
+				</value>
+				<value id="30033">
+					<name><![CDATA[Infant bedding set]]></name>
+				</value>
+				<value id="26917">
+					<name><![CDATA[Diaper bag set]]></name>
+				</value>
+				<value id="21990">
+					<name><![CDATA[Automotive]]></name>
+				</value>
+				<value id="21522">
+					<name><![CDATA[Impact ratchet]]></name>
+				</value>
+				<value id="19847">
+					<name><![CDATA[Communication test set]]></name>
+				</value>
+				<value id="19846">
+					<name><![CDATA[Tone and probe kit]]></name>
+				</value>
+				<value id="24367">
+					<name><![CDATA[Impact racing kit]]></name>
+				</value>
+				<value id="24288">
+					<name><![CDATA[Chisel set]]></name>
+				</value>
+				<value id="22663">
+					<name><![CDATA[Dryer]]></name>
+				</value>
+				<value id="22112">
+					<name><![CDATA[Screwdriver(s)]]></name>
+				</value>
+				<value id="18905">
+					<name><![CDATA[Garage door opener]]></name>
+				</value>
+				<value id="18915">
+					<name><![CDATA[Wobble extension set]]></name>
+				</value>
+				<value id="18611">
+					<name><![CDATA[Bushing]]></name>
+				</value>
+				<value id="18650">
+					<name><![CDATA[Puller set]]></name>
+				</value>
+				<value id="19114">
+					<name><![CDATA[Refill kit]]></name>
+				</value>
+				<value id="19115">
+					<name><![CDATA[Painting kit]]></name>
+				</value>
+				<value id="19082">
+					<name><![CDATA[Window kit]]></name>
+				</value>
+				<value id="19083">
+					<name><![CDATA[Garage door bottom]]></name>
+				</value>
+				<value id="12993">
+					<name><![CDATA[Marine tool set]]></name>
+				</value>
+				<value id="12994">
+					<name><![CDATA[Motorcyle tool set]]></name>
+				</value>
+				<value id="12715">
+					<name><![CDATA[Cut-off wheel set]]></name>
+				</value>
+				<value id="12842">
+					<name><![CDATA[Masonry cutting disc set]]></name>
+				</value>
+				<value id="18484">
+					<name><![CDATA[Funnel set]]></name>
+				</value>
+				<value id="18523">
+					<name><![CDATA[Snap ring]]></name>
+				</value>
+				<value id="13987">
+					<name><![CDATA[Aviation set]]></name>
+				</value>
+				<value id="18441">
+					<name><![CDATA[Tap and drill]]></name>
+				</value>
+				<value id="4201">
+					<name><![CDATA[Grooming set]]></name>
+				</value>
+				<value id="4186">
+					<name><![CDATA[Bathtub set]]></name>
+				</value>
+				<value id="4636">
+					<name><![CDATA[Chisels]]></name>
+				</value>
+				<value id="4283">
+					<name><![CDATA[Bedding set]]></name>
+				</value>
+				<value id="2924">
+					<name><![CDATA[Barbeque set]]></name>
+				</value>
+				<value id="2923">
+					<name><![CDATA[Cutter set]]></name>
+				</value>
+				<value id="3684">
+					<name><![CDATA[Tool set]]></name>
+				</value>
+				<value id="3421">
+					<name><![CDATA[Quick connect kit]]></name>
+				</value>
+				<value id="2911">
+					<name><![CDATA[Nut driver sets]]></name>
+				</value>
+				<value id="2910">
+					<name><![CDATA[Bit set]]></name>
+				</value>
+				<value id="2921">
+					<name><![CDATA[Punch, chisel & alignment tool set]]></name>
+				</value>
+				<value id="2917">
+					<name><![CDATA[Impact driver set]]></name>
+				</value>
+				<value id="2833">
+					<name><![CDATA[Rethread die set]]></name>
+				</value>
+				<value id="2805">
+					<name><![CDATA[General purpose tool kit]]></name>
+				</value>
+				<value id="2902">
+					<name><![CDATA[Metric combination]]></name>
+				</value>
+				<value id="2835">
+					<name><![CDATA[Screwdriver bit wrench set]]></name>
+				</value>
+				<value id="5207">
+					<name><![CDATA[Sander kit]]></name>
+				</value>
+				<value id="5239">
+					<name><![CDATA[Circular saw kit]]></name>
+				</value>
+				<value id="5275">
+					<name><![CDATA[Repair kit]]></name>
+				</value>
+				<value id="5282">
+					<name><![CDATA[Sanding kit]]></name>
+				</value>
+				<value id="5149">
+					<name><![CDATA[First aid kit]]></name>
+				</value>
+				<value id="5166">
+					<name><![CDATA[Drill attachment kit]]></name>
+				</value>
+				<value id="5174">
+					<name><![CDATA[Drill / driver]]></name>
+				</value>
+				<value id="5206">
+					<name><![CDATA[Belt sander kit]]></name>
+				</value>
+				<value id="4817">
+					<name><![CDATA[Tire, battery, hose or tail pipe tool]]></name>
+				</value>
+				<value id="4831">
+					<name><![CDATA[Gift set]]></name>
+				</value>
+				<value id="4945">
+					<name><![CDATA[Brake honer replacement set]]></name>
+				</value>
+				<value id="4955">
+					<name><![CDATA[Ignition set]]></name>
+				</value>
+				<value id="4749">
+					<name><![CDATA[Screwdriver set]]></name>
+				</value>
+				<value id="4769">
+					<name><![CDATA[Snip sets]]></name>
+				</value>
+				<value id="4796">
+					<name><![CDATA[SAE socket]]></name>
+				</value>
+				<value id="4797">
+					<name><![CDATA[Socket wrench set]]></name>
+				</value>
+				<value id="2415">
+					<name><![CDATA[Molding cutter]]></name>
+				</value>
+				<value id="2371">
+					<name><![CDATA[Rotary tool set]]></name>
+				</value>
+				<value id="2356">
+					<name><![CDATA[Carbide arbor set]]></name>
+				</value>
+				<value id="2351">
+					<name><![CDATA[File set]]></name>
+				</value>
+				<value id="2276">
+					<name><![CDATA[Flaring tool]]></name>
+				</value>
+				<value id="2082">
+					<name><![CDATA[Sharpening kit]]></name>
+				</value>
+				<value id="2055">
+					<name><![CDATA[Metric socket]]></name>
+				</value>
+				<value id="2054">
+					<name><![CDATA[Combination socket]]></name>
+				</value>
+				<value id="2029">
+					<name><![CDATA[Soldering gun/iron]]></name>
+				</value>
+				<value id="1871">
+					<name><![CDATA[Nail set]]></name>
+				</value>
+				<value id="1751">
+					<name><![CDATA[Vacuum kit]]></name>
+				</value>
+				<value id="1743">
+					<name><![CDATA[Drill bit]]></name>
+				</value>
+				<value id="1708">
+					<name><![CDATA[Test Kit]]></name>
+				</value>
+				<value id="1690">
+					<name><![CDATA[Hose repair kit]]></name>
+				</value>
+				<value id="1689">
+					<name><![CDATA[Tool care kit]]></name>
+				</value>
+				<value id="1688">
+					<name><![CDATA[Compressor accessory kit]]></name>
+				</value>
+				<value id="2733">
+					<name><![CDATA[Hammer set]]></name>
+				</value>
+				<value id="2736">
+					<name><![CDATA[Assorted tool set]]></name>
+				</value>
+				<value id="2721">
+					<name><![CDATA[Precision screwdriver]]></name>
+				</value>
+				<value id="2722">
+					<name><![CDATA[Mini pliers]]></name>
+				</value>
+				<value id="2675">
+					<name><![CDATA[Buffing wheel compound set]]></name>
+				</value>
+				<value id="2694">
+					<name><![CDATA[Compound leverage aviation snips]]></name>
+				</value>
+				<value id="2613">
+					<name><![CDATA[Clamping set]]></name>
+				</value>
+				<value id="2648">
+					<name><![CDATA[Combination wrench]]></name>
+				</value>
+				<value id="2586">
+					<name><![CDATA[Hex screwdriver bit set]]></name>
+				</value>
+				<value id="2587">
+					<name><![CDATA[Hex key set]]></name>
+				</value>
+				<value id="2510">
+					<name><![CDATA[Finish nailer kit]]></name>
+				</value>
+				<value id="2518">
+					<name><![CDATA[Random orbit sanding pad kit]]></name>
+				</value>
+				<value id="2490">
+					<name><![CDATA[Pin punch set]]></name>
+				</value>
+				<value id="2495">
+					<name><![CDATA[Torque socket]]></name>
+				</value>
+				<value id="2459">
+					<name><![CDATA[Brad nailer kit]]></name>
+				</value>
+				<value id="2461">
+					<name><![CDATA[Stapler kit]]></name>
+				</value>
+				<value id="7074">
+					<name><![CDATA[Welding set]]></name>
+				</value>
+				<value id="6916">
+					<name><![CDATA[Pool table accessory kit]]></name>
+				</value>
+				<value id="7156">
+					<name><![CDATA[Turning tool set]]></name>
+				</value>
+				<value id="7079">
+					<name><![CDATA[Filter installation kit]]></name>
+				</value>
+				<value id="7308">
+					<name><![CDATA[Tap socket set]]></name>
+				</value>
+				<value id="7210">
+					<name><![CDATA[Accessory set]]></name>
+				</value>
+				<value id="7313">
+					<name><![CDATA[Car cleaning kit]]></name>
+				</value>
+				<value id="7309">
+					<name><![CDATA[Torx bit set]]></name>
+				</value>
+				<value id="6703">
+					<name><![CDATA[Punch, chisel and alignment set]]></name>
+				</value>
+				<value id="6628">
+					<name><![CDATA[Field technician]]></name>
+				</value>
+				<value id="6716">
+					<name><![CDATA[Tap and die set]]></name>
+				</value>
+				<value id="6712">
+					<name><![CDATA[Machinist's tool kit]]></name>
+				</value>
+				<value id="6733">
+					<name><![CDATA[Plumber's repair kit]]></name>
+				</value>
+				<value id="6719">
+					<name><![CDATA[Precision tool set]]></name>
+				</value>
+				<value id="6770">
+					<name><![CDATA[Drag link set]]></name>
+				</value>
+				<value id="6734">
+					<name><![CDATA[MIG conversion kit]]></name>
+				</value>
+				<value id="7609">
+					<name><![CDATA[Home maintenance set]]></name>
+				</value>
+				<value id="7698">
+					<name><![CDATA[Socket and bit set]]></name>
+				</value>
+				<value id="7712">
+					<name><![CDATA[Bit socket set]]></name>
+				</value>
+				<value id="7734">
+					<name><![CDATA[Knife set]]></name>
+				</value>
+				<value id="7772">
+					<name><![CDATA[Torque wrench and accessories]]></name>
+				</value>
+				<value id="7999">
+					<name><![CDATA[Bit wrench set]]></name>
+				</value>
+				<value id="8236">
+					<name><![CDATA[Auto tool kit]]></name>
+				</value>
+				<value id="8237">
+					<name><![CDATA[Multi-tool and knife set]]></name>
+				</value>
+				<value id="7343">
+					<name><![CDATA[Hobby tool set]]></name>
+				</value>
+				<value id="7349">
+					<name><![CDATA[Pickle fork kit]]></name>
+				</value>
+				<value id="7433">
+					<name><![CDATA[Micrometer set]]></name>
+				</value>
+				<value id="7434">
+					<name><![CDATA[Base depth set]]></name>
+				</value>
+				<value id="7464">
+					<name><![CDATA[Blade set]]></name>
+				</value>
+				<value id="7465">
+					<name><![CDATA[Mounting Kit]]></name>
+				</value>
+				<value id="7475">
+					<name><![CDATA[Metal preparation kit]]></name>
+				</value>
+				<value id="7530">
+					<name><![CDATA[Backing disc set]]></name>
+				</value>
+				<value id="5523">
+					<name><![CDATA[Punch/chisel set]]></name>
+				</value>
+				<value id="5521">
+					<name><![CDATA[Screwdriver bit/nutdriver set]]></name>
+				</value>
+				<value id="5520">
+					<name><![CDATA[Screwdriver bit set]]></name>
+				</value>
+				<value id="5516">
+					<name><![CDATA[Air tool lubrication kit]]></name>
+				</value>
+				<value id="5591">
+					<name><![CDATA[Insert bit set]]></name>
+				</value>
+				<value id="5587">
+					<name><![CDATA[Power bit set]]></name>
+				</value>
+				<value id="5584">
+					<name><![CDATA[Vise clamp kit]]></name>
+				</value>
+				<value id="5581">
+					<name><![CDATA[Jack set]]></name>
+				</value>
+				<value id="5373">
+					<name><![CDATA[Flashlight set]]></name>
+				</value>
+				<value id="5332">
+					<name><![CDATA[Scroll saw kit]]></name>
+				</value>
+				<value id="5300">
+					<name><![CDATA[Universal coupler kit]]></name>
+				</value>
+				<value id="5286">
+					<name><![CDATA[Ratchet set]]></name>
+				</value>
+				<value id="5502">
+					<name><![CDATA[Spade bit set]]></name>
+				</value>
+				<value id="5501">
+					<name><![CDATA[Router bit set]]></name>
+				</value>
+				<value id="5446">
+					<name><![CDATA[Combo kit]]></name>
+				</value>
+				<value id="5395">
+					<name><![CDATA[Level set]]></name>
+				</value>
+				<value id="6056">
+					<name><![CDATA[Drill/driver bit set]]></name>
+				</value>
+				<value id="6061">
+					<name><![CDATA[Mulch kit for 48 in. deck]]></name>
+				</value>
+				<value id="5869">
+					<name><![CDATA[Pry bar set]]></name>
+				</value>
+				<value id="5973">
+					<name><![CDATA[Blade variety pack]]></name>
+				</value>
+				<value id="6170">
+					<name><![CDATA[Shaper cutter set]]></name>
+				</value>
+				<value id="6382">
+					<name><![CDATA[Nailer/stapler kit]]></name>
+				</value>
+				<value id="6163">
+					<name><![CDATA[Household cleaning kit]]></name>
+				</value>
+				<value id="6167">
+					<name><![CDATA[Mortising kit]]></name>
+				</value>
+				<value id="5597">
+					<name><![CDATA[Surface preparation kit]]></name>
+				</value>
+				<value id="5604">
+					<name><![CDATA[Extension kit]]></name>
+				</value>
+				<value id="5594">
+					<name><![CDATA[Counter sink set]]></name>
+				</value>
+				<value id="5595">
+					<name><![CDATA[Nut setter set]]></name>
+				</value>
+				<value id="5708">
+					<name><![CDATA[Lock set]]></name>
+				</value>
+				<value id="5803">
+					<name><![CDATA[Screw drive extension kit]]></name>
+				</value>
+				<value id="5657">
+					<name><![CDATA[Reciprocating saw kit]]></name>
+				</value>
+				<value id="5658">
+					<name><![CDATA[Electrician multi-purpose tool kit]]></name>
+				</value>
+				<value id="395">
+					<name><![CDATA[Electrical]]></name>
+				</value>
+				<value id="396">
+					<name><![CDATA[Wrench set]]></name>
+				</value>
+				<value id="397">
+					<name><![CDATA[Multi-purpose]]></name>
+				</value>
+				<value id="398">
+					<name><![CDATA[Pliers]]></name>
+				</value>
+				<value id="423">
+					<name><![CDATA[Glue gun]]></name>
+				</value>
+				<value id="562">
+					<name><![CDATA[Engraver]]></name>
+				</value>
+				<value id="945">
+					<name><![CDATA[Impact socket]]></name>
+				</value>
+				<value id="1672">
+					<name><![CDATA[Small engine repair]]></name>
+				</value>
+				<value id="1671">
+					<name><![CDATA[Socket]]></name>
+				</value>
+				<value id="1675">
+					<name><![CDATA[Buffer kit]]></name>
+				</value>
+				<value id="1673">
+					<name><![CDATA[Mechanics]]></name>
+				</value>
+				<value id="1677">
+					<name><![CDATA[Drill kit]]></name>
+				</value>
+				<value id="1676">
+					<name><![CDATA[Rotary tool kit]]></name>
+				</value>
+				<value id="1679">
+					<name><![CDATA[Planer kit]]></name>
+				</value>
+				<value id="1678">
+					<name><![CDATA[Profile sander kit]]></name>
+				</value>
+				<value id="1681">
+					<name><![CDATA[Hole saw set]]></name>
+				</value>
+				<value id="1680">
+					<name><![CDATA[Screw extractor set]]></name>
+				</value>
+				<value id="1683">
+					<name><![CDATA[Grinding set]]></name>
+				</value>
+				<value id="1682">
+					<name><![CDATA[Sanding set]]></name>
+				</value>
+				<value id="1685">
+					<name><![CDATA[Cutting/carving set]]></name>
+				</value>
+				<value id="1684">
+					<name><![CDATA[Polishing kit]]></name>
+				</value>
+				<value id="1687">
+					<name><![CDATA[Router kit]]></name>
+				</value>
+				<value id="1686">
+					<name><![CDATA[Saw kit]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="242">
+			<name><![CDATA[Quantity in Set]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-regex>
+				<regex><![CDATA[-{0,1}\d*|-{0,1}\d*\.\d{0,}]]></regex>
+			</allowed-value-regex>
+		</attribute>
+		<attribute id="250">
+			<name><![CDATA[Case/Storage Material]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="1932">
+					<name><![CDATA[Vinyl]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="1915">
+					<name><![CDATA[Rubber]]></name>
+				</value>
+				<value id="1766">
+					<name><![CDATA[Polyethylene (PE)]]></name>
+				</value>
+				<value id="1753">
+					<name><![CDATA[Leather]]></name>
+				</value>
+				<value id="791">
+					<name><![CDATA[Aluminum]]></name>
+				</value>
+				<value id="734">
+					<name><![CDATA[Solid Oak]]></name>
+				</value>
+				<value id="247901">
+					<name><![CDATA[Cherrywood]]></name>
+				</value>
+				<value id="728">
+					<name><![CDATA[Wood]]></name>
+				</value>
+				<value id="727">
+					<name><![CDATA[Plastic (Polystyrene)]]></name>
+				</value>
+				<value id="20965">
+					<name><![CDATA[Hangsell]]></name>
+				</value>
+				<value id="4256">
+					<name><![CDATA[Polyester]]></name>
+				</value>
+				<value id="3441">
+					<name><![CDATA[Fabric]]></name>
+				</value>
+				<value id="32076">
+					<name><![CDATA[ABS]]></name>
+				</value>
+				<value id="3162">
+					<name><![CDATA[Foam]]></name>
+				</value>
+				<value id="2841">
+					<name><![CDATA[Leatherette]]></name>
+				</value>
+				<value id="2229">
+					<name><![CDATA[Canvas]]></name>
+				</value>
+				<value id="2014">
+					<name><![CDATA[Tin Plated Steel]]></name>
+				</value>
+				<value id="1969">
+					<name><![CDATA[Nylon]]></name>
+				</value>
+				<value id="263">
+					<name><![CDATA[Plastic]]></name>
+				</value>
+				<value id="371">
+					<name><![CDATA[Metal]]></name>
+				</value>
+				<value id="322">
+					<name><![CDATA[Steel]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="178401">
+			<name><![CDATA[Units Type]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="305">
+					<name><![CDATA[Metric]]></name>
+				</value>
+				<value id="2899">
+					<name><![CDATA[SAE and Metric]]></name>
+				</value>
+				<value id="8010">
+					<name><![CDATA[SAE]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="251">
+			<name><![CDATA[Individual, Kit or Set]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="4826">
+					<name><![CDATA[Sets]]></name>
+				</value>
+				<value id="2690">
+					<name><![CDATA[Satellite or Surround Speaker Package]]></name>
+				</value>
+				<value id="3892">
+					<name><![CDATA[Pair]]></name>
+				</value>
+				<value id="726">
+					<name><![CDATA[Kit]]></name>
+				</value>
+				<value id="842">
+					<name><![CDATA[Box]]></name>
+				</value>
+				<value id="6022">
+					<name><![CDATA[Set]]></name>
+				</value>
+				<value id="725">
+					<name><![CDATA[Individual]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="848810">
+			<name><![CDATA[Hot Buy]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-flags>
+				<flag>true</flag>
+				<flag>false</flag>
+			</allowed-value-flags>
+		</attribute>
+		<attribute id="252">
+			<name><![CDATA[Case/Storage Style]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="2898">
+					<name><![CDATA[Molded tray]]></name>
+				</value>
+				<value id="2836">
+					<name><![CDATA[Tote caddy]]></name>
+				</value>
+				<value id="2914">
+					<name><![CDATA[Carrying case]]></name>
+				</value>
+				<value id="2900">
+					<name><![CDATA[Storage tote]]></name>
+				</value>
+				<value id="2349">
+					<name><![CDATA[Four drawer]]></name>
+				</value>
+				<value id="2343">
+					<name><![CDATA[Three drawer]]></name>
+				</value>
+				<value id="2806">
+					<name><![CDATA[Wall Mount]]></name>
+				</value>
+				<value id="2588">
+					<name><![CDATA[Hand box]]></name>
+				</value>
+				<value id="7608">
+					<name><![CDATA[Roll-up storage pouch]]></name>
+				</value>
+				<value id="7422">
+					<name><![CDATA[Roll-up]]></name>
+				</value>
+				<value id="7664">
+					<name><![CDATA[Storage tray]]></name>
+				</value>
+				<value id="7661">
+					<name><![CDATA[Storage bag]]></name>
+				</value>
+				<value id="4862">
+					<name><![CDATA[Wallet]]></name>
+				</value>
+				<value id="4513">
+					<name><![CDATA[Tool bag]]></name>
+				</value>
+				<value id="7418">
+					<name><![CDATA[Organizer box]]></name>
+				</value>
+				<value id="6943">
+					<name><![CDATA[Bi-fold wallet]]></name>
+				</value>
+				<value id="9346">
+					<name><![CDATA[Belt pouch]]></name>
+				</value>
+				<value id="10146">
+					<name><![CDATA[Storage cassette]]></name>
+				</value>
+				<value id="10195">
+					<name><![CDATA[Gift tin]]></name>
+				</value>
+				<value id="10507">
+					<name><![CDATA[Display box]]></name>
+				</value>
+				<value id="7948">
+					<name><![CDATA[Carry bags]]></name>
+				</value>
+				<value id="8235">
+					<name><![CDATA[Clip rail]]></name>
+				</value>
+				<value id="9248">
+					<name><![CDATA[Tri-fold]]></name>
+				</value>
+				<value id="9250">
+					<name><![CDATA[Storage chest]]></name>
+				</value>
+				<value id="11127">
+					<name><![CDATA[Carrying rack]]></name>
+				</value>
+				<value id="11621">
+					<name><![CDATA[Backpack]]></name>
+				</value>
+				<value id="15897">
+					<name><![CDATA[Flip-top case]]></name>
+				</value>
+				<value id="18725">
+					<name><![CDATA[Rolling case]]></name>
+				</value>
+				<value id="10536">
+					<name><![CDATA[Storage case]]></name>
+				</value>
+				<value id="10538">
+					<name><![CDATA[Utility bag]]></name>
+				</value>
+				<value id="10573">
+					<name><![CDATA[Portfolio case]]></name>
+				</value>
+				<value id="10574">
+					<name><![CDATA[Cart]]></name>
+				</value>
+				<value id="22162">
+					<name><![CDATA[Storage rack]]></name>
+				</value>
+				<value id="20520">
+					<name><![CDATA[Tray box]]></name>
+				</value>
+				<value id="20370">
+					<name><![CDATA[Soft bag]]></name>
+				</value>
+				<value id="18802">
+					<name><![CDATA[Rolling case and rolling bag]]></name>
+				</value>
+				<value id="24057">
+					<name><![CDATA[Single bay roller cabinet and top drawer chest]]></name>
+				</value>
+				<value id="24056">
+					<name><![CDATA[Triple bay roller cabinet]]></name>
+				</value>
+				<value id="24055">
+					<name><![CDATA[Roller cabinet and top drawer chest]]></name>
+				</value>
+				<value id="23988">
+					<name><![CDATA[Case]]></name>
+				</value>
+				<value id="24061">
+					<name><![CDATA[Steel hand box]]></name>
+				</value>
+				<value id="24060">
+					<name><![CDATA[Plastic hand box]]></name>
+				</value>
+				<value id="24059">
+					<name><![CDATA[Top chest]]></name>
+				</value>
+				<value id="24058">
+					<name><![CDATA[Single bay roller cabinet]]></name>
+				</value>
+				<value id="24938">
+					<name><![CDATA[Molded plastic case]]></name>
+				</value>
+				<value id="24071">
+					<name><![CDATA[Single bay roller cabinet and top chest]]></name>
+				</value>
+				<value id="24063">
+					<name><![CDATA[Socket rail and clips]]></name>
+				</value>
+				<value id="24062">
+					<name><![CDATA[Plastic socket rail and clips]]></name>
+				</value>
+				<value id="32349">
+					<name><![CDATA[Tote Rack]]></name>
+				</value>
+				<value id="2253">
+					<name><![CDATA[Tool pouch]]></name>
+				</value>
+				<value id="2320">
+					<name><![CDATA[Tool chest]]></name>
+				</value>
+				<value id="1425">
+					<name><![CDATA[Holster]]></name>
+				</value>
+				<value id="2232">
+					<name><![CDATA[Sheath/holder]]></name>
+				</value>
+				<value id="732">
+					<name><![CDATA[Index-style]]></name>
+				</value>
+				<value id="733">
+					<name><![CDATA[Storage pouch]]></name>
+				</value>
+				<value id="731">
+					<name><![CDATA[Fold-style]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="313">
+			<name><![CDATA[Socket Drive Size]]></name>
+			<type>LABEL</type>
+			<type>SEARCH</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<important-flag>true</important-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="456">
+					<name><![CDATA[1/4 in.]]></name>
+				</value>
+				<value id="3291">
+					<name><![CDATA[1 in.]]></name>
+				</value>
+				<value id="2211510">
+					<name><![CDATA[More than 1-1/2 in.]]></name>
+				</value>
+				<value id="60">
+					<name><![CDATA[3/8 in.]]></name>
+				</value>
+				<value id="145">
+					<name><![CDATA[3/4 in.]]></name>
+				</value>
+				<value id="942">
+					<name><![CDATA[1/2 in.]]></name>
+				</value>
+				<value id="529">
+					<name><![CDATA[1-1/2 in.]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="315">
+			<name><![CDATA[Socket Points]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="39">
+					<name><![CDATA[8]]></name>
+				</value>
+				<value id="38">
+					<name><![CDATA[6]]></name>
+				</value>
+				<value id="24072">
+					<name><![CDATA[8 & 12]]></name>
+				</value>
+				<value id="2355">
+					<name><![CDATA[6, 8 & 12]]></name>
+				</value>
+				<value id="2338">
+					<name><![CDATA[6 & 12]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="41">
+					<name><![CDATA[12]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="351">
+			<name><![CDATA[Length (in.)]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+		</attribute>
+		<attribute id="358">
+			<name><![CDATA[Dimen Diameter]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="1033">
+					<name><![CDATA[18-1/2 in.]]></name>
+				</value>
+				<value id="1032">
+					<name><![CDATA[15-1/2 in.]]></name>
+				</value>
+				<value id="1031">
+					<name><![CDATA[14-1/2 in.]]></name>
+				</value>
+				<value id="1030">
+					<name><![CDATA[11-1/2 in.]]></name>
+				</value>
+				<value id="1037">
+					<name><![CDATA[22-1/2 in.]]></name>
+				</value>
+				<value id="1036">
+					<name><![CDATA[21-1/2 in.]]></name>
+				</value>
+				<value id="1035">
+					<name><![CDATA[20-1/2 in.]]></name>
+				</value>
+				<value id="1034">
+					<name><![CDATA[19-1/2 in.]]></name>
+				</value>
+				<value id="940">
+					<name><![CDATA[21 in.]]></name>
+				</value>
+				<value id="939">
+					<name><![CDATA[19 in.]]></name>
+				</value>
+				<value id="883">
+					<name><![CDATA[34 in.]]></name>
+				</value>
+				<value id="882">
+					<name><![CDATA[7-1/2 in. lathe]]></name>
+				</value>
+				<value id="950">
+					<name><![CDATA[6-7/8 in.]]></name>
+				</value>
+				<value id="949">
+					<name><![CDATA[7-3/4 in.]]></name>
+				</value>
+				<value id="942">
+					<name><![CDATA[1/2 in.]]></name>
+				</value>
+				<value id="941">
+					<name><![CDATA[22 in.]]></name>
+				</value>
+				<value id="861">
+					<name><![CDATA[17 in.]]></name>
+				</value>
+				<value id="862">
+					<name><![CDATA[6-1/2 in.]]></name>
+				</value>
+				<value id="602101">
+					<name><![CDATA[14 Inches]]></name>
+				</value>
+				<value id="860">
+					<name><![CDATA[15 in.]]></name>
+				</value>
+				<value id="865">
+					<name><![CDATA[16-1/2 in.]]></name>
+				</value>
+				<value id="873">
+					<name><![CDATA[13-1/2 in.]]></name>
+				</value>
+				<value id="863">
+					<name><![CDATA[9-1/2 in.]]></name>
+				</value>
+				<value id="864">
+					<name><![CDATA[8-1/2 in.]]></name>
+				</value>
+				<value id="823">
+					<name><![CDATA[17-1/2 in.]]></name>
+				</value>
+				<value id="824">
+					<name><![CDATA[12-1/2 in.]]></name>
+				</value>
+				<value id="145001">
+					<name><![CDATA[18.5 in.]]></name>
+				</value>
+				<value id="811">
+					<name><![CDATA[10-7/8 in.]]></name>
+				</value>
+				<value id="821">
+					<name><![CDATA[18 in.]]></name>
+				</value>
+				<value id="836">
+					<name><![CDATA[20 in.]]></name>
+				</value>
+				<value id="858">
+					<name><![CDATA[13 in.]]></name>
+				</value>
+				<value id="832">
+					<name><![CDATA[13-3/4 in.]]></name>
+				</value>
+				<value id="835">
+					<name><![CDATA[16 in.]]></name>
+				</value>
+				<value id="758">
+					<name><![CDATA[5-3/4 in.]]></name>
+				</value>
+				<value id="150701">
+					<name><![CDATA[21.5 in.]]></name>
+				</value>
+				<value id="757">
+					<name><![CDATA[5-5/8 in.]]></name>
+				</value>
+				<value id="798">
+					<name><![CDATA[10-1/2 in.]]></name>
+				</value>
+				<value id="772">
+					<name><![CDATA[6-3/4 in.]]></name>
+				</value>
+				<value id="800">
+					<name><![CDATA[24 in.]]></name>
+				</value>
+				<value id="799">
+					<name><![CDATA[25 in.]]></name>
+				</value>
+				<value id="810">
+					<name><![CDATA[38 in.]]></name>
+				</value>
+				<value id="801">
+					<name><![CDATA[30 in.]]></name>
+				</value>
+				<value id="615">
+					<name><![CDATA[5/32 in.]]></name>
+				</value>
+				<value id="580">
+					<name><![CDATA[7/32 in.]]></name>
+				</value>
+				<value id="748">
+					<name><![CDATA[3-3/4 in.]]></name>
+				</value>
+				<value id="686">
+					<name><![CDATA[3 in.]]></name>
+				</value>
+				<value id="753">
+					<name><![CDATA[4-3/8 in.]]></name>
+				</value>
+				<value id="750">
+					<name><![CDATA[3-1/2 in.]]></name>
+				</value>
+				<value id="756">
+					<name><![CDATA[5-1/8 in.]]></name>
+				</value>
+				<value id="700001">
+					<name><![CDATA[16-7/50 in.]]></name>
+				</value>
+				<value id="754">
+					<name><![CDATA[4-5/8 in.]]></name>
+				</value>
+				<value id="476">
+					<name><![CDATA[6 in.]]></name>
+				</value>
+				<value id="479">
+					<name><![CDATA[11/16 in.]]></name>
+				</value>
+				<value id="146501">
+					<name><![CDATA[19.75 in.]]></name>
+				</value>
+				<value id="481">
+					<name><![CDATA[8 in.]]></name>
+				</value>
+				<value id="513">
+					<name><![CDATA[9-1/8 in.]]></name>
+				</value>
+				<value id="527">
+					<name><![CDATA[9-5/8 in.]]></name>
+				</value>
+				<value id="139301">
+					<name><![CDATA[15.75 in.]]></name>
+				</value>
+				<value id="528">
+					<name><![CDATA[11 in.]]></name>
+				</value>
+				<value id="529">
+					<name><![CDATA[1-1/2 in.]]></name>
+				</value>
+				<value id="576">
+					<name><![CDATA[3/16 in.]]></name>
+				</value>
+				<value id="311">
+					<name><![CDATA[10-1/4 in.]]></name>
+				</value>
+				<value id="312">
+					<name><![CDATA[12 in.]]></name>
+				</value>
+				<value id="315">
+					<name><![CDATA[2-1/4 in.]]></name>
+				</value>
+				<value id="316">
+					<name><![CDATA[1-3/4 in.]]></name>
+				</value>
+				<value id="325">
+					<name><![CDATA[5-3/8 in.]]></name>
+				</value>
+				<value id="162901">
+					<name><![CDATA[26.375 in.]]></name>
+				</value>
+				<value id="343">
+					<name><![CDATA[1-1/4 in.]]></name>
+				</value>
+				<value id="456">
+					<name><![CDATA[1/4 in.]]></name>
+				</value>
+				<value id="463">
+					<name><![CDATA[2 in.]]></name>
+				</value>
+				<value id="5367">
+					<name><![CDATA[20-3/4 in.]]></name>
+				</value>
+				<value id="5308">
+					<name><![CDATA[20-1/4 in.]]></name>
+				</value>
+				<value id="5157">
+					<name><![CDATA[16-3/4 in.]]></name>
+				</value>
+				<value id="5085">
+					<name><![CDATA[29-3/4 in.]]></name>
+				</value>
+				<value id="4964">
+					<name><![CDATA[22-1/4 in.]]></name>
+				</value>
+				<value id="4144">
+					<name><![CDATA[31 in.]]></name>
+				</value>
+				<value id="4143">
+					<name><![CDATA[14-1/4 in.]]></name>
+				</value>
+				<value id="4130">
+					<name><![CDATA[19-2/5 in.]]></name>
+				</value>
+				<value id="4128">
+					<name><![CDATA[15-3/5 in.]]></name>
+				</value>
+				<value id="4025">
+					<name><![CDATA[10-4/5 in.]]></name>
+				</value>
+				<value id="4024">
+					<name><![CDATA[3-4/5 in.]]></name>
+				</value>
+				<value id="4023">
+					<name><![CDATA[10-3/10 in.]]></name>
+				</value>
+				<value id="4009">
+					<name><![CDATA[24-3/8 in.]]></name>
+				</value>
+				<value id="4008">
+					<name><![CDATA[26-3/8 in.]]></name>
+				</value>
+				<value id="4005">
+					<name><![CDATA[28-1/2 in.]]></name>
+				</value>
+				<value id="4004">
+					<name><![CDATA[23-1/4 in.]]></name>
+				</value>
+				<value id="3979">
+					<name><![CDATA[26-1/2 in.]]></name>
+				</value>
+				<value id="2020910">
+					<name><![CDATA[26-25/64 in.]]></name>
+				</value>
+				<value id="4003">
+					<name><![CDATA[26-3/4 in.]]></name>
+				</value>
+				<value id="3963">
+					<name><![CDATA[18-3/4 in.]]></name>
+				</value>
+				<value id="3972">
+					<name><![CDATA[30-1/2 in.]]></name>
+				</value>
+				<value id="3949">
+					<name><![CDATA[23-3/8 in.]]></name>
+				</value>
+				<value id="3959">
+					<name><![CDATA[17-3/4 in.]]></name>
+				</value>
+				<value id="3353">
+					<name><![CDATA[26 in.]]></name>
+				</value>
+				<value id="3664">
+					<name><![CDATA[53 in.]]></name>
+				</value>
+				<value id="65596">
+					<name><![CDATA[20.25 in.]]></name>
+				</value>
+				<value id="3283">
+					<name><![CDATA[10 in.]]></name>
+				</value>
+				<value id="3291">
+					<name><![CDATA[1 in.]]></name>
+				</value>
+				<value id="2886">
+					<name><![CDATA[24-1/2 in.]]></name>
+				</value>
+				<value id="3067">
+					<name><![CDATA[43 in.]]></name>
+				</value>
+				<value id="2856">
+					<name><![CDATA[9-7/8 in.]]></name>
+				</value>
+				<value id="2872">
+					<name><![CDATA[19-3/4 in.]]></name>
+				</value>
+				<value id="2616">
+					<name><![CDATA[10-1/8 in.]]></name>
+				</value>
+				<value id="2811">
+					<name><![CDATA[52 in.]]></name>
+				</value>
+				<value id="2523">
+					<name><![CDATA[8-3/8 in.]]></name>
+				</value>
+				<value id="2479">
+					<name><![CDATA[6-5/8 in.]]></name>
+				</value>
+				<value id="2583">
+					<name><![CDATA[13-1/4 in.]]></name>
+				</value>
+				<value id="2554">
+					<name><![CDATA[17-1/4 in.]]></name>
+				</value>
+				<value id="2046">
+					<name><![CDATA[54 in.]]></name>
+				</value>
+				<value id="2041">
+					<name><![CDATA[28 in.]]></name>
+				</value>
+				<value id="2380">
+					<name><![CDATA[29 in.]]></name>
+				</value>
+				<value id="2271">
+					<name><![CDATA[29-1/4 in.]]></name>
+				</value>
+				<value id="1965">
+					<name><![CDATA[32 in.]]></name>
+				</value>
+				<value id="1942">
+					<name><![CDATA[8-3/4 in.]]></name>
+				</value>
+				<value id="135501">
+					<name><![CDATA[13-39/50 in.]]></name>
+				</value>
+				<value id="2004">
+					<name><![CDATA[5-1/2 in.]]></name>
+				</value>
+				<value id="1966">
+					<name><![CDATA[15-3/4 in.]]></name>
+				</value>
+				<value id="1635">
+					<name><![CDATA[11-3/4 in.]]></name>
+				</value>
+				<value id="1618">
+					<name><![CDATA[9-3/4 in.]]></name>
+				</value>
+				<value id="1935">
+					<name><![CDATA[15-1/4 in.]]></name>
+				</value>
+				<value id="1888">
+					<name><![CDATA[48 in.]]></name>
+				</value>
+				<value id="1511">
+					<name><![CDATA[4-1/8 in.]]></name>
+				</value>
+				<value id="1516">
+					<name><![CDATA[12-1/4 in.]]></name>
+				</value>
+				<value id="1517">
+					<name><![CDATA[16-1/4 in.]]></name>
+				</value>
+				<value id="1584">
+					<name><![CDATA[6-1/8 in.]]></name>
+				</value>
+				<value id="1227">
+					<name><![CDATA[24-3/4 in.]]></name>
+				</value>
+				<value id="1334">
+					<name><![CDATA[4-7/8 in.]]></name>
+				</value>
+				<value id="1338">
+					<name><![CDATA[18-1/4 in.]]></name>
+				</value>
+				<value id="1418">
+					<name><![CDATA[6-1/4 in.]]></name>
+				</value>
+				<value id="1218">
+					<name><![CDATA[16-5/8 in.]]></name>
+				</value>
+				<value id="1221">
+					<name><![CDATA[11-1/4 in.]]></name>
+				</value>
+				<value id="1225">
+					<name><![CDATA[42 in.]]></name>
+				</value>
+				<value id="1226">
+					<name><![CDATA[27 in.]]></name>
+				</value>
+				<value id="1038">
+					<name><![CDATA[23 in.]]></name>
+				</value>
+				<value id="1102">
+					<name><![CDATA[36 in.]]></name>
+				</value>
+				<value id="142101">
+					<name><![CDATA[17.75 in.]]></name>
+				</value>
+				<value id="1103">
+					<name><![CDATA[37 in.]]></name>
+				</value>
+				<value id="1213">
+					<name><![CDATA[8-5/8 in.]]></name>
+				</value>
+				<value id="643001">
+					<name><![CDATA[2- 7/16 in.]]></name>
+				</value>
+				<value id="725401">
+					<name><![CDATA[22.44 in.]]></name>
+				</value>
+				<value id="6816">
+					<name><![CDATA[23-1/5 in.]]></name>
+				</value>
+				<value id="6383">
+					<name><![CDATA[6-1/5 in.]]></name>
+				</value>
+				<value id="6002">
+					<name><![CDATA[108 in.]]></name>
+				</value>
+				<value id="5660">
+					<name><![CDATA[12-5/8 in.]]></name>
+				</value>
+				<value id="10564">
+					<name><![CDATA[8-7/20 in.]]></name>
+				</value>
+				<value id="9011">
+					<name><![CDATA[98 in.]]></name>
+				</value>
+				<value id="6853">
+					<name><![CDATA[39-1/8 in.]]></name>
+				</value>
+				<value id="6847">
+					<name><![CDATA[29-1/2 in.]]></name>
+				</value>
+				<value id="22306">
+					<name><![CDATA[35-1/8 in.]]></name>
+				</value>
+				<value id="16100">
+					<name><![CDATA[15-1/3 in.]]></name>
+				</value>
+				<value id="16096">
+					<name><![CDATA[5-1/3 in.]]></name>
+				</value>
+				<value id="14309">
+					<name><![CDATA[36-1/5 in.]]></name>
+				</value>
+				<value id="32237">
+					<name><![CDATA[.113 in.]]></name>
+				</value>
+				<value id="32236">
+					<name><![CDATA[.069 in.]]></name>
+				</value>
+				<value id="32179">
+					<name><![CDATA[.12 in.]]></name>
+				</value>
+				<value id="23198">
+					<name><![CDATA[34-1/4 in.]]></name>
+				</value>
+				<value id="32238">
+					<name><![CDATA[.131 in.]]></name>
+				</value>
+				<value id="163301">
+					<name><![CDATA[26.75 in.]]></name>
+				</value>
+				<value id="65601">
+					<name><![CDATA[18.25 in.]]></name>
+				</value>
+				<value id="719201">
+					<name><![CDATA[17-13/100 x17-13/100 in.]]></name>
+				</value>
+				<value id="60">
+					<name><![CDATA[3/8 in.]]></name>
+				</value>
+				<value id="89">
+					<name><![CDATA[5/8 in.]]></name>
+				</value>
+				<value id="65591">
+					<name><![CDATA[22.5 in.]]></name>
+				</value>
+				<value id="248">
+					<name><![CDATA[7-1/4 in.]]></name>
+				</value>
+				<value id="249">
+					<name><![CDATA[5-1/4 in.]]></name>
+				</value>
+				<value id="205">
+					<name><![CDATA[9 in.]]></name>
+				</value>
+				<value id="207">
+					<name><![CDATA[5 in.]]></name>
+				</value>
+				<value id="203">
+					<name><![CDATA[4-1/2 in.]]></name>
+				</value>
+				<value id="204">
+					<name><![CDATA[7 in.]]></name>
+				</value>
+				<value id="145">
+					<name><![CDATA[3/4 in.]]></name>
+				</value>
+				<value id="202">
+					<name><![CDATA[4 in.]]></name>
+				</value>
+				<value id="150801">
+					<name><![CDATA[21.75 in.]]></name>
+				</value>
+				<value id="163201">
+					<name><![CDATA[26.5 in.]]></name>
+				</value>
+				<value id="149701">
+					<name><![CDATA[20.5 in.]]></name>
+				</value>
+				<value id="137101">
+					<name><![CDATA[14.125 in.]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="386">
+			<name><![CDATA[Hose Diameter]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="456">
+					<name><![CDATA[1/4 in.]]></name>
+				</value>
+				<value id="145">
+					<name><![CDATA[3/4 in.]]></name>
+				</value>
+				<value id="89">
+					<name><![CDATA[5/8 in.]]></name>
+				</value>
+				<value id="60">
+					<name><![CDATA[3/8 in.]]></name>
+				</value>
+				<value id="942">
+					<name><![CDATA[1/2 in.]]></name>
+				</value>
+				<value id="699">
+					<name><![CDATA[7/16 in.]]></name>
+				</value>
+				<value id="576">
+					<name><![CDATA[3/16 in.]]></name>
+				</value>
+				<value id="541">
+					<name><![CDATA[5/16 in.]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="1450">
+			<name><![CDATA[Overall Material Type]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="10276">
+					<name><![CDATA[Vinyl coated polyester]]></name>
+				</value>
+				<value id="23218">
+					<name><![CDATA[Painted steel]]></name>
+				</value>
+				<value id="10388">
+					<name><![CDATA[Bamboo]]></name>
+				</value>
+				<value id="10606">
+					<name><![CDATA[Silicone]]></name>
+				</value>
+				<value id="10813">
+					<name><![CDATA[Microfiber]]></name>
+				</value>
+				<value id="642001">
+					<name><![CDATA[UV and mildew resistant]]></name>
+				</value>
+				<value id="11090">
+					<name><![CDATA[Olefin]]></name>
+				</value>
+				<value id="12717">
+					<name><![CDATA[Soap]]></name>
+				</value>
+				<value id="66586">
+					<name><![CDATA[PVC/Resin]]></name>
+				</value>
+				<value id="23965">
+					<name><![CDATA[Concrete]]></name>
+				</value>
+				<value id="24557">
+					<name><![CDATA[Marble]]></name>
+				</value>
+				<value id="13093">
+					<name><![CDATA[Pewter]]></name>
+				</value>
+				<value id="13492">
+					<name><![CDATA[Aluminum and steel]]></name>
+				</value>
+				<value id="6013">
+					<name><![CDATA[Steel/Stainless steel]]></name>
+				</value>
+				<value id="966801">
+					<name><![CDATA[Stainless/Titanium]]></name>
+				</value>
+				<value id="6893">
+					<name><![CDATA[Slate]]></name>
+				</value>
+				<value id="6904">
+					<name><![CDATA[Medium Density Fiberboard (MDF)]]></name>
+				</value>
+				<value id="775701">
+					<name><![CDATA[Simulated leather]]></name>
+				</value>
+				<value id="7494">
+					<name><![CDATA[Die cast metal]]></name>
+				</value>
+				<value id="8440">
+					<name><![CDATA[Garnet]]></name>
+				</value>
+				<value id="8996">
+					<name><![CDATA[Titanium]]></name>
+				</value>
+				<value id="9016">
+					<name><![CDATA[Pressboard]]></name>
+				</value>
+				<value id="9299">
+					<name><![CDATA[Neoprene]]></name>
+				</value>
+				<value id="20410">
+					<name><![CDATA[Resin and polycarbonate]]></name>
+				</value>
+				<value id="245201">
+					<name><![CDATA[Alloy and polymer]]></name>
+				</value>
+				<value id="20409">
+					<name><![CDATA[Aluminum and polyethylene]]></name>
+				</value>
+				<value id="21434">
+					<name><![CDATA[UV resistant plastic]]></name>
+				</value>
+				<value id="21372">
+					<name><![CDATA[Ethylene vinyl]]></name>
+				</value>
+				<value id="22897">
+					<name><![CDATA[Polystyrene (PS)]]></name>
+				</value>
+				<value id="21590">
+					<name><![CDATA[Porcelain enamel on cast iron]]></name>
+				</value>
+				<value id="24663">
+					<name><![CDATA[Non-corrosive metal]]></name>
+				</value>
+				<value id="23081">
+					<name><![CDATA[High-Impact Polystyrene (HIPS)]]></name>
+				</value>
+				<value id="14858">
+					<name><![CDATA[High speed steel (HSS)]]></name>
+				</value>
+				<value id="14077">
+					<name><![CDATA[Electrogalvanized steel]]></name>
+				</value>
+				<value id="16185">
+					<name><![CDATA[Granite]]></name>
+				</value>
+				<value id="15763">
+					<name><![CDATA[Stoneware]]></name>
+				</value>
+				<value id="18797">
+					<name><![CDATA[Porcelain enameled on aluminum]]></name>
+				</value>
+				<value id="16186">
+					<name><![CDATA[Terra cotta]]></name>
+				</value>
+				<value id="1096901">
+					<name><![CDATA[Rattan]]></name>
+				</value>
+				<value id="19645">
+					<name><![CDATA[Polyester/polyvinyl]]></name>
+				</value>
+				<value id="725001">
+					<name><![CDATA[Steel/polyethylene]]></name>
+				</value>
+				<value id="18986">
+					<name><![CDATA[Polyresin]]></name>
+				</value>
+				<value id="43240">
+					<name><![CDATA[PVC coated polyester]]></name>
+				</value>
+				<value id="2611">
+					<name><![CDATA[Gold]]></name>
+				</value>
+				<value id="43424">
+					<name><![CDATA[Silicone/neoprene]]></name>
+				</value>
+				<value id="967001">
+					<name><![CDATA[Chrome Moly]]></name>
+				</value>
+				<value id="42662">
+					<name><![CDATA[Cedar]]></name>
+				</value>
+				<value id="43042">
+					<name><![CDATA[Extruded aluminum]]></name>
+				</value>
+				<value id="43627">
+					<name><![CDATA[Polyolefin]]></name>
+				</value>
+				<value id="25160">
+					<name><![CDATA[Malleable iron, zinc plated]]></name>
+				</value>
+				<value id="29595">
+					<name><![CDATA[Cowhide]]></name>
+				</value>
+				<value id="24874">
+					<name><![CDATA[Microfiber with soft mesh]]></name>
+				</value>
+				<value id="24906">
+					<name><![CDATA[Stainless Steel & manufactured brick]]></name>
+				</value>
+				<value id="34097">
+					<name><![CDATA[Manufactured Stone]]></name>
+				</value>
+				<value id="39209">
+					<name><![CDATA[Wood/glass]]></name>
+				</value>
+				<value id="32286">
+					<name><![CDATA[Masonite]]></name>
+				</value>
+				<value id="694901">
+					<name><![CDATA[Wrought-iron]]></name>
+				</value>
+				<value id="34032">
+					<name><![CDATA[Chromate]]></name>
+				</value>
+				<value id="2079010">
+					<name><![CDATA[Cordierite]]></name>
+				</value>
+				<value id="8683">
+					<name><![CDATA[Sterling silver]]></name>
+				</value>
+				<value id="13779">
+					<name><![CDATA[Bronze]]></name>
+				</value>
+				<value id="1753">
+					<name><![CDATA[Leather]]></name>
+				</value>
+				<value id="694001">
+					<name><![CDATA[Resin wicker]]></name>
+				</value>
+				<value id="1766">
+					<name><![CDATA[Polyethylene (PE)]]></name>
+				</value>
+				<value id="1768">
+					<name><![CDATA[Polypropylene (PP)]]></name>
+				</value>
+				<value id="1830">
+					<name><![CDATA[Plywood]]></name>
+				</value>
+				<value id="746201">
+					<name><![CDATA[100% glass reinforced cement]]></name>
+				</value>
+				<value id="792">
+					<name><![CDATA[Cast iron]]></name>
+				</value>
+				<value id="966">
+					<name><![CDATA[Cast metal]]></name>
+				</value>
+				<value id="1361">
+					<name><![CDATA[Ceramic]]></name>
+				</value>
+				<value id="1562">
+					<name><![CDATA[Powdercoat]]></name>
+				</value>
+				<value id="568">
+					<name><![CDATA[Stainless Steel]]></name>
+				</value>
+				<value id="569">
+					<name><![CDATA[Brass]]></name>
+				</value>
+				<value id="728">
+					<name><![CDATA[Wood]]></name>
+				</value>
+				<value id="6939">
+					<name><![CDATA[Tungsten]]></name>
+				</value>
+				<value id="791">
+					<name><![CDATA[Aluminum]]></name>
+				</value>
+				<value id="390">
+					<name><![CDATA[Forged steel]]></name>
+				</value>
+				<value id="483">
+					<name><![CDATA[Cotton]]></name>
+				</value>
+				<value id="571">
+					<name><![CDATA[Tungsten Carbide]]></name>
+				</value>
+				<value id="718601">
+					<name><![CDATA[Aluminum/spun polyester]]></name>
+				</value>
+				<value id="526">
+					<name><![CDATA[Assorted]]></name>
+				</value>
+				<value id="567">
+					<name><![CDATA[Carbon steel]]></name>
+				</value>
+				<value id="724801">
+					<name><![CDATA[Vinyl covered mesh]]></name>
+				</value>
+				<value id="2262">
+					<name><![CDATA[Magnesium]]></name>
+				</value>
+				<value id="2231">
+					<name><![CDATA[Ballistic nylon]]></name>
+				</value>
+				<value id="2556">
+					<name><![CDATA[Die cast aluminum]]></name>
+				</value>
+				<value id="2264">
+					<name><![CDATA[Hardwood]]></name>
+				</value>
+				<value id="764001">
+					<name><![CDATA[Polyester lined with PE backing]]></name>
+				</value>
+				<value id="2100">
+					<name><![CDATA[Polycarbonate (PC)]]></name>
+				</value>
+				<value id="900101">
+					<name><![CDATA[Solid Maple]]></name>
+				</value>
+				<value id="2099">
+					<name><![CDATA[ABS plastic]]></name>
+				</value>
+				<value id="2229">
+					<name><![CDATA[Canvas]]></name>
+				</value>
+				<value id="2125">
+					<name><![CDATA[Fiberglass]]></name>
+				</value>
+				<value id="2013">
+					<name><![CDATA[Polyurethane (PU)]]></name>
+				</value>
+				<value id="766801">
+					<name><![CDATA[Plastic/rubber]]></name>
+				</value>
+				<value id="1969">
+					<name><![CDATA[Nylon]]></name>
+				</value>
+				<value id="721301">
+					<name><![CDATA[Steel/sling fabric]]></name>
+				</value>
+				<value id="2078">
+					<name><![CDATA[Alloy steel]]></name>
+				</value>
+				<value id="2044">
+					<name><![CDATA[Iron]]></name>
+				</value>
+				<value id="1915">
+					<name><![CDATA[Rubber]]></name>
+				</value>
+				<value id="1902">
+					<name><![CDATA[Tubular steel]]></name>
+				</value>
+				<value id="1968">
+					<name><![CDATA[Copper]]></name>
+				</value>
+				<value id="1932">
+					<name><![CDATA[Vinyl]]></name>
+				</value>
+				<value id="3585">
+					<name><![CDATA[Composite]]></name>
+				</value>
+				<value id="3613">
+					<name><![CDATA[Chrome]]></name>
+				</value>
+				<value id="3430">
+					<name><![CDATA[Bi-component]]></name>
+				</value>
+				<value id="3441">
+					<name><![CDATA[Fabric]]></name>
+				</value>
+				<value id="3401">
+					<name><![CDATA[Latex]]></name>
+				</value>
+				<value id="3404">
+					<name><![CDATA[Poly/cotton blend]]></name>
+				</value>
+				<value id="706701">
+					<name><![CDATA[Aluminum, PVC]]></name>
+				</value>
+				<value id="3354">
+					<name><![CDATA[Rubber vinyl compound]]></name>
+				</value>
+				<value id="2948">
+					<name><![CDATA[Platinum]]></name>
+				</value>
+				<value id="692601">
+					<name><![CDATA[Olefin fabric stuffed polyester fillings]]></name>
+				</value>
+				<value id="3392">
+					<name><![CDATA[Graphite]]></name>
+				</value>
+				<value id="3200">
+					<name><![CDATA[Polymer]]></name>
+				</value>
+				<value id="3276">
+					<name><![CDATA[Die cast zinc]]></name>
+				</value>
+				<value id="3162">
+					<name><![CDATA[Foam]]></name>
+				</value>
+				<value id="721701">
+					<name><![CDATA[Steel/glass]]></name>
+				</value>
+				<value id="3196">
+					<name><![CDATA[Cast aluminum]]></name>
+				</value>
+				<value id="3039">
+					<name><![CDATA[Polyvinyl Chloride (PVC)]]></name>
+				</value>
+				<value id="3043">
+					<name><![CDATA[Zinc]]></name>
+				</value>
+				<value id="2766">
+					<name><![CDATA[High Density Polyethylene (HDPE)]]></name>
+				</value>
+				<value id="2814">
+					<name><![CDATA[Glass]]></name>
+				</value>
+				<value id="6007">
+					<name><![CDATA[Vinyl covered polyester]]></name>
+				</value>
+				<value id="6006">
+					<name><![CDATA[Spun polyester]]></name>
+				</value>
+				<value id="5638">
+					<name><![CDATA[Dash for Compares & Unknowns]]></name>
+				</value>
+				<value id="718801">
+					<name><![CDATA[Cast aluminum/steel]]></name>
+				</value>
+				<value id="5605">
+					<name><![CDATA[Hard anodized aluminum]]></name>
+				</value>
+				<value id="5375">
+					<name><![CDATA[Resin]]></name>
+				</value>
+				<value id="5165">
+					<name><![CDATA[Double Insulated]]></name>
+				</value>
+				<value id="4256">
+					<name><![CDATA[Polyester]]></name>
+				</value>
+				<value id="4255">
+					<name><![CDATA[Blend]]></name>
+				</value>
+				<value id="4253">
+					<name><![CDATA[Acrylic]]></name>
+				</value>
+				<value id="3994">
+					<name><![CDATA[Laminate on composite]]></name>
+				</value>
+				<value id="3927">
+					<name><![CDATA[Cloth]]></name>
+				</value>
+				<value id="3838">
+					<name><![CDATA[Aluminized steel]]></name>
+				</value>
+				<value id="10688">
+					<name><![CDATA[Silk]]></name>
+				</value>
+				<value id="3821">
+					<name><![CDATA[Polyester/PVC]]></name>
+				</value>
+				<value id="3744">
+					<name><![CDATA[Silver]]></name>
+				</value>
+				<value id="3724">
+					<name><![CDATA[Chrome plated]]></name>
+				</value>
+				<value id="3614">
+					<name><![CDATA[Porcelain]]></name>
+				</value>
+				<value id="1163201">
+					<name><![CDATA[Fiber-Reinforced Plastic (FRP)]]></name>
+				</value>
+				<value id="763201">
+					<name><![CDATA[PVC tube]]></name>
+				</value>
+				<value id="1163901">
+					<name><![CDATA[Recycled Plastic]]></name>
+				</value>
+				<value id="10412">
+					<name><![CDATA[Nickel]]></name>
+				</value>
+				<value id="1163301">
+					<name><![CDATA[Glass Fiber Reinfored Concrete (GFRC)]]></name>
+				</value>
+				<value id="1164001">
+					<name><![CDATA[Tin]]></name>
+				</value>
+				<value id="765601">
+					<name><![CDATA[Stone powder]]></name>
+				</value>
+				<value id="966901">
+					<name><![CDATA[Titanium/Carbon Steel]]></name>
+				</value>
+				<value id="730801">
+					<name><![CDATA[Aluminum, cast aluminum, spun polyester]]></name>
+				</value>
+				<value id="1164101">
+					<name><![CDATA[Forest Stewardship Council (FSC) Certified Wood]]></name>
+				</value>
+				<value id="24744">
+					<name><![CDATA[Rubber/nylon]]></name>
+				</value>
+				<value id="26424">
+					<name><![CDATA[Rayon from Bamboo]]></name>
+				</value>
+				<value id="1316701">
+					<name><![CDATA[Polyester and latex]]></name>
+				</value>
+				<value id="693401">
+					<name><![CDATA[Powder coated steel frame]]></name>
+				</value>
+				<value id="1316801">
+					<name><![CDATA[Synthetic leather, spandex and lycra]]></name>
+				</value>
+				<value id="322">
+					<name><![CDATA[Steel]]></name>
+				</value>
+				<value id="266401">
+					<name><![CDATA[Polymer, alloy, and steel]]></name>
+				</value>
+				<value id="371">
+					<name><![CDATA[Metal]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="263">
+					<name><![CDATA[Plastic]]></name>
+				</value>
+				<value id="900501">
+					<name><![CDATA[Hybrid Polymer]]></name>
+				</value>
+				<value id="43540">
+					<name><![CDATA[Olefin and polyester]]></name>
+				</value>
+				<value id="248001">
+					<name><![CDATA[Chrome vanadium steel]]></name>
+				</value>
+				<value id="734401">
+					<name><![CDATA[Cast iron/aluminum]]></name>
+				</value>
+				<value id="1316901">
+					<name><![CDATA[Polyester and sand nitrile]]></name>
+				</value>
+				<value id="730401">
+					<name><![CDATA[Cast Aluminum, Polyester]]></name>
+				</value>
+				<value id="1163401">
+					<name><![CDATA[Hemp]]></name>
+				</value>
+				<value id="762301">
+					<name><![CDATA[Steel/polyester]]></name>
+				</value>
+				<value id="3822">
+					<name><![CDATA[Rosewood]]></name>
+				</value>
+				<value id="691701">
+					<name><![CDATA[Aluminum/olefin]]></name>
+				</value>
+				<value id="14946">
+					<name><![CDATA[Cobalt]]></name>
+				</value>
+				<value id="10705">
+					<name><![CDATA[Wool]]></name>
+				</value>
+				<value id="898401">
+					<name><![CDATA[Hammered Granite]]></name>
+				</value>
+				<value id="737601">
+					<name><![CDATA[Cast iron/wood]]></name>
+				</value>
+				<value id="256401">
+					<name><![CDATA[Hard-impact plastic]]></name>
+				</value>
+				<value id="704901">
+					<name><![CDATA[Aluminum/polyester]]></name>
+				</value>
+				<value id="1163601">
+					<name><![CDATA[Medium Density Polyethylene (MDPE)]]></name>
+				</value>
+				<value id="1163501">
+					<name><![CDATA[Low Density Polyethylene (LDPE)]]></name>
+				</value>
+				<value id="13302">
+					<name><![CDATA[Teak wood]]></name>
+				</value>
+				<value id="5860">
+					<name><![CDATA[Sling]]></name>
+				</value>
+				<value id="725201">
+					<name><![CDATA[Steel/polyester/PVC]]></name>
+				</value>
+				<value id="762701">
+					<name><![CDATA[Polyurethane/nylon]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="394">
+			<name><![CDATA[Hose Function]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="1175">
+					<name><![CDATA[Compressed air/paint]]></name>
+				</value>
+				<value id="1174">
+					<name><![CDATA[Compressed air]]></name>
+				</value>
+				<value id="9439">
+					<name><![CDATA[Air hose]]></name>
+				</value>
+				<value id="1179">
+					<name><![CDATA[Cold water]]></name>
+				</value>
+				<value id="1178">
+					<name><![CDATA[Compressed air/cold water]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="413">
+			<name><![CDATA[Drive Socket Depth]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<important-flag>true</important-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="42721">
+					<name><![CDATA[Shallow]]></name>
+				</value>
+				<value id="6652">
+					<name><![CDATA[Deep, standard and mid length]]></name>
+				</value>
+				<value id="2897">
+					<name><![CDATA[Deep and standard]]></name>
+				</value>
+				<value id="134">
+					<name><![CDATA[Standard]]></name>
+				</value>
+				<value id="1299">
+					<name><![CDATA[Deep]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="2590">
+					<name><![CDATA[Metric deep]]></name>
+				</value>
+				<value id="2591">
+					<name><![CDATA[Mid length metric]]></name>
+				</value>
+				<value id="2053">
+					<name><![CDATA[Mid length]]></name>
+				</value>
+				<value id="2589">
+					<name><![CDATA[Metric standard]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="412">
+			<name><![CDATA[Overall Color 3]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="246301">
+					<name><![CDATA[Black/pink]]></name>
+				</value>
+				<value id="734701">
+					<name><![CDATA[Antique gray]]></name>
+				</value>
+				<value id="770901">
+					<name><![CDATA[Cream/gold]]></name>
+				</value>
+				<value id="703801">
+					<name><![CDATA[Helios gray]]></name>
+				</value>
+				<value id="706201">
+					<name><![CDATA[Brown/burnt red with yellow and orange details]]></name>
+				</value>
+				<value id="256201">
+					<name><![CDATA[Green, gray, and black]]></name>
+				</value>
+				<value id="704101">
+					<name><![CDATA[Helios white]]></name>
+				</value>
+				<value id="898401">
+					<name><![CDATA[Hammered Granite]]></name>
+				</value>
+				<value id="720101">
+					<name><![CDATA[Dark gray/gold]]></name>
+				</value>
+				<value id="726601">
+					<name><![CDATA[Dark beige]]></name>
+				</value>
+				<value id="706501">
+					<name><![CDATA[Brown/gold details]]></name>
+				</value>
+				<value id="36176">
+					<name><![CDATA[Soft moss]]></name>
+				</value>
+				<value id="37370">
+					<name><![CDATA[Tangerine]]></name>
+				</value>
+				<value id="34918">
+					<name><![CDATA[Marigold]]></name>
+				</value>
+				<value id="34992">
+					<name><![CDATA[Platinum/Black]]></name>
+				</value>
+				<value id="41231">
+					<name><![CDATA[Sage]]></name>
+				</value>
+				<value id="42541">
+					<name><![CDATA[Burgundy and gold]]></name>
+				</value>
+				<value id="39620">
+					<name><![CDATA[Silver/gray]]></name>
+				</value>
+				<value id="39653">
+					<name><![CDATA[Green/White]]></name>
+				</value>
+				<value id="741801">
+					<name><![CDATA[Aqua]]></name>
+				</value>
+				<value id="43270">
+					<name><![CDATA[Black Gloss]]></name>
+				</value>
+				<value id="34790">
+					<name><![CDATA[Navy/White Stripe]]></name>
+				</value>
+				<value id="34787">
+					<name><![CDATA[Gray/White Stripe]]></name>
+				</value>
+				<value id="34794">
+					<name><![CDATA[Brown/White Stripe]]></name>
+				</value>
+				<value id="34792">
+					<name><![CDATA[Black/White Stripe]]></name>
+				</value>
+				<value id="34797">
+					<name><![CDATA[Green Multi Stripe]]></name>
+				</value>
+				<value id="34795">
+					<name><![CDATA[Burgundy/Tan/White]]></name>
+				</value>
+				<value id="34800">
+					<name><![CDATA[Forest/White Stripe]]></name>
+				</value>
+				<value id="34799">
+					<name><![CDATA[Burgundy/Tan Stripe]]></name>
+				</value>
+				<value id="34814">
+					<name><![CDATA[Tan/Terra Cotta/White]]></name>
+				</value>
+				<value id="34811">
+					<name><![CDATA[Burgundy Multi Stripe]]></name>
+				</value>
+				<value id="34823">
+					<name><![CDATA[Bright Blue/White Stripe]]></name>
+				</value>
+				<value id="34815">
+					<name><![CDATA[Brown/Tan Multi Stripe]]></name>
+				</value>
+				<value id="34827">
+					<name><![CDATA[Burgundy/Forest/Tan Stripe]]></name>
+				</value>
+				<value id="34825">
+					<name><![CDATA[Yellow/Gray/Terra Stripe]]></name>
+				</value>
+				<value id="34831">
+					<name><![CDATA[Yellow/Terra Cotta/Gray/White]]></name>
+				</value>
+				<value id="34829">
+					<name><![CDATA[Burgundy/Forest/Tan/Off-White]]></name>
+				</value>
+				<value id="34511">
+					<name><![CDATA[Black/Stainless]]></name>
+				</value>
+				<value id="34535">
+					<name><![CDATA[Glossy Black]]></name>
+				</value>
+				<value id="34622">
+					<name><![CDATA[White/Gray]]></name>
+				</value>
+				<value id="34673">
+					<name><![CDATA[Eggshell]]></name>
+				</value>
+				<value id="707701">
+					<name><![CDATA[Tan/red]]></name>
+				</value>
+				<value id="34748">
+					<name><![CDATA[Brown/Tan]]></name>
+				</value>
+				<value id="34749">
+					<name><![CDATA[Olive/Tan]]></name>
+				</value>
+				<value id="34750">
+					<name><![CDATA[Tan/White]]></name>
+				</value>
+				<value id="526">
+					<name><![CDATA[Assorted]]></name>
+				</value>
+				<value id="34760">
+					<name><![CDATA[Sage Stripe]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="34771">
+					<name><![CDATA[Sage/olive/tan]]></name>
+				</value>
+				<value id="34775">
+					<name><![CDATA[Brown/Tan/White]]></name>
+				</value>
+				<value id="34776">
+					<name><![CDATA[Brown/Tan Stripe]]></name>
+				</value>
+				<value id="34780">
+					<name><![CDATA[Olive/Tan Stripe]]></name>
+				</value>
+				<value id="34783">
+					<name><![CDATA[Tan/Terra Stripe]]></name>
+				</value>
+				<value id="34784">
+					<name><![CDATA[Tan/White Stripe]]></name>
+				</value>
+				<value id="34785">
+					<name><![CDATA[Bright Blue/White]]></name>
+				</value>
+				<value id="34786">
+					<name><![CDATA[Gray White Stripe]]></name>
+				</value>
+				<value id="34390">
+					<name><![CDATA[Fresh Lavender]]></name>
+				</value>
+				<value id="34419">
+					<name><![CDATA[Fuchsia]]></name>
+				</value>
+				<value id="34387">
+					<name><![CDATA[Ocean Blue]]></name>
+				</value>
+				<value id="34388">
+					<name><![CDATA[Classic Black]]></name>
+				</value>
+				<value id="1532610">
+					<name><![CDATA[Terracotta/Medium Brown]]></name>
+				</value>
+				<value id="34385">
+					<name><![CDATA[Earth]]></name>
+				</value>
+				<value id="34386">
+					<name><![CDATA[Cool Sage]]></name>
+				</value>
+				<value id="31739">
+					<name><![CDATA[Red/green]]></name>
+				</value>
+				<value id="34037">
+					<name><![CDATA[Stainless Steel w/Black]]></name>
+				</value>
+				<value id="31047">
+					<name><![CDATA[Black/platinum]]></name>
+				</value>
+				<value id="31312">
+					<name><![CDATA[White/yellow]]></name>
+				</value>
+				<value id="28702">
+					<name><![CDATA[Amber iridescent]]></name>
+				</value>
+				<value id="28716">
+					<name><![CDATA[Storm gray]]></name>
+				</value>
+				<value id="28700">
+					<name><![CDATA[Soft white]]></name>
+				</value>
+				<value id="28701">
+					<name><![CDATA[Iridescent]]></name>
+				</value>
+				<value id="761901">
+					<name><![CDATA[Brown/green stripe]]></name>
+				</value>
+				<value id="27184">
+					<name><![CDATA[Blue/green]]></name>
+				</value>
+				<value id="27201">
+					<name><![CDATA[Vanilla]]></name>
+				</value>
+				<value id="27040">
+					<name><![CDATA[Black/copper]]></name>
+				</value>
+				<value id="26905">
+					<name><![CDATA[Lime]]></name>
+				</value>
+				<value id="26774">
+					<name><![CDATA[Off white]]></name>
+				</value>
+				<value id="26350">
+					<name><![CDATA[Gold/black]]></name>
+				</value>
+				<value id="26258">
+					<name><![CDATA[Green/gray]]></name>
+				</value>
+				<value id="698001">
+					<name><![CDATA[Saratoga]]></name>
+				</value>
+				<value id="26071">
+					<name><![CDATA[Kiwi]]></name>
+				</value>
+				<value id="25606">
+					<name><![CDATA[Blue and yellow]]></name>
+				</value>
+				<value id="25586">
+					<name><![CDATA[Copper-metallic]]></name>
+				</value>
+				<value id="25436">
+					<name><![CDATA[Gray/black]]></name>
+				</value>
+				<value id="25047">
+					<name><![CDATA[Cranberry red]]></name>
+				</value>
+				<value id="24914">
+					<name><![CDATA[Persimmon]]></name>
+				</value>
+				<value id="24909">
+					<name><![CDATA[Granite/brick]]></name>
+				</value>
+				<value id="24908">
+					<name><![CDATA[Stainless & brick]]></name>
+				</value>
+				<value id="24788">
+					<name><![CDATA[Silver sage]]></name>
+				</value>
+				<value id="24787">
+					<name><![CDATA[Copper pearl]]></name>
+				</value>
+				<value id="730501">
+					<name><![CDATA[Dark bronze]]></name>
+				</value>
+				<value id="24786">
+					<name><![CDATA[Brass pearl]]></name>
+				</value>
+				<value id="775601">
+					<name><![CDATA[Glossy black/opera rose]]></name>
+				</value>
+				<value id="22627">
+					<name><![CDATA[Almond]]></name>
+				</value>
+				<value id="23108">
+					<name><![CDATA[Taupe]]></name>
+				</value>
+				<value id="23585">
+					<name><![CDATA[Black/chrome]]></name>
+				</value>
+				<value id="24688">
+					<name><![CDATA[Espresso]]></name>
+				</value>
+				<value id="21519">
+					<name><![CDATA[Speckled gray]]></name>
+				</value>
+				<value id="21642">
+					<name><![CDATA[Camouflage]]></name>
+				</value>
+				<value id="21820">
+					<name><![CDATA[Biscuit]]></name>
+				</value>
+				<value id="900001">
+					<name><![CDATA[Gladiator Gray]]></name>
+				</value>
+				<value id="22304">
+					<name><![CDATA[Biscuit or Bisque]]></name>
+				</value>
+				<value id="16186">
+					<name><![CDATA[Terra cotta]]></name>
+				</value>
+				<value id="17003">
+					<name><![CDATA[White/red stripe]]></name>
+				</value>
+				<value id="18021">
+					<name><![CDATA[Gunmetal gray]]></name>
+				</value>
+				<value id="19471">
+					<name><![CDATA[Ivory]]></name>
+				</value>
+				<value id="13739">
+					<name><![CDATA[Pink/Black]]></name>
+				</value>
+				<value id="13779">
+					<name><![CDATA[Bronze]]></name>
+				</value>
+				<value id="13797">
+					<name><![CDATA[Yellow/black]]></name>
+				</value>
+				<value id="13941">
+					<name><![CDATA[Gray/white]]></name>
+				</value>
+				<value id="13238">
+					<name><![CDATA[Red/gray]]></name>
+				</value>
+				<value id="13236">
+					<name><![CDATA[Blue/Gray]]></name>
+				</value>
+				<value id="13735">
+					<name><![CDATA[Green/black]]></name>
+				</value>
+				<value id="13382">
+					<name><![CDATA[Midnight blue]]></name>
+				</value>
+				<value id="13093">
+					<name><![CDATA[Pewter]]></name>
+				</value>
+				<value id="12946">
+					<name><![CDATA[Forest/White]]></name>
+				</value>
+				<value id="13177">
+					<name><![CDATA[Forest green]]></name>
+				</value>
+				<value id="13102">
+					<name><![CDATA[Burgundy/Tan]]></name>
+				</value>
+				<value id="12752">
+					<name><![CDATA[Red/blue]]></name>
+				</value>
+				<value id="12567">
+					<name><![CDATA[Blue/white]]></name>
+				</value>
+				<value id="12924">
+					<name><![CDATA[Navy/white]]></name>
+				</value>
+				<value id="12868">
+					<name><![CDATA[Blue/silver]]></name>
+				</value>
+				<value id="12075">
+					<name><![CDATA[Olive]]></name>
+				</value>
+				<value id="16327">
+					<name><![CDATA[Clear/black]]></name>
+				</value>
+				<value id="12067">
+					<name><![CDATA[Khaki]]></name>
+				</value>
+				<value id="12085">
+					<name><![CDATA[White/blue]]></name>
+				</value>
+				<value id="12080">
+					<name><![CDATA[Sand]]></name>
+				</value>
+				<value id="12026">
+					<name><![CDATA[White/black]]></name>
+				</value>
+				<value id="12037">
+					<name><![CDATA[Maroon]]></name>
+				</value>
+				<value id="12018">
+					<name><![CDATA[Black/white]]></name>
+				</value>
+				<value id="12023">
+					<name><![CDATA[Red/white]]></name>
+				</value>
+				<value id="901301">
+					<name><![CDATA[Green/Beige/Red]]></name>
+				</value>
+				<value id="12059">
+					<name><![CDATA[Blue/black]]></name>
+				</value>
+				<value id="12060">
+					<name><![CDATA[Brown/black]]></name>
+				</value>
+				<value id="12051">
+					<name><![CDATA[Black/gold]]></name>
+				</value>
+				<value id="12055">
+					<name><![CDATA[Black/silver]]></name>
+				</value>
+				<value id="8996">
+					<name><![CDATA[Titanium]]></name>
+				</value>
+				<value id="1980710">
+					<name><![CDATA[Red/Stainless Steel]]></name>
+				</value>
+				<value id="10412">
+					<name><![CDATA[Nickel]]></name>
+				</value>
+				<value id="7130">
+					<name><![CDATA[Rose]]></name>
+				</value>
+				<value id="255701">
+					<name><![CDATA[Gemini white]]></name>
+				</value>
+				<value id="8876">
+					<name><![CDATA[Tan]]></name>
+				</value>
+				<value id="11735">
+					<name><![CDATA[Woodgrain]]></name>
+				</value>
+				<value id="12015">
+					<name><![CDATA[Black/grey]]></name>
+				</value>
+				<value id="11465">
+					<name><![CDATA[Red/silver]]></name>
+				</value>
+				<value id="11681">
+					<name><![CDATA[Multi]]></name>
+				</value>
+				<value id="5685">
+					<name><![CDATA[Silver/black]]></name>
+				</value>
+				<value id="5638">
+					<name><![CDATA[Dash for Compares & Unknowns]]></name>
+				</value>
+				<value id="5544">
+					<name><![CDATA[Black/red]]></name>
+				</value>
+				<value id="5525">
+					<name><![CDATA[Black/orange]]></name>
+				</value>
+				<value id="7119">
+					<name><![CDATA[Ruby]]></name>
+				</value>
+				<value id="6901">
+					<name><![CDATA[Dark green]]></name>
+				</value>
+				<value id="6004">
+					<name><![CDATA[Natural]]></name>
+				</value>
+				<value id="6003">
+					<name><![CDATA[Cherry]]></name>
+				</value>
+				<value id="3744">
+					<name><![CDATA[Silver]]></name>
+				</value>
+				<value id="3613">
+					<name><![CDATA[Chrome]]></name>
+				</value>
+				<value id="701501">
+					<name><![CDATA[Gemini Black]]></name>
+				</value>
+				<value id="3609">
+					<name><![CDATA[Charcoal]]></name>
+				</value>
+				<value id="3548">
+					<name><![CDATA[Pattern]]></name>
+				</value>
+				<value id="5500">
+					<name><![CDATA[Black/yellow]]></name>
+				</value>
+				<value id="4845">
+					<name><![CDATA[Champagne]]></name>
+				</value>
+				<value id="3973">
+					<name><![CDATA[Metallic]]></name>
+				</value>
+				<value id="265201">
+					<name><![CDATA[Paprika]]></name>
+				</value>
+				<value id="3797">
+					<name><![CDATA[Dover]]></name>
+				</value>
+				<value id="2611">
+					<name><![CDATA[Gold]]></name>
+				</value>
+				<value id="2625">
+					<name><![CDATA[Glo-orange]]></name>
+				</value>
+				<value id="2771">
+					<name><![CDATA[Mocha]]></name>
+				</value>
+				<value id="605101">
+					<name><![CDATA[Light gray/green]]></name>
+				</value>
+				<value id="2784">
+					<name><![CDATA[Pink]]></name>
+				</value>
+				<value id="2948">
+					<name><![CDATA[Platinum]]></name>
+				</value>
+				<value id="2981">
+					<name><![CDATA[Polo green]]></name>
+				</value>
+				<value id="3177">
+					<name><![CDATA[Yellow/green]]></name>
+				</value>
+				<value id="3178">
+					<name><![CDATA[Red/yellow]]></name>
+				</value>
+				<value id="1980">
+					<name><![CDATA[Cream]]></name>
+				</value>
+				<value id="2015">
+					<name><![CDATA[Burgundy]]></name>
+				</value>
+				<value id="2394">
+					<name><![CDATA[Red/black]]></name>
+				</value>
+				<value id="2396">
+					<name><![CDATA[Purple]]></name>
+				</value>
+				<value id="694801">
+					<name><![CDATA[Brown/red]]></name>
+				</value>
+				<value id="2469">
+					<name><![CDATA[Brick]]></name>
+				</value>
+				<value id="273401">
+					<name><![CDATA[Violet/Blue]]></name>
+				</value>
+				<value id="2542">
+					<name><![CDATA[Bright blue]]></name>
+				</value>
+				<value id="2543">
+					<name><![CDATA[Beige]]></name>
+				</value>
+				<value id="2598">
+					<name><![CDATA[Charcoal gray]]></name>
+				</value>
+				<value id="1346">
+					<name><![CDATA[Gray]]></name>
+				</value>
+				<value id="247901">
+					<name><![CDATA[Cherrywood]]></name>
+				</value>
+				<value id="1345">
+					<name><![CDATA[White]]></name>
+				</value>
+				<value id="1348">
+					<name><![CDATA[Green]]></name>
+				</value>
+				<value id="1347">
+					<name><![CDATA[Stainless-metallic]]></name>
+				</value>
+				<value id="1350">
+					<name><![CDATA[Brown]]></name>
+				</value>
+				<value id="1349">
+					<name><![CDATA[Orange]]></name>
+				</value>
+				<value id="1968">
+					<name><![CDATA[Copper]]></name>
+				</value>
+				<value id="1364">
+					<name><![CDATA[Red and charcoal]]></name>
+				</value>
+				<value id="569">
+					<name><![CDATA[Brass]]></name>
+				</value>
+				<value id="568">
+					<name><![CDATA[Stainless Steel]]></name>
+				</value>
+				<value id="889">
+					<name><![CDATA[Clear]]></name>
+				</value>
+				<value id="791">
+					<name><![CDATA[Aluminum]]></name>
+				</value>
+				<value id="1166">
+					<name><![CDATA[Red]]></name>
+				</value>
+				<value id="967">
+					<name><![CDATA[Yellow]]></name>
+				</value>
+				<value id="1344">
+					<name><![CDATA[Black]]></name>
+				</value>
+				<value id="1167">
+					<name><![CDATA[Blue]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="437">
+			<name><![CDATA[Fastener Length]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>true</multivalue-flag>
+			<allowed-value-ids>
+				<value id="737">
+					<name><![CDATA[2-1/8 in.]]></name>
+				</value>
+				<value id="750">
+					<name><![CDATA[3-1/2 in.]]></name>
+				</value>
+				<value id="942">
+					<name><![CDATA[1/2 in.]]></name>
+				</value>
+				<value id="1001">
+					<name><![CDATA[1-3/8 in.]]></name>
+				</value>
+				<value id="1745">
+					<name><![CDATA[2-3/8 x .113 in.]]></name>
+				</value>
+				<value id="1746">
+					<name><![CDATA[3 x .120 in.]]></name>
+				</value>
+				<value id="1747">
+					<name><![CDATA[3-1/4 x .131 in.]]></name>
+				</value>
+				<value id="3291">
+					<name><![CDATA[1 in.]]></name>
+				</value>
+				<value id="18899">
+					<name><![CDATA[1-2-1/2 in.]]></name>
+				</value>
+				<value id="32505">
+					<name><![CDATA[2 X .113 IN.]]></name>
+				</value>
+				<value id="32521">
+					<name><![CDATA[3 x .131 in.]]></name>
+				</value>
+				<value id="3283">
+					<name><![CDATA[10 in.]]></name>
+				</value>
+				<value id="476">
+					<name><![CDATA[6 in.]]></name>
+				</value>
+				<value id="60">
+					<name><![CDATA[3/8 in.]]></name>
+				</value>
+				<value id="89">
+					<name><![CDATA[5/8 in.]]></name>
+				</value>
+				<value id="208">
+					<name><![CDATA[7/8 in.]]></name>
+				</value>
+				<value id="236">
+					<name><![CDATA[2 to 3-1/2 in.]]></name>
+				</value>
+				<value id="145">
+					<name><![CDATA[3/4 in.]]></name>
+				</value>
+				<value id="202">
+					<name><![CDATA[4 in.]]></name>
+				</value>
+				<value id="316">
+					<name><![CDATA[1-3/4 in.]]></name>
+				</value>
+				<value id="329">
+					<name><![CDATA[1-5/8 in.]]></name>
+				</value>
+				<value id="481">
+					<name><![CDATA[8 in.]]></name>
+				</value>
+				<value id="314">
+					<name><![CDATA[2-3/8 in.]]></name>
+				</value>
+				<value id="315">
+					<name><![CDATA[2-1/4 in.]]></name>
+				</value>
+				<value id="456">
+					<name><![CDATA[1/4 in.]]></name>
+				</value>
+				<value id="343">
+					<name><![CDATA[1-1/4 in.]]></name>
+				</value>
+				<value id="340">
+					<name><![CDATA[1-3/16 in.]]></name>
+				</value>
+				<value id="331">
+					<name><![CDATA[1-1/8 in.]]></name>
+				</value>
+				<value id="529">
+					<name><![CDATA[1-1/2 in.]]></name>
+				</value>
+				<value id="526">
+					<name><![CDATA[Assorted]]></name>
+				</value>
+				<value id="463">
+					<name><![CDATA[2 in.]]></name>
+				</value>
+				<value id="457">
+					<name><![CDATA[2-1/2 in.]]></name>
+				</value>
+				<value id="686">
+					<name><![CDATA[3 in.]]></name>
+				</value>
+				<value id="554">
+					<name><![CDATA[1/8 in.]]></name>
+				</value>
+				<value id="546">
+					<name><![CDATA[3-1/4 in.]]></name>
+				</value>
+				<value id="541">
+					<name><![CDATA[5/16 in.]]></name>
+				</value>
+				<value id="207">
+					<name><![CDATA[5 in.]]></name>
+				</value>
+				<value id="713">
+					<name><![CDATA[9/16 in.]]></name>
+				</value>
+				<value id="699">
+					<name><![CDATA[7/16 in.]]></name>
+				</value>
+				<value id="204">
+					<name><![CDATA[7 in.]]></name>
+				</value>
+				<value id="698">
+					<name><![CDATA[11/32 in.]]></name>
+				</value>
+				<value id="692">
+					<name><![CDATA[13/64 in.]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="436">
+			<name><![CDATA[Fastener Type]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="11293">
+					<name><![CDATA[Tie down]]></name>
+				</value>
+				<value id="10590">
+					<name><![CDATA[Coil nails]]></name>
+				</value>
+				<value id="18523">
+					<name><![CDATA[Snap ring]]></name>
+				</value>
+				<value id="26878">
+					<name><![CDATA[Roofing nails]]></name>
+				</value>
+				<value id="16976">
+					<name><![CDATA[Flooring cleats]]></name>
+				</value>
+				<value id="6404">
+					<name><![CDATA[T-head and finish nails]]></name>
+				</value>
+				<value id="4547">
+					<name><![CDATA[Brad]]></name>
+				</value>
+				<value id="5499">
+					<name><![CDATA[Staples and brad nails]]></name>
+				</value>
+				<value id="8165">
+					<name><![CDATA[Plastic cap staples]]></name>
+				</value>
+				<value id="6406">
+					<name><![CDATA[T-head nails]]></name>
+				</value>
+				<value id="4177">
+					<name><![CDATA[Staples and nails]]></name>
+				</value>
+				<value id="4173">
+					<name><![CDATA[Round crown staples]]></name>
+				</value>
+				<value id="5470">
+					<name><![CDATA[Glue sticks]]></name>
+				</value>
+				<value id="4178">
+					<name><![CDATA[Round and flat crown staples]]></name>
+				</value>
+				<value id="3407">
+					<name><![CDATA[O ring]]></name>
+				</value>
+				<value id="2717">
+					<name><![CDATA[Collated screws]]></name>
+				</value>
+				<value id="4172">
+					<name><![CDATA[Flat crown staples]]></name>
+				</value>
+				<value id="3408">
+					<name><![CDATA[Washer]]></name>
+				</value>
+				<value id="33177">
+					<name><![CDATA[Drywall Screw Strips]]></name>
+				</value>
+				<value id="33295">
+					<name><![CDATA[Power Hammer Fasteners]]></name>
+				</value>
+				<value id="33362">
+					<name><![CDATA[Galvanized Roofing Nails]]></name>
+				</value>
+				<value id="37546">
+					<name><![CDATA[Lock nut]]></name>
+				</value>
+				<value id="32846">
+					<name><![CDATA[Sheathing Nails]]></name>
+				</value>
+				<value id="32908">
+					<name><![CDATA[Oval Glue Sticks]]></name>
+				</value>
+				<value id="33077">
+					<name><![CDATA[Power Hammer Nails]]></name>
+				</value>
+				<value id="33130">
+					<name><![CDATA[Chisel Point Staple]]></name>
+				</value>
+				<value id="25550">
+					<name><![CDATA[General purpose screws]]></name>
+				</value>
+				<value id="26861">
+					<name><![CDATA[Galvanized nails]]></name>
+				</value>
+				<value id="29930">
+					<name><![CDATA[Hitch pin]]></name>
+				</value>
+				<value id="32341">
+					<name><![CDATA[Micro Pin]]></name>
+				</value>
+				<value id="18884">
+					<name><![CDATA[Wire-collated coil roofing nails]]></name>
+				</value>
+				<value id="24430">
+					<name><![CDATA[Full head framing]]></name>
+				</value>
+				<value id="24431">
+					<name><![CDATA[Clip head framing]]></name>
+				</value>
+				<value id="24524">
+					<name><![CDATA[Assorted rivets]]></name>
+				</value>
+				<value id="37549">
+					<name><![CDATA[Cotter pin]]></name>
+				</value>
+				<value id="37551">
+					<name><![CDATA[Eye bolt]]></name>
+				</value>
+				<value id="37547">
+					<name><![CDATA[U clip and screw]]></name>
+				</value>
+				<value id="37548">
+					<name><![CDATA[E clip]]></name>
+				</value>
+				<value id="37552">
+					<name><![CDATA[Steel spring]]></name>
+				</value>
+				<value id="41056">
+					<name><![CDATA[Diamond stack point]]></name>
+				</value>
+				<value id="2378">
+					<name><![CDATA[T-head brads]]></name>
+				</value>
+				<value id="2498">
+					<name><![CDATA[Stick nails]]></name>
+				</value>
+				<value id="1893">
+					<name><![CDATA[Aluminum rivets]]></name>
+				</value>
+				<value id="1970">
+					<name><![CDATA[Staples]]></name>
+				</value>
+				<value id="1370">
+					<name><![CDATA[Crown staples]]></name>
+				</value>
+				<value id="1371">
+					<name><![CDATA[Framing nails]]></name>
+				</value>
+				<value id="1366">
+					<name><![CDATA[Finish nails]]></name>
+				</value>
+				<value id="1369">
+					<name><![CDATA[Coil roofing nails]]></name>
+				</value>
+				<value id="1365">
+					<name><![CDATA[Brad nails]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="16592">
+			<name><![CDATA[Craftsman Warranty Detail Link]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="636801">
+					<name><![CDATA[<a href="/download/war/CRW.pdf">Craftsman Warranty</a>]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="438">
+			<name><![CDATA[Fastener Gauge]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="2738">
+					<name><![CDATA[6 ga.]]></name>
+				</value>
+				<value id="1352901">
+					<name><![CDATA[34 ga.]]></name>
+				</value>
+				<value id="2012">
+					<name><![CDATA[23 ga.]]></name>
+				</value>
+				<value id="18738">
+					<name><![CDATA[15.5 ga.]]></name>
+				</value>
+				<value id="5503">
+					<name><![CDATA[14 ga.]]></name>
+				</value>
+				<value id="24432">
+					<name><![CDATA[.113 ga.]]></name>
+				</value>
+				<value id="20618">
+					<name><![CDATA[4 ga.]]></name>
+				</value>
+				<value id="24433">
+					<name><![CDATA[.120 ga.]]></name>
+				</value>
+				<value id="1064">
+					<name><![CDATA[18 ga.]]></name>
+				</value>
+				<value id="1065">
+					<name><![CDATA[16 ga.]]></name>
+				</value>
+				<value id="1374">
+					<name><![CDATA[15 ga.]]></name>
+				</value>
+				<value id="1375">
+					<name><![CDATA[20 ga.]]></name>
+				</value>
+				<value id="1353001">
+					<name><![CDATA[.131 ga.]]></name>
+				</value>
+				<value id="1957">
+					<name><![CDATA[.050 ga.]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="964">
+			<name><![CDATA[Instructions1]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="19">
+					<name><![CDATA[Yes]]></name>
+				</value>
+				<value id="92">
+					<name><![CDATA[No]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="592">
+			<name><![CDATA[Liquid Capacity]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="1917">
+					<name><![CDATA[6 oz.]]></name>
+				</value>
+				<value id="1410">
+					<name><![CDATA[1 pint]]></name>
+				</value>
+				<value id="1043">
+					<name><![CDATA[5 gal.]]></name>
+				</value>
+				<value id="968">
+					<name><![CDATA[4 gal.]]></name>
+				</value>
+				<value id="3307">
+					<name><![CDATA[1 qt.]]></name>
+				</value>
+				<value id="3055">
+					<name><![CDATA[3 qt.]]></name>
+				</value>
+				<value id="3053">
+					<name><![CDATA[5 qt.]]></name>
+				</value>
+				<value id="1960">
+					<name><![CDATA[3 oz.]]></name>
+				</value>
+				<value id="1954">
+					<name><![CDATA[2 oz.]]></name>
+				</value>
+				<value id="1947">
+					<name><![CDATA[10 oz.]]></name>
+				</value>
+				<value id="1946">
+					<name><![CDATA[7 oz.]]></name>
+				</value>
+				<value id="1923">
+					<name><![CDATA[32 oz.]]></name>
+				</value>
+				<value id="16024">
+					<name><![CDATA[6-1/2 cup]]></name>
+				</value>
+				<value id="14374">
+					<name><![CDATA[4.4 qt.]]></name>
+				</value>
+				<value id="21593">
+					<name><![CDATA[5.25 qt.]]></name>
+				</value>
+				<value id="19004">
+					<name><![CDATA[15 oz.]]></name>
+				</value>
+				<value id="24683">
+					<name><![CDATA[6.4 qt.]]></name>
+				</value>
+				<value id="24361">
+					<name><![CDATA[1/2 liter]]></name>
+				</value>
+				<value id="27156">
+					<name><![CDATA[7.4 qt.]]></name>
+				</value>
+				<value id="27130">
+					<name><![CDATA[8.5 qt.]]></name>
+				</value>
+				<value id="32031">
+					<name><![CDATA[3-2/3 Cup]]></name>
+				</value>
+				<value id="4441">
+					<name><![CDATA[8 cup]]></name>
+				</value>
+				<value id="32030">
+					<name><![CDATA[3-1/5 qt.]]></name>
+				</value>
+				<value id="32047">
+					<name><![CDATA[1.9 qt]]></name>
+				</value>
+				<value id="3333">
+					<name><![CDATA[2 qt.]]></name>
+				</value>
+				<value id="3843">
+					<name><![CDATA[4 qt.]]></name>
+				</value>
+				<value id="4435">
+					<name><![CDATA[10 cup]]></name>
+				</value>
+				<value id="4436">
+					<name><![CDATA[12 cup]]></name>
+				</value>
+				<value id="4448">
+					<name><![CDATA[6 qt.]]></name>
+				</value>
+				<value id="4449">
+					<name><![CDATA[5.5 qt.]]></name>
+				</value>
+				<value id="4450">
+					<name><![CDATA[8 qt.]]></name>
+				</value>
+				<value id="4460">
+					<name><![CDATA[4.5 qt.]]></name>
+				</value>
+				<value id="4461">
+					<name><![CDATA[10 qt.]]></name>
+				</value>
+				<value id="4462">
+					<name><![CDATA[12 qt.]]></name>
+				</value>
+				<value id="4474">
+					<name><![CDATA[1 - 1/2 qt.]]></name>
+				</value>
+				<value id="5602">
+					<name><![CDATA[3.5 qt.]]></name>
+				</value>
+				<value id="5780">
+					<name><![CDATA[1.5 qt.]]></name>
+				</value>
+				<value id="7453">
+					<name><![CDATA[16 qt.]]></name>
+				</value>
+				<value id="8409">
+					<name><![CDATA[2.5 qt.]]></name>
+				</value>
+				<value id="14226">
+					<name><![CDATA[2.75 qt.]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="546">
+			<name><![CDATA[Number of Sockets in Kit/Set]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-regex>
+				<regex><![CDATA[-{0,1}\d*|-{0,1}\d*\.\d{0,}]]></regex>
+			</allowed-value-regex>
+		</attribute>
+		<attribute id="545">
+			<name><![CDATA[Number of Wrenches in Kit/Set]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-regex>
+				<regex><![CDATA[-{0,1}\d*|-{0,1}\d*\.\d{0,}]]></regex>
+			</allowed-value-regex>
+		</attribute>
+		<attribute id="483">
+			<name><![CDATA[Case/Storage Class]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="1424">
+					<name><![CDATA[Hard shell]]></name>
+				</value>
+				<value id="775801">
+					<name><![CDATA[Semi-hard shell]]></name>
+				</value>
+				<value id="1423">
+					<name><![CDATA[Soft]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="21">
+			<name><![CDATA[Handle Type]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="900401">
+					<name><![CDATA[Heavy-duty Bail]]></name>
+				</value>
+				<value id="1199301">
+					<name><![CDATA[Rear Drive Dual Trigger]]></name>
+				</value>
+				<value id="1191101">
+					<name><![CDATA[Ball Handle]]></name>
+				</value>
+				<value id="1335901">
+					<name><![CDATA[D-Handle wih Overmold]]></name>
+				</value>
+				<value id="1186501">
+					<name><![CDATA[Loop and bail]]></name>
+				</value>
+				<value id="1186701">
+					<name><![CDATA[Loop and bail w/ padded grips ]]></name>
+				</value>
+				<value id="40097">
+					<name><![CDATA[Double dipped PVC comfort grip]]></name>
+				</value>
+				<value id="34599">
+					<name><![CDATA[Integral]]></name>
+				</value>
+				<value id="43969">
+					<name><![CDATA[Padded loop]]></name>
+				</value>
+				<value id="42881">
+					<name><![CDATA[Bullhorn]]></name>
+				</value>
+				<value id="24348">
+					<name><![CDATA[Spade (90 deg. D)]]></name>
+				</value>
+				<value id="23575">
+					<name><![CDATA[Compound leverage]]></name>
+				</value>
+				<value id="1199401">
+					<name><![CDATA[Rear Drive Under-Bail]]></name>
+				</value>
+				<value id="25192">
+					<name><![CDATA[Cushion grip]]></name>
+				</value>
+				<value id="1191001">
+					<name><![CDATA[Contour D Handle]]></name>
+				</value>
+				<value id="25191">
+					<name><![CDATA[Loop]]></name>
+				</value>
+				<value id="3084">
+					<name><![CDATA[Built in]]></name>
+				</value>
+				<value id="1199001">
+					<name><![CDATA[Front Drive Auto Walk]]></name>
+				</value>
+				<value id="3227">
+					<name><![CDATA[Anti-vibration]]></name>
+				</value>
+				<value id="2979">
+					<name><![CDATA[Deluxe]]></name>
+				</value>
+				<value id="3072">
+					<name><![CDATA[Molded]]></name>
+				</value>
+				<value id="3456">
+					<name><![CDATA[1-way]]></name>
+				</value>
+				<value id="3552">
+					<name><![CDATA[Paddle]]></name>
+				</value>
+				<value id="3341">
+					<name><![CDATA[Push]]></name>
+				</value>
+				<value id="3380">
+					<name><![CDATA[3-position]]></name>
+				</value>
+				<value id="4288">
+					<name><![CDATA[Full size]]></name>
+				</value>
+				<value id="4869">
+					<name><![CDATA[Angled]]></name>
+				</value>
+				<value id="3873">
+					<name><![CDATA[Shoulder strap]]></name>
+				</value>
+				<value id="3874">
+					<name><![CDATA[U shaped]]></name>
+				</value>
+				<value id="5172">
+					<name><![CDATA[D handle w/front post grip]]></name>
+				</value>
+				<value id="1199101">
+					<name><![CDATA[Front Drive Under-Bail]]></name>
+				</value>
+				<value id="5232">
+					<name><![CDATA[Dual position]]></name>
+				</value>
+				<value id="34990">
+					<name><![CDATA[Push/Pull]]></name>
+				</value>
+				<value id="5161">
+					<name><![CDATA[Palm grip]]></name>
+				</value>
+				<value id="5167">
+					<name><![CDATA[Barrel grip]]></name>
+				</value>
+				<value id="5795">
+					<name><![CDATA[Easy fold down]]></name>
+				</value>
+				<value id="5794">
+					<name><![CDATA[Fold down]]></name>
+				</value>
+				<value id="5732">
+					<name><![CDATA[Pole]]></name>
+				</value>
+				<value id="5366">
+					<name><![CDATA[Retractable telescoping]]></name>
+				</value>
+				<value id="1199201">
+					<name><![CDATA[Rear Drive Auto Walk]]></name>
+				</value>
+				<value id="8251">
+					<name><![CDATA[Grab handle]]></name>
+				</value>
+				<value id="7365">
+					<name><![CDATA[Mid-handle]]></name>
+				</value>
+				<value id="5844">
+					<name><![CDATA[Deluxe comfort handle]]></name>
+				</value>
+				<value id="5824">
+					<name><![CDATA[J handle]]></name>
+				</value>
+				<value id="15685">
+					<name><![CDATA[Quilled]]></name>
+				</value>
+				<value id="9167">
+					<name><![CDATA[Spoke]]></name>
+				</value>
+				<value id="8769">
+					<name><![CDATA[Spring loaded]]></name>
+				</value>
+				<value id="8287">
+					<name><![CDATA[Chemical resistant]]></name>
+				</value>
+				<value id="22451">
+					<name><![CDATA[Molded-in]]></name>
+				</value>
+				<value id="22203">
+					<name><![CDATA[Wrap-around]]></name>
+				</value>
+				<value id="20980">
+					<name><![CDATA[Support]]></name>
+				</value>
+				<value id="20404">
+					<name><![CDATA[Dual-articulating]]></name>
+				</value>
+				<value id="28">
+					<name><![CDATA[Adjustable]]></name>
+				</value>
+				<value id="55">
+					<name><![CDATA[Pistol]]></name>
+				</value>
+				<value id="56">
+					<name><![CDATA[T]]></name>
+				</value>
+				<value id="61">
+					<name><![CDATA[Horizontal]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="98">
+					<name><![CDATA[Pistol grip]]></name>
+				</value>
+				<value id="100">
+					<name><![CDATA[In-line (stick)]]></name>
+				</value>
+				<value id="134">
+					<name><![CDATA[Standard]]></name>
+				</value>
+				<value id="775301">
+					<name><![CDATA[Carry handle/shoulder strap]]></name>
+				</value>
+				<value id="293">
+					<name><![CDATA[Center (D)]]></name>
+				</value>
+				<value id="322">
+					<name><![CDATA[Steel]]></name>
+				</value>
+				<value id="1191201">
+					<name><![CDATA[Over-Molded D-Handle with Barrier Bar]]></name>
+				</value>
+				<value id="626">
+					<name><![CDATA[2 pc.]]></name>
+				</value>
+				<value id="803">
+					<name><![CDATA[Quick release]]></name>
+				</value>
+				<value id="856">
+					<name><![CDATA[Bent]]></name>
+				</value>
+				<value id="867">
+					<name><![CDATA[Fixed]]></name>
+				</value>
+				<value id="875">
+					<name><![CDATA[Built-In/carry]]></name>
+				</value>
+				<value id="907">
+					<name><![CDATA[Detachable]]></name>
+				</value>
+				<value id="1010">
+					<name><![CDATA[Pivoting]]></name>
+				</value>
+				<value id="955">
+					<name><![CDATA[Extension]]></name>
+				</value>
+				<value id="1694">
+					<name><![CDATA[Carrying]]></name>
+				</value>
+				<value id="1372">
+					<name><![CDATA[Tubular]]></name>
+				</value>
+				<value id="1760">
+					<name><![CDATA[Recessed]]></name>
+				</value>
+				<value id="1695">
+					<name><![CDATA[Pull]]></name>
+				</value>
+				<value id="1894">
+					<name><![CDATA[Removable]]></name>
+				</value>
+				<value id="1770">
+					<name><![CDATA[Dual-action]]></name>
+				</value>
+				<value id="1915">
+					<name><![CDATA[Rubber]]></name>
+				</value>
+				<value id="1902">
+					<name><![CDATA[Tubular steel]]></name>
+				</value>
+				<value id="2178">
+					<name><![CDATA[Telescoping]]></name>
+				</value>
+				<value id="2067">
+					<name><![CDATA[Point]]></name>
+				</value>
+				<value id="2567">
+					<name><![CDATA[Swivel]]></name>
+				</value>
+				<value id="2481">
+					<name><![CDATA[Replacement]]></name>
+				</value>
+				<value id="2854">
+					<name><![CDATA[Ergonomic]]></name>
+				</value>
+				<value id="2680">
+					<name><![CDATA[Tapered]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="2">
+			<name><![CDATA[Cord Option]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="21">
+					<name><![CDATA[Cordless]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="8091">
+					<name><![CDATA[Hard wire only by a professional electrician]]></name>
+				</value>
+				<value id="9168">
+					<name><![CDATA[Corded or cordless]]></name>
+				</value>
+				<value id="20">
+					<name><![CDATA[Corded]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="1">
+			<name><![CDATA[Case]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="19">
+					<name><![CDATA[Yes]]></name>
+				</value>
+				<value id="92">
+					<name><![CDATA[No]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="6143">
+			<name><![CDATA[Pre-Selected Quantity]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="2534">
+					<name><![CDATA[0]]></name>
+				</value>
+				<value id="52">
+					<name><![CDATA[1]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="37">
+			<name><![CDATA[Overview of Number Included]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-regex>
+				<regex><![CDATA[-{0,1}\d*|-{0,1}\d*\.\d{0,}]]></regex>
+			</allowed-value-regex>
+		</attribute>
+		<attribute id="6268">
+			<name><![CDATA[All ItemType]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="690001">
+					<name><![CDATA[High Energy Learning System]]></name>
+				</value>
+				<value id="8604">
+					<name><![CDATA[Lawn & garden]]></name>
+				</value>
+				<value id="6480">
+					<name><![CDATA[Tools]]></name>
+				</value>
+				<value id="15693">
+					<name><![CDATA[Holiday]]></name>
+				</value>
+				<value id="11095">
+					<name><![CDATA[Jewelry]]></name>
+				</value>
+				<value id="18758">
+					<name><![CDATA[Baby]]></name>
+				</value>
+				<value id="17902">
+					<name><![CDATA[Appliances]]></name>
+				</value>
+				<value id="19065">
+					<name><![CDATA[Toys & games]]></name>
+				</value>
+				<value id="19066">
+					<name><![CDATA[Electronics & computers]]></name>
+				</value>
+				<value id="19063">
+					<name><![CDATA[Home]]></name>
+				</value>
+				<value id="19064">
+					<name><![CDATA[Clothing]]></name>
+				</value>
+				<value id="19076">
+					<name><![CDATA[Pets]]></name>
+				</value>
+				<value id="23573">
+					<name><![CDATA[Dutch oven]]></name>
+				</value>
+				<value id="19067">
+					<name><![CDATA[Sports & fitness]]></name>
+				</value>
+				<value id="19075">
+					<name><![CDATA[Personal care]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="31">
+			<name><![CDATA[Portable Option Overview]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="71">
+					<name><![CDATA[Portable]]></name>
+				</value>
+				<value id="24480">
+					<name><![CDATA[Can be relocated]]></name>
+				</value>
+				<value id="72">
+					<name><![CDATA[Stationary]]></name>
+				</value>
+				<value id="21">
+					<name><![CDATA[Cordless]]></name>
+				</value>
+				<value id="3186">
+					<name><![CDATA[Tabletop]]></name>
+				</value>
+				<value id="4825">
+					<name><![CDATA[Mobile]]></name>
+				</value>
+				<value id="2079">
+					<name><![CDATA[Bench top]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="30">
+			<name><![CDATA[Overview of Power Option]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="7389">
+					<name><![CDATA[Self powered]]></name>
+				</value>
+				<value id="69">
+					<name><![CDATA[Powered]]></name>
+				</value>
+				<value id="70">
+					<name><![CDATA[No power]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="5338">
+			<name><![CDATA[Socket Depth]]></name>
+			<type>LABEL</type>
+			<type>SEARCH</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<important-flag>true</important-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="6022">
+					<name><![CDATA[Set]]></name>
+				</value>
+				<value id="3558">
+					<name><![CDATA[Spark plug]]></name>
+				</value>
+				<value id="181001">
+					<name><![CDATA[4.25 in.]]></name>
+				</value>
+				<value id="134">
+					<name><![CDATA[Standard]]></name>
+				</value>
+				<value id="2053">
+					<name><![CDATA[Mid length]]></name>
+				</value>
+				<value id="1299">
+					<name><![CDATA[Deep]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="26">
+			<name><![CDATA[Overview of Item Weight (lbs.)]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+		</attribute>
+		<attribute id="160">
+			<name><![CDATA[General Warranty]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+		</attribute>
+		<attribute id="153">
+			<name><![CDATA[Power Type]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="5638">
+					<name><![CDATA[Dash for Compares & Unknowns]]></name>
+				</value>
+				<value id="7458">
+					<name><![CDATA[Solar]]></name>
+				</value>
+				<value id="4979">
+					<name><![CDATA[Telephone line powered]]></name>
+				</value>
+				<value id="5440">
+					<name><![CDATA[Self-generating]]></name>
+				</value>
+				<value id="20993">
+					<name><![CDATA[Halogen cooking technology]]></name>
+				</value>
+				<value id="34053">
+					<name><![CDATA[Disposable or Rechargeable Batteries / Power Adapter]]></name>
+				</value>
+				<value id="9451">
+					<name><![CDATA[Electric or disposable battery]]></name>
+				</value>
+				<value id="12736">
+					<name><![CDATA[AC]]></name>
+				</value>
+				<value id="249501">
+					<name><![CDATA[DC]]></name>
+				</value>
+				<value id="3803">
+					<name><![CDATA[Gas/oil mix]]></name>
+				</value>
+				<value id="4252">
+					<name><![CDATA[Disposable or rechargeable batteries]]></name>
+				</value>
+				<value id="4320">
+					<name><![CDATA[Electric or battery]]></name>
+				</value>
+				<value id="3985">
+					<name><![CDATA[AC/DC]]></name>
+				</value>
+				<value id="4045">
+					<name><![CDATA[Plug-in]]></name>
+				</value>
+				<value id="2217">
+					<name><![CDATA[Manual]]></name>
+				</value>
+				<value id="3056">
+					<name><![CDATA[Gasoline]]></name>
+				</value>
+				<value id="773">
+					<name><![CDATA[None (non-powered)]]></name>
+				</value>
+				<value id="1794">
+					<name><![CDATA[Rechargeable battery]]></name>
+				</value>
+				<value id="7191">
+					<name><![CDATA[Battery]]></name>
+				</value>
+				<value id="425">
+					<name><![CDATA[Butane]]></name>
+				</value>
+				<value id="427">
+					<name><![CDATA[Propane]]></name>
+				</value>
+				<value id="290">
+					<name><![CDATA[Rechargeable batteries]]></name>
+				</value>
+				<value id="404">
+					<name><![CDATA[Disposable batteries]]></name>
+				</value>
+				<value id="185">
+					<name><![CDATA[Pneumatic]]></name>
+				</value>
+				<value id="289">
+					<name><![CDATA[Gas]]></name>
+				</value>
+				<value id="32">
+					<name><![CDATA[Dual]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="22">
+					<name><![CDATA[Electric]]></name>
+				</value>
+				<value id="3208">
+					<name><![CDATA[Oil]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="1181">
+			<name><![CDATA[Installation Setup Requirements]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="643701">
+					<name><![CDATA[Light assembly may be required]]></name>
+				</value>
+				<value id="681301">
+					<name><![CDATA[Quick attach]]></name>
+				</value>
+				<value id="5638">
+					<name><![CDATA[Dash for Compares & Unknowns]]></name>
+				</value>
+				<value id="5351">
+					<name><![CDATA[Professional installation recommended]]></name>
+				</value>
+				<value id="269801">
+					<name><![CDATA[Some Assembly Required (Seat)]]></name>
+				</value>
+				<value id="14056">
+					<name><![CDATA[Assembly may be required]]></name>
+				</value>
+				<value id="8018">
+					<name><![CDATA[Installation required]]></name>
+				</value>
+				<value id="3201">
+					<name><![CDATA[Assembly required, no tools]]></name>
+				</value>
+				<value id="3050">
+					<name><![CDATA[Assembly Required]]></name>
+				</value>
+				<value id="671701">
+					<name><![CDATA[Professional Assembly Recommended]]></name>
+				</value>
+				<value id="4108">
+					<name><![CDATA[Professional installation optional]]></name>
+				</value>
+				<value id="4107">
+					<name><![CDATA[Requires professional installation]]></name>
+				</value>
+				<value id="3048">
+					<name><![CDATA[Fully Assembled]]></name>
+				</value>
+				<value id="3049">
+					<name><![CDATA[Some assembly required]]></name>
+				</value>
+				<value id="719101">
+					<name><![CDATA[No assembly required]]></name>
+				</value>
+				<value id="74">
+					<name><![CDATA[N/A]]></name>
+				</value>
+				<value id="268601">
+					<name><![CDATA[Seat and steering wheel]]></name>
+				</value>
+				<value id="722801">
+					<name><![CDATA[Assembly required for dining table and swivel rocker]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="111">
+			<name><![CDATA[Modular]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="19">
+					<name><![CDATA[Yes]]></name>
+				</value>
+				<value id="92">
+					<name><![CDATA[No]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+		<attribute id="3192">
+			<name><![CDATA[Number of Extensions in Kit/Set]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-regex>
+				<regex><![CDATA[-{0,1}\d*|-{0,1}\d*\.\d{0,}]]></regex>
+			</allowed-value-regex>
+		</attribute>
+		<attribute id="55">
+			<name><![CDATA[Number of Handles]]></name>
+			<type>LABEL</type>
+			<required-flag>false</required-flag>
+			<trademark-flag>false</trademark-flag>
+			<multivalue-flag>false</multivalue-flag>
+			<allowed-value-ids>
+				<value id="52">
+					<name><![CDATA[1]]></name>
+				</value>
+				<value id="1272">
+					<name><![CDATA[17]]></name>
+				</value>
+				<value id="53">
+					<name><![CDATA[2]]></name>
+				</value>
+				<value id="39">
+					<name><![CDATA[8]]></name>
+				</value>
+				<value id="40">
+					<name><![CDATA[10]]></name>
+				</value>
+				<value id="75">
+					<name><![CDATA[4]]></name>
+				</value>
+				<value id="84">
+					<name><![CDATA[3]]></name>
+				</value>
+				<value id="57">
+					<name><![CDATA[None]]></name>
+				</value>
+				<value id="1277">
+					<name><![CDATA[23]]></name>
+				</value>
+				<value id="2360">
+					<name><![CDATA[41]]></name>
+				</value>
+				<value id="37">
+					<name><![CDATA[5]]></name>
+				</value>
+			</allowed-value-ids>
+		</attribute>
+	</attributes>
+</attribute-library>

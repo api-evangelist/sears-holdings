@@ -1,0 +1,182 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/docs/api-guide/
+docs: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/
+api: Sears Marketplace Seller API
+media_type: application/xml
+note: >-
+  Cross-cutting runtime semantics for the Sears Marketplace Seller API, read from the provider's
+  own API Guide and the 33 XSDs harvested into xsd/. There is no OpenAPI to derive from; every
+  statement below traces to a published page or a fetched schema.
+auth:
+  style: HMAC-SHA256 request signature in an Authorization header
+  detail: authentication/sears-holdings-authentication.yml
+transport:
+  protocol: HTTPS
+  verbs:
+    - verb: GET
+      meaning: export a document from Seller Portal (orders, inventory, reports, libraries)
+    - verb: PUT
+      meaning: import a document into Seller Portal (items, inventory, pricing, ASNs, adjustments)
+  payload: whole XML documents validated against a published XSD, not per-resource JSON
+  note: >-
+    The API is document-oriented rather than resource-oriented. A PUT submits a feed file and
+    returns a document-id; it does not return the created resource. There is no POST, PATCH or
+    DELETE - deletion is expressed as an items-to-delete section inside a catalog feed.
+async_write_model:
+  shape: accept-then-verify
+  description: >-
+    A 200 OK on a PUT means only that the file was ACCEPTED, not that it processed. The provider
+    states this in bold: "A 200 (OK) response from the API call only means we accepted the file and
+    does not mean that we processed the file without any issues." The caller must take the
+    document-id from the api-response body and poll the Processing Report API to learn the real
+    outcome.
+  step_1: PUT the feed -> 200 OK with <api-response><document-id>N</document-id></api-response>
+  step_2: GET /SellerPortal/api/reports/v1/processing-report/{document-id}?sellerId={sellerId}
+  step_3_for_refunds: GET /SellerPortal/api/oms/orderadjustment/v3 to confirm the refund completed or failed
+  agent_implication: >-
+    An agent that treats the 200 as success will silently drop every rejected record. The
+    processing report is not optional instrumentation, it is the second half of the write.
+idempotency:
+  supported: false
+  header: null
+  scope: null
+  retention: null
+  evidence: >-
+    No Idempotency-Key header, no request-id de-duplication and no replay-safety statement appears
+    anywhere in the API Guide or in any of the 33 published XSDs. The nearest thing to a safety net
+    is domain-level: a duplicate catalog record is rejected with "Duplicate item and store id", and
+    an order already marked returned rejects further adjustments. Those are business-rule guards on
+    two specific feeds, not a general idempotency contract.
+  agent_implication: >-
+    Retrying a failed PUT is not safe in general. A timed-out ASN or order-adjustment PUT may or may
+    not have been accepted, and the only way to find out is to poll the processing report or the
+    refund-status lookup before resending.
+pagination:
+  style: date-range filtering, not cursor or page pagination
+  params:
+    - fromdate
+    - todate
+    - status
+    - podate
+    - ponumber
+  response_fields: []
+  note: >-
+    Export APIs are scoped by query parameters on the request URL and return a whole document.
+    There is no page, offset, cursor or next-link convention, and no total-count field.
+field_expansion:
+  supported: false
+sparse_fields:
+  supported: false
+metadata:
+  supported: false
+  note: There is no free-form metadata bag on any entity; every field is XSD-constrained.
+request_id_tracing:
+  request_header: null
+  response_field: document-id
+  note: >-
+    The document-id returned in <api-response> is the correlation handle for a submitted feed. It
+    is the only tracing identifier the API exposes, and it is assigned by the server, not the
+    caller.
+versioning:
+  style: version in the URL path segment and in the XML target namespace
+  examples:
+    - https://seller.marketplace.sears.com/SellerPortal/api/oms/purchaseorder/v19
+    - http://seller.marketplace.sears.com/oms/v7
+  per_api: true
+  note: >-
+    Every API carries its own independent integer version. There is no global API version. Multiple
+    versions of the same API stay callable simultaneously (purchase order v13, v15, v18 and v19 are
+    all documented as current), which is a real strength for a slow-moving integrator.
+error_envelope:
+  synchronous:
+    element: api-response
+    namespace: http://seller.marketplace.sears.com/shared/v1
+    schema: xsd/sears-holdings-shared-api-response-v1.xsd
+    fields: [deprecated, document-id, error-detail, processing-message]
+    note: >-
+      A single choice of document-id (success), error-detail (failure) or processing-message.
+      Errors are returned with HTTP 200 and an error-detail element, not with a 4xx status.
+  asynchronous:
+    element: report
+    schema: xsd/sears-holdings-shared-seller-error-report-v1.xsd
+    fields: [summary.record-count, summary.records-with-warnings, summary.records-with-errors, summary.records-accepted, detail.warnings.warning, detail.errors.error]
+    keyed_by: record-id attribute per warning/error, pointing back into the submitted feed
+  rfc9457: false
+  catalog: errors/sears-holdings-problem-types.yml
+rate_limit_signaling:
+  headers: []
+  status_on_exhaustion: 403
+  body_message: rate limited
+  detail: rate-limits/sears-holdings-rate-limits.yml
+  note: >-
+    No runtime quota signal of any kind. The published limits are the only budget an agent has, and
+    it must track its own consumption.
+reversibility:
+  applicable: true
+  grade: documented
+  grade_basis: >-
+    Reversal operations are documented for every consequential write, but the provider states no
+    time window for any of them. Per the 0.12.0 rubric that is `documented` (0.4), not `verified`.
+    No window is asserted here that the docs do not state.
+  write_surfaces:
+    - surface: Purchase order fulfilment (ASN / shipment update)
+      write: PUT /SellerPortal/api/oms/asn/v7
+      reversal: null
+      window: null
+      note: >-
+        Once an ASN closes an order line there is no documented un-ship operation. The recorded
+        recovery path is a subsequent refund or return via the order adjustment API, not a reversal
+        of the shipment itself.
+    - surface: Order cancellation
+      write: PUT /SellerPortal/api/oms/order/cancel/v1
+      reversal: null
+      window: null
+      note: >-
+        Cancellation is itself the reversal of an order. The guide documents no un-cancel. It does
+        state a related automatic boundary - an order with a rejected ASN that is not closed reaches
+        30 days overdue and is automatically cancelled, and the seller is not paid for it.
+    - surface: Refund (money out, buyer keeps the item)
+      write: PUT /SellerPortal/api/oms/order/adjustment/v5 with a <refund> section
+      reversal: null
+      status_check: GET /SellerPortal/api/oms/orderadjustment/v3?sellerId={}&ponumber={}&podate={}
+      window: null
+      note: >-
+        A refund cannot be taken back. It can only be verified: the status lookup reports the
+        adjustment as completed or failed, and a failure reason the guide names explicitly is that a
+        return or refund was already issued.
+    - surface: Return (money out, item comes back)
+      write: PUT /SellerPortal/api/oms/order/adjustment/v5 with a <return> section
+      reversal: null
+      window: null
+      hard_boundary: >-
+        Documented and load-bearing - "Adjustments cannot be made on an order that has been marked
+        as returned. Seller Portal will accept a refund file but the order management system will
+        reject the refund and it will fail to process." The PUT still returns 200, so an agent that
+        does not poll the status lookup will believe a rejected refund succeeded.
+    - surface: Catalog item deletion
+      write: PUT /SellerPortal/api/catalog/fbm/v25 with an items-to-delete section
+      reversal: re-create the item through the same catalog feed
+      window: 90 days
+      window_source: >-
+        The API Guide states deleted items are pulled down from the .com sites and purged after
+        90 days - the only numeric reversal window the provider publishes.
+    - surface: Catalog item deactivation
+      write: PUT /SellerPortal/api/catalog/fbm/v25 with an items-to-inactivate section
+      reversal: reactivate through the same feed
+      window: unlimited
+      window_source: >-
+        The guide contrasts inactivate with delete precisely on reversibility - inactivate is for
+        items a seller "might want to reactivate in future".
+dry_run_mode:
+  supported: false
+  substitute: >-
+    A full sandbox at https://sellersandbox.sears.com mirrors production. There is no in-production
+    dry-run, validate-only or preview flag on any operation. See sandbox/sears-holdings-sandbox.yml.
+cross_links:
+  errors: errors/sears-holdings-problem-types.yml
+  lifecycle: lifecycle/sears-holdings-lifecycle.yml
+  authentication: authentication/sears-holdings-authentication.yml
+  rate_limits: rate-limits/sears-holdings-rate-limits.yml
+  data_model: data-model/sears-holdings-data-model.yml
+  sandbox: sandbox/sears-holdings-sandbox.yml

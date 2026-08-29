@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns="http://seller.marketplace.sears.com/catalog/v1"
+           elementFormDefault="qualified" targetNamespace="http://seller.marketplace.sears.com/catalog/v1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="seller-product-id-type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="upc-type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="price-type">
+        <xs:restriction base="xs:decimal"/>
+    </xs:simpleType>
+    <xs:simpleType name="date-removed-type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{4,4}-(0[1-9]|1[0-2])-(3[0-1]|[1-2][0-9]|0[1-9]) (0[1-9]|1[0-2]):([1-5][0-9]|0[0-9]):([1-5][0-9]|0[0-9])">
+                <xs:annotation>
+                    <xs:documentation>
+                        SimpleDateFormat and a little easier to read:
+                        yyyy-MM-dd hh:mm:ss
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="pricing-type">
+        <xs:sequence>
+            <xs:element name="standard-price" type="price-type" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rule-term-type">
+        <xs:sequence>
+            <xs:element name="rule-term-id" type="xs:long" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="term" type="xs:string" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="product-type">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="short-desc" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="brand-name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="canonical-brand-name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="item-class-path" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="model-number" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="upc" type="upc-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="pricing" type="pricing-type" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="date-removed" type="date-removed-type" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="operational-status" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="rule-term" type="rule-term-type" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="removal-reason" type="xs:string" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="comment" type="xs:string" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+         <xs:attribute name="seller-product-id" type="seller-product-id-type" use="required" />
+    </xs:complexType>
+    <xs:complexType name="summary-stats-type">
+        <xs:sequence>
+            <xs:element name="item-counts" type="item-counts-type" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="processing-times" type="processing-times-type" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="item-counts-type">
+        <xs:sequence>
+            <xs:element name="total" type="xs:long" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="expected" type="xs:long" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="errored-out" type="xs:long" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="processing-times-type">
+        <xs:sequence>
+            <xs:element name="per-item-average-ms" type="xs:long" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="total-seconds" type="xs:long" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="header-type">
+        <xs:sequence>
+            <xs:element name="version" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="seller-id" type="xs:long" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="seller-name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="date" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="removed-items">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="header" type="header-type" maxOccurs="1" minOccurs="1"/>
+                <xs:element name="product" type="product-type" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Only products that have video related assets will be listed and only if those assets have
+                            been
+                            changed withing the [last-sync-data, sync-date) date range. If the product does not
+                            appear in this list it does not mean that the product does not exist but rather the product
+                            does not have any video assets. The one exception is that if the product once had video
+                            assets
+                            but no longer has video assets it will be listed without any video assets.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="summary-stats" type="summary-stats-type" maxOccurs="1" minOccurs="1"/>
+                <xs:element name="system-errors" type="xs:string" maxOccurs="1" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>
+                            This element will be populated when application encounters system errors while generating
+                            this feed.
+                            Exception will be populated. This is an indication to Clients to not to process the file.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns="http://seller.marketplace.sears.com/catalog/v1" elementFormDefault="qualified" targetNamespace="http://seller.marketplace.sears.com/catalog/v1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="content-matching-report">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="header" type="header-type" minOccurs="1"  maxOccurs="1"/>
+                <xs:element name="content-detail" type="content-detail-type" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+     
+    <xs:complexType name="content-detail-type">
+        <xs:sequence>
+            <xs:element name="ssin" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+           <xs:element name="upc" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+            <xs:element name="brand" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="manufacturer-model-number" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="content-item-class-id" type="xs:long" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="upload-date" type="xs:date" maxOccurs="1" minOccurs="1"/> 
+            <xs:element name="match-status" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="match-process-date" type="xs:date" minOccurs="0" maxOccurs="1" />
+            <xs:element name="preview-url" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="transaction-id" type="xs:string"  minOccurs="0" maxOccurs="1"/> 
+        </xs:sequence>
+         <xs:attribute name="item-id" type="xs:string"  use="required" />
+    </xs:complexType> 
+    
+    <xs:complexType name="header-type">
+        <xs:sequence>
+            <xs:element name="seller-id" type="xs:long" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="date" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="request-params" type="request-params-type" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+   
+	<xs:complexType name="request-params-type">
+		<xs:sequence>
+			<xs:element name="request-param" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="name" type="xs:string" use="required" />
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+ 
+</xs:schema>           

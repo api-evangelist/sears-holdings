@@ -1,0 +1,84 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/docs/api-guide/sandbox-environment/
+docs:
+  - https://marketplace.sears.com/seller-support/sandbox-access/
+  - https://marketplace.sears.com/seller-support/use-of-sandbox/
+api: Sears Marketplace Seller API
+published: true
+name: Seller Portal Sandbox
+host: https://sellersandbox.sears.com
+signup: https://sellersandbox.sears.com/SellerPortal/d/index.jsp
+url_rule: >-
+  Every production URL works in the sandbox by substituting the host - replace
+  https://seller.marketplace.sears.com with https://sellersandbox.sears.com and leave the path,
+  version and query parameters unchanged.
+note: >-
+  A full replica environment rather than a test-mode flag. There are no test key prefixes, no
+  magic test identifiers and no test card numbers, because the sandbox is a separate host with its
+  own separately-registered seller account and its own credentials. Nothing in this file is an
+  invented test value; the only concrete value the provider publishes is the instruction that a
+  fake 16-digit card number is acceptable during sandbox registration, and no such number is
+  reproduced here.
+test_vs_live:
+  mechanism: separate host and separate account, not a key prefix or a mode flag
+  key_prefixes: []
+  data_isolation: >-
+    The sandbox is a blank slate for security reasons - no items, orders or settings are copied
+    from the production account. Sellers must build their own items, inventory and orders before
+    testing.
+access:
+  self_service: false
+  gated: true
+  steps:
+    - Self-register at https://sellersandbox.sears.com/SellerPortal/d/index.jsp using the "Sign up" button
+    - Use the same email address and the same FEIN or SSN as the production Sears Marketplace account
+    - Valid card and bank details are not required, but a 16-digit placeholder card number must be supplied
+    - Activate the account from the "Sears Marketplace Account Authentication Required - Sandbox" email
+    - Complete the account setup workflow and submit for approval
+    - Open a support request at https://marketplace.sears.com/support with topic Accounts, subtopic "Sandbox Activation Request", quoting the production seller ID and the sandbox seller ID
+    - Wait for the "Sears Marketplace - Your account is activated - Sandbox" email
+  note: >-
+    The final manual step is load-bearing. The provider states that without the support request the
+    sandbox account may never be activated.
+fixtures:
+  order_generation:
+    api: Create Purchase Order
+    version: 1
+    released: '2015-09-23'
+    method: PUT
+    url: https://sellersandbox.sears.com/SellerPortal/api/sandbox/oms/createpo/v1?sellerId={sellerId}
+    sandbox_only: true
+    note: >-
+      The only way to create test orders. There is no UI mechanism to generate a sample purchase
+      order; it must be done through this API. Up to five comma-separated external item ids may be
+      supplied and one order line is created per id.
+supported_apis:
+  - Export Seller Information
+  - Export Item Class
+  - Export Attribute Library
+  - Item Management
+  - Inventory Management
+  - Pricing Management
+  - Competitive Pricing
+  - Order Prep Time / Lead Time (item level)
+  - Create Purchase Order
+  - Get Purchase Order
+  - ASN / Shipment Updates Management
+  - Order Cancellations Management
+  - Order Adjustment / Return Management
+  - Export Order Adjustment Details
+unsupported_apis:
+  - Customer Cancellation APIs
+  - Reporting features of Seller Portal
+time_simulation:
+  supported: false
+observed:
+  probe: https://sellersandbox.sears.com/SellerPortal/s/schema/rest/attribute/export/v2/attribute-library.xsd
+  date: '2026-08-28'
+  status: 503
+  note: >-
+    The sandbox host answered 503 to an anonymous schema request on the day of this harvest, and
+    403 to every /.well-known/ probe. The production host served the equivalent schema with a 200,
+    so the schemas in xsd/ were taken from production. The 503 is recorded as observed, not
+    interpreted as an outage claim.

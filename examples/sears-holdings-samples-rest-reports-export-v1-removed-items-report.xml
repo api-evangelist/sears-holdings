@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<removed-items xmlns="http://seller.marketplace.sears.com/catalog/v1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://seller.marketplace.sears.com/catalog/v1 ../../../../../rest/reports/export/v1/removed-items-report.xsd">
+    <header>
+        <version>application/vnd.shc.offering.removed.v1+txt</version>
+        <seller-id>84369352</seller-id>
+        <seller-name>Bob</seller-name>
+        <date>2013-06-24T12:00:00</date>
+    </header>
+    <product>
+        <title>Widgets</title>
+        <short-desc>Plug-in play widgets</short-desc>
+        <brand-name>Predator</brand-name>
+        <canonical-brand-name>Tyco</canonical-brand-name>
+        <item-class-path>Automotive|Tires &amp; Wheels|Custom Wheels</item-class-path>
+        <model-number>3252</model-number>
+        <pricing>
+            <standard-price>12.99</standard-price>
+        </pricing>
+        <date-removed>2013-12-01 12:00:00</date-removed>
+        <rule-term>
+            <rule-term-id>26223</rule-term-id>
+            <term>field-exclusion</term>
+            <description>Fielded</description>
+        </rule-term>
+        <rule-term>
+            <rule-term-id>262184</rule-term-id>
+            <term>invalid-product-image</term>
+            <description>This is not a car tire</description>
+        </rule-term>
+    </product>
+    <product>
+        <title>Golden Melody</title>
+        <short-desc>The only mainstream equal temperament on the market</short-desc>
+        <brand-name>Hohner Harps</brand-name>
+        <canonical-brand-name>Hohner</canonical-brand-name>
+        <item-class-path>Music Movies &amp; Gaming|Music</item-class-path>
+        <model-number>124</model-number>
+        <pricing>
+            <standard-price>32.99</standard-price>
+        </pricing>
+        <date-removed>2013-12-01 12:00:00</date-removed>
+        <rule-term>
+            <rule-term-id>1671162</rule-term-id>
+            <term>state</term>
+            <description>CA</description>
+        </rule-term>
+    </product>
+    <summary-stats>
+        <item-counts>
+            <total>2</total>
+            <expected>2</expected>
+            <errored-out>0</errored-out>
+        </item-counts>
+    </summary-stats>
+</removed-items>

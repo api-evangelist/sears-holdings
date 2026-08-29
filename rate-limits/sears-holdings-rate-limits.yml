@@ -1,0 +1,62 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/api-limits/
+docs: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/api-limits/
+api: Sears Marketplace Seller API
+limit_count: 8
+headers_published: false
+response_headers: []
+header_note: >-
+  The provider documents no rate-limit response headers. No X-RateLimit-*, RateLimit-* or
+  Retry-After header is described in the API Guide, and none was observed on the unauthenticated
+  probe of https://seller.marketplace.sears.com/SellerPortal/api/oms/purchaseorder/v19 on
+  2026-08-28. An agent cannot read remaining quota at runtime; it can only count its own calls.
+exhaustion:
+  status_code: 403
+  body_message: rate limited
+  recovery: >-
+    File-type limits reset on a rolling hour measured from the first call in the window — the guide's
+    own worked example is a seller posting 600 catalog files between 11:05 and 11:58 who must wait
+    until 12:05. An IP that exceeds the per-minute ceiling is throttled for 15 minutes.
+rate_limits:
+  - scope: per-ip
+    window: 1 minute
+    limit: 500
+    applies_to: all PUT and GET calls
+    penalty: IP throttled for 15 minutes
+    source: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/api-limits/
+  - scope: per-account
+    resource: Catalog
+    window: 1 hour
+    limit: 600
+    unit: files
+  - scope: per-account
+    resource: Pricing
+    window: 1 hour
+    limit: 120
+    unit: files
+  - scope: per-account
+    resource: Inventory
+    window: 1 hour
+    limit: 360
+    unit: files
+  - scope: per-account
+    resource: Order Prep Time / Lead Time
+    window: 1 hour
+    limit: 100
+    unit: files
+  - scope: per-account
+    resource: Order updates (returns / cancellations / refunds)
+    window: 1 hour
+    limit: 200
+    unit: files
+  - scope: per-account
+    resource: ASN / Shipment Updates
+    window: 1 hour
+    limit: 300
+    unit: files
+  - scope: per-account
+    resource: Manual Invoice
+    window: 1 hour
+    limit: 20
+    unit: files

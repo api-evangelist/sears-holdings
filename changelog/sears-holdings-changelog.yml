@@ -1,0 +1,46 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/wp-content/uploads/MP_API_Guide.pdf
+docs: https://marketplace.sears.com/docs/api-guide/current-api-versions/
+api: Sears Marketplace Seller API
+scheme: dated "Version Updates" section inside the published API Guide
+dedicated_changelog_page: false
+current_guide_edition: December 2022
+note: >-
+  There is no dedicated changelog page, RSS feed or release-notes site. The provider's change
+  record is a dated Version Updates section in the API Guide PDF, which is republished when
+  versions change. The most recent entry is 2022-12-15; the guide has carried a December 2022
+  cover date since, so the public evidence is that the Seller API has not shipped a versioned
+  change in over three years. That is the finding, not a gap in this harvest.
+latest_entry: '2022-12-15'
+entries:
+  - date: '2022-12-15'
+    version: Purchase Order v19, Remittance Info Report v9
+    breaking: false
+    additions:
+      - Purchase Order API v19 adds a Lease Order field
+      - Common fields XSD raised to version 19
+      - Remittance Info Report API v9 adds a Lease Order field
+    highlights: Lease order support surfaced through both the order and the settlement feeds.
+  - date: '2021-09-23'
+    version: Purchase Order v18, Remittance Info Report v8
+    breaking: false
+    additions:
+      - Purchase Order API v18 adds a Shipping Commission field
+      - Common fields XSD raised to version 18
+      - Remittance Info Report API v8 adds a Shipping Commission field
+    highlights: Shipping commission became visible to sellers in the order and remittance feeds.
+  - date: '2021-04-15'
+    version: Service Item API v1
+    breaking: false
+    additions:
+      - New Service Item API for delivery and installation services
+    highlights: >-
+      Invited sellers can offer curb-side delivery, in-home delivery, installation and haul-away on
+      LTL-shipped categories such as appliances, electronics and fitness equipment, with variable
+      pricing by zip code across the 48 contiguous states.
+older_dated_releases:
+  note: >-
+    Release dates for versions predating the Version Updates section are recorded per API in the
+    Current API Versions table and are carried in lifecycle/sears-holdings-lifecycle.yml rather
+    than duplicated here.

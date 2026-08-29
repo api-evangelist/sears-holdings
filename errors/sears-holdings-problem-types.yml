@@ -1,0 +1,192 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/seller-support/error-messages/
+docs: https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/general-error-handling/
+api: Sears Marketplace Seller API
+format: xml
+rfc9457: false
+note: >-
+  Sears Marketplace does not use RFC 9457 problem+json, HTTP status codes for application errors,
+  or numeric error codes. Errors are English message strings carried in XML, in two envelopes -
+  a synchronous api-response/error-detail on the call itself, and an asynchronous per-record
+  seller error report retrieved later by document-id. Both envelopes are described by published
+  XSDs harvested into xsd/. The catalog below is the provider's own public error-message reference,
+  transcribed; nothing is invented and no error was assigned a code the provider does not publish.
+envelopes:
+  - name: synchronous api-response
+    schema: xsd/sears-holdings-shared-api-response-v1.xsd
+    namespace: http://seller.marketplace.sears.com/shared/v1
+    error_field: error-detail
+    http_status: 200
+    warning: >-
+      Application errors are returned with HTTP 200. The status line cannot be used to detect
+      failure - the body must be parsed. Observed live on 2026-08-28: an unauthenticated GET of
+      purchaseorder/v19 returned 200 with error-detail "Missing Authorization header in request".
+  - name: asynchronous seller error report
+    schema: xsd/sears-holdings-shared-seller-error-report-v1.xsd
+    example: examples/sears-holdings-samples-seller-error-report-v1-example.xml
+    retrieved_by: GET /SellerPortal/api/reports/v1/processing-report/{document-id}?sellerId={sellerId}
+    fields:
+      - summary/record-count
+      - summary/records-with-warnings
+      - summary/records-with-errors
+      - summary/records-accepted
+      - detail/warnings/warning@record-id
+      - detail/errors/error@record-id
+    note: >-
+      Errors are keyed by record-id, which points back to a row of the feed the caller submitted.
+      A partially-accepted feed is normal: records-accepted and records-with-errors can both be
+      non-zero on the same submission.
+transport_errors:
+  - status: 403
+    meaning: rate limited
+    remediation: >-
+      Wait 60 minutes from the first call of the hour for a file-type limit, or 15 minutes for the
+      per-IP 500/minute limit. See rate-limits/sears-holdings-rate-limits.yml.
+  - status: 200
+    meaning: file accepted, processing outcome unknown
+    remediation: Poll the Processing Report API with the returned document-id.
+problem_types:
+  - id: missing-authorization-header
+    title: Missing Authorization header in request
+    envelope: api-response/error-detail
+    category: authentication
+    remediation: Send the HMAC-SHA256 Authorization header. See authentication/sears-holdings-authentication.yml.
+    source: probed 2026-08-28 https://seller.marketplace.sears.com/SellerPortal/api/oms/purchaseorder/v19
+  - id: attribute-value-invalid
+    title: "Attribute with id = '12345' doesn't have value = 'XYZ'"
+    category: catalog
+    cause: An invalid value was selected for an attribute.
+    remediation: Consult the Item Class / Attributes mapping for the valid value set.
+  - id: attribute-not-in-item-class
+    title: "Attribute with id = 'XXXXX' does not exist for content item class XXXX"
+    category: catalog
+    cause: The attribute is not compatible with the chosen item class.
+    remediation: Verify the attribute in the mapping files or choose a different item class.
+  - id: image-url-unreachable
+    title: Dude server didn't find specified URL
+    category: media
+    cause: The supplied image URL did not respond or is invalid.
+    remediation: Replace the image URL or fix the source image.
+  - id: image-asset-code-mismatch
+    title: Dude server doesn't return proper asset code
+    category: media
+    cause: The file extension does not match the real image format.
+    remediation: Ensure a file labelled JPG is actually a JPG, not a BMP or GIF.
+  - id: duplicate-image-urls
+    title: Duplicate image URLs have been removed
+    category: media
+    severity: warning
+    remediation: Remove the repeated URLs from the feed.
+  - id: duplicate-item-and-store-id
+    title: Duplicate item and store id
+    category: catalog
+    cause: The same item id appears more than once in the feed.
+    remediation: Remove the duplicate row or change the item id.
+  - id: product-create-update-failed
+    title: "Failed to create/update product. [ABC123]"
+    category: catalog
+    cause: Too many item-creation errors on the record.
+    remediation: Verify the item is completely constructed; contact seller support if unclear.
+  - id: html-in-title
+    title: HTML tags have been found in the 'Title' field
+    category: content
+    remediation: Remove HTML from the title; HTML is permitted only in description fields.
+  - id: image-url-malformed
+    title: Image URL is not well-formed
+    category: media
+    remediation: Supply a syntactically valid absolute URL.
+  - id: item-does-not-exist
+    title: "Item 'chew009' doesn't exist, inactive or already deleted"
+    category: catalog
+    severity: informational
+    remediation: None required - the item is already gone.
+  - id: item-class-not-eligible
+    title: "Item class '...' is not eligible for FBM program"
+    category: catalog
+    remediation: Remove the item or select a different item class.
+  - id: item-class-required
+    title: Item Class is required
+    category: catalog
+    remediation: Supply the item class number, not the item class path name.
+  - id: socket-timeout
+    title: "java.net.SocketTimeoutException: Read timed out"
+    category: transport
+    cause: The connection was reset during upload.
+    remediation: Re-upload the file after 30 to 60 minutes.
+  - id: long-description-too-long
+    title: "'Long Description' should not be longer than 5000 characters"
+    category: content
+    remediation: Trim to 5000 characters.
+  - id: short-description-too-long
+    title: "'Short Description' should not be longer than 2400 characters"
+    category: content
+    remediation: Trim to 2400 characters and move the remainder to the long description.
+  - id: profanity-in-marketing-description
+    title: "Profane words have been found in the 'contentItem.marketingDescription' field"
+    category: content
+    remediation: Remove the flagged language; contact support if the flag looks wrong.
+  - id: profanity-in-free-shipping-promo
+    title: "Profane words have been found in the 'pricing.freeShippingPromoText' field"
+    category: content
+    remediation: Avoid the words "free" and "shipping" in the promo text.
+  - id: shipping-cost-out-of-range
+    title: "Shipping Cost: Ground value '9999.99' is invalid"
+    category: pricing
+    remediation: Use a value between 0.01 and 500.00.
+  - id: group-processing-failure
+    title: System error occurred during group processing
+    category: platform
+    remediation: Retry the upload after 30 to 60 minutes; contact support if it persists.
+  - id: item-class-obsolete
+    title: "The Item Class provided 'zz_Do_Not_Use|...' is invalid"
+    category: catalog
+    remediation: Replace with a currently valid item class.
+  - id: model-number-not-alphanumeric
+    title: "The 'Manufacturer Model Number' should be alphanumeric"
+    category: catalog
+    remediation: Alphanumeric only, maximum 40 characters, no spaces.
+  - id: price-format-invalid
+    title: "The 'Price' should be in the following format: #####.##"
+    category: pricing
+    remediation: Reformat the price.
+  - id: update-before-item-exists
+    title: "Cannot update 'a pricing' of the item with id 'ABC' because it doesn't exist"
+    category: ordering
+    cause: >-
+      Inventory, pricing or order-prep-time was sent before the item finished being created. Named
+      by the provider as the single most common integration error.
+    remediation: >-
+      Wait up to 15 minutes for the item feed to process, confirm via the processing report that
+      the item was created, then send the dependent update.
+  - id: variant-attributes-inconsistent
+    title: The same set of attributes have to be filled for all variants
+    category: catalog
+    remediation: Give every variation item the identical attribute field set.
+  - id: upc-check-digit-failed
+    title: "'UPC' 000000000000 did not pass check digit validation"
+    category: catalog
+    remediation: Supply a valid numeric 12 or 13 digit UPC.
+  - id: upc-already-used
+    title: "UPC '123456789100' is already used by another product"
+    category: catalog
+    remediation: Use a unique UPC or remove the item.
+  - id: variation-combination-exists
+    title: "Variation attributes combination already exists for items: 'ABC123'"
+    category: catalog
+    remediation: Add a differentiating attribute to the variant.
+  - id: refund-rejected-order-already-returned
+    title: Adjustment rejected because the order is marked as returned
+    envelope: order-adjustment status lookup (return-status Failed)
+    category: order-adjustment
+    cause: >-
+      A refund was submitted against an order already marked returned. Seller Portal accepts the
+      file with a 200 and the order management system rejects it downstream.
+    remediation: >-
+      Check the refund status via GET /SellerPortal/api/oms/orderadjustment/v3 before assuming a
+      refund succeeded.
+    source: https://marketplace.sears.com/docs/api-guide/
+additional_references:
+  - https://marketplace.sears.com/seller-support/error-messages/
+  - https://marketplace.sears.com/seller-support/category/products-and-inventory/item-creation/item-build-errors/
+decline_codes: not applicable - Sears Marketplace is not a card acquirer and publishes no decline-code reference

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://seller.marketplace.sears.com/pricing/v6"
+    targetNamespace="http://seller.marketplace.sears.com/pricing/v6"
+    elementFormDefault="qualified">
+
+    <!-- definition of simple types -->
+    <xs:simpleType name="map-price-indicator-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="strict" />
+            <xs:enumeration value="non-strict" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="itemIdType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="shipping-method-status-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="enabled" />
+            <xs:enumeration value="disabled" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="shipping-cost" type="xs:decimal" />
+    <!-- definition of complex types -->
+    <xs:complexType name="syw-max-shipping-method-type">
+        <xs:sequence>
+            <xs:element name="two-day-free-shipping" type="xs:boolean"
+                maxOccurs="1" minOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="sale-type">
+        <xs:sequence>
+            <xs:element name="sale-price" type="xs:decimal"
+                maxOccurs="1" minOccurs="1" />
+            <xs:element name="sale-start-date" type="xs:date"
+                maxOccurs="1" minOccurs="1" />
+            <xs:element name="sale-end-date" type="xs:date"
+                maxOccurs="1" minOccurs="1" />
+            <xs:element name="promotional-text" type="xs:string"
+                maxOccurs="1" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="shipping-provider-type" mixed="true">
+        <xs:sequence>
+            <xs:element ref="shipping-cost" maxOccurs="1"
+                minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="status" type="shipping-method-status-type"
+            use="required" />
+    </xs:complexType>
+    <xs:complexType name="shipping-override-type">
+        <xs:sequence>
+            <xs:element name="shipping-method-ground" type="ground-shipping-type"
+                maxOccurs="1" minOccurs="0" />
+            <xs:element name="shipping-method-expedited"
+                type="shipping-provider-type" maxOccurs="1" minOccurs="0" />
+            <xs:element name="shipping-method-premium" type="shipping-provider-type"
+                maxOccurs="1" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ground-shipping-type">
+        <xs:sequence>
+            <xs:element ref="shipping-cost" minOccurs="0"
+                maxOccurs="1" />
+            <xs:element name="free-shipping" type="free-shipping-type"
+                minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="status" type="shipping-method-status-type"
+            use="required" />
+    </xs:complexType>
+    <xs:complexType name="free-shipping-type">
+        <xs:sequence>
+            <xs:element name="free-shipping-start-date" type="xs:date"
+                maxOccurs="1" minOccurs="1" />
+            <xs:element name="free-shipping-end-date" type="xs:date"
+                maxOccurs="1" minOccurs="0" />
+            <xs:element name="free-shipping-promotional-text"
+                type="xs:string" maxOccurs="1" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="pricing-item-type">
+        <xs:sequence>
+            <xs:element name="standard-price" type="xs:decimal"
+                maxOccurs="1" minOccurs="1" />
+            <xs:element name="sale" type="sale-type"
+                maxOccurs="1" minOccurs="0" />
+            <xs:element name="shipping-override" type="shipping-override-type"
+                maxOccurs="1" minOccurs="0" />
+            <xs:element name="syw-max-shipping-method" type="syw-max-shipping-method-type"
+                maxOccurs="1" minOccurs="0" />
+            <xs:element name="map-price-indicator" type="map-price-indicator-type"
+                maxOccurs="1" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="item-id" type="itemIdType" use="required" />
+    </xs:complexType>
+    <xs:complexType name="fbm-pricing-type">
+        <xs:sequence>
+            <xs:element name="item" type="pricing-item-type"
+                maxOccurs="unbounded" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- definition of complex elements -->
+    <xs:element name="pricing-feed">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fbm-pricing" type="fbm-pricing-type"
+                    maxOccurs="1" minOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

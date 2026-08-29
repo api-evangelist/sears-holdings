@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pricing-feed xmlns="http://seller.marketplace.sears.com/pricing/v6"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://seller.marketplace.sears.com/pricing/v6 ../../../../../rest/pricing/import/v6/pricing.xsd">
+    <fbm-pricing>
+        <item item-id="123456">
+            <standard-price>59.99</standard-price>
+            <sale>
+                <sale-price>39.99</sale-price>
+                <sale-start-date>2010-01-30</sale-start-date>
+                <sale-end-date>2010-12-30</sale-end-date>
+            </sale>
+            <map-price-indicator>strict</map-price-indicator>
+        </item>
+        <item item-id="123457">
+            <standard-price>69.99</standard-price>
+            <sale>
+                <sale-price>49.99</sale-price>
+                <sale-start-date>2010-01-30</sale-start-date>
+                <sale-end-date>2010-12-30</sale-end-date>
+                <promotional-text>Save 5% off on all our Electronics</promotional-text>
+            </sale>
+            <shipping-override><!-- optional -->
+                <shipping-method-ground status="enabled"> <!-- each shipping method is optional; set status=”disabled” if item cannot
+                        be shipped by a method -->
+                    <shipping-cost>6.25</shipping-cost>   <!-- min: $0.01; max: $500; format: XXX.XX -->
+                    <free-shipping> <!-- free shipping applicable to ground shipping method only -->
+                        <free-shipping-start-date>2011-06-30</free-shipping-start-date> <!-- must be at least 2 days from today? -->
+                        <free-shipping-end-date>2011-07-30</free-shipping-end-date>	<!-- optional element -->
+                        <free-shipping-promotional-text>free shipping is available</free-shipping-promotional-text>  <!-- optional element -->
+                    </free-shipping>
+                </shipping-method-ground>
+                <shipping-method-expedited
+                    status="disabled"> <!-- optional -->
+                </shipping-method-expedited>
+                <shipping-method-premium status="enabled"> <!-- optional; will use weight based rate if method is enabled but no shipping-cost
+                        present -->
+                </shipping-method-premium>
+            </shipping-override>
+            <syw-max-shipping-method>
+                <two-day-free-shipping>true</two-day-free-shipping>
+            </syw-max-shipping-method>
+            <map-price-indicator>strict</map-price-indicator>
+        </item>
+    </fbm-pricing>
+</pricing-feed>

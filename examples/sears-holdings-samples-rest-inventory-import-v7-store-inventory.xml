@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<store-inventory
+        xmlns="http://seller.marketplace.sears.com/catalog/v7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://seller.marketplace.sears.com/catalog/v7 ../../../../../rest/inventory/import/v7/store-inventory.xsd">
+    <item item-id="10">
+        <locations>
+            <location location-id="20">
+                <quantity>20</quantity>
+                <low-inventory-threshold>5</low-inventory-threshold>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+                <inventory-timestamp>2012-03-30T09:05:30</inventory-timestamp>
+            </location>
+            <location location-id="21">
+                <quantity>20</quantity>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+            </location>
+            <location location-id="22">
+                <quantity>20</quantity>
+                <low-inventory-threshold>5</low-inventory-threshold>
+                <pick-up-now-eligible>false</pick-up-now-eligible>
+                <inventory-timestamp>2012-03-30T09:05:30</inventory-timestamp>
+            </location>
+        </locations>
+    </item>
+    <item item-id="11">
+        <locations>
+            <location location-id="23">
+                <quantity>20</quantity>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+            </location>
+            <location location-id="24">
+                <quantity>9</quantity>
+                <pick-up-now-eligible>false</pick-up-now-eligible>
+            </location>
+            <location location-id="25">
+                <quantity>20</quantity>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+            </location>
+        </locations>
+    </item>
+    <item item-id="12">
+        <locations>
+            <location location-id="26">
+                <quantity>20</quantity>
+                <pick-up-now-eligible>true</pick-up-now-eligible>
+            </location>
+        </locations>
+    </item>
+</store-inventory>

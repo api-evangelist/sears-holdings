@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://seller.marketplace.sears.com/oms/v1" targetNamespace="http://seller.marketplace.sears.com/oms/v1"
+           elementFormDefault="qualified">
+
+    <!--  Order returns request GET API for Sellers.The feed contains the details of the return order.
+
+      order-return-request-header -
+              po-number - Seller Portal's purchase order number, which will be available to sellers via purchase-order API
+              po-date - Seller Portal's purchase order date, which will be available to sellers via purchase-order API
+      order-return-request-detail -
+             com-line-number - Seller Portal's line number, which will be available to sellers via purchase-order API
+              quantity - return quantity.
+      return-detail -
+              return-request-id - unique id used to identify return request, should be the same value send in returns response.
+              return-status - One of the below enumeration values, refer <return-status-type>.
+              return-date - Actual date submitted by the customer.
+              return-reason - One of the below enumeration values, refer <return-reason-type>.
+              customer-comments - customer comments for the returns request.
+    -->
+
+    <xs:element name="order-returns-request-feed">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="order-return-request" type="order-return-request-type" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+        <xs:complexType name="order-return-request-type">
+            <xs:sequence>
+                <xs:element name="order-return-request-header" type="order-return-request-header-type" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="order-return-request-detail" type="order-return-request-detail-type" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    <xs:complexType name="order-return-request-header-type">
+        <xs:sequence>
+            <xs:element name="po-number" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="po-date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="order-return-request-detail-type">
+        <xs:sequence>
+            <xs:element name="com-line-number" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="quantity" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="return-detail" type="order-return-detail-type" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="order-return-detail-type">
+        <xs:sequence>
+            <xs:element name="return-request-id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="return-status" type="return-status-type" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="return-date" type="xs:date" minOccurs="1" maxOccurs="1" />
+            <xs:element name="return-reason" type="return-reason-type" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="customer-comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="return-status-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PENDING_RETURN"/>
+            <xs:enumeration value="RETURN_AUTHORIZED"/>
+            <xs:enumeration value="RETURN_REJECTED"/>
+            <xs:enumeration value="PARTIAL_RETURNED"/>
+            <xs:enumeration value="RETURN_PROCESSED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="return-reason-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="WRONG-ITEM-SHIPPED"/>
+            <xs:enumeration value="WRONG-QUANTITY-SHIPPED"/>
+            <xs:enumeration value="DAMAGED-IN-SHIPMENT"/>
+            <xs:enumeration value="DUPLICATE-SHIPMENT"/>
+            <xs:enumeration value="ARRIVED-TOO-LATE"/>
+            <xs:enumeration value="WRONG-QUANTITY-ORDERED"/>
+            <xs:enumeration value="WRONG-MERCHANDISE-ORDERED"/>
+            <xs:enumeration value="PRODUCT-QUALITY-NOT-ACCEPTABLE"/>
+            <xs:enumeration value="NOT-AS-DESCRIBED"/>
+            <xs:enumeration value="DEFECTIVE-PRODUCT"/>
+            <xs:enumeration value="TOO-SMALL"/>
+            <xs:enumeration value="TOO-LARGE"/>
+            <xs:enumeration value="NOT-SATISFIED-WITH-SIZING"/>
+            <xs:enumeration value="NOT-SATISFIED-WITH-COLOR"/>
+        </xs:restriction>
+    </xs:simpleType>
+    </xs:schema>

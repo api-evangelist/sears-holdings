@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://seller.marketplace.sears.com/catalog/v1"
+	targetNamespace="http://seller.marketplace.sears.com/catalog/v1"
+	elementFormDefault="qualified">
+
+	<xs:element name="catalog-feed">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="deprecated" type="xs:date" maxOccurs="1" minOccurs="0" />
+				<xs:element name="fbm-catalog" type="fbm-catalog-type" maxOccurs="1" minOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="fbm-catalog-type">
+		<xs:sequence>
+			<xs:element name="items" type="items-type" maxOccurs="1" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>	
+	
+	<xs:complexType name="items-type">
+		<xs:sequence>
+			<xs:element name="item" type="item-type" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="item-type">
+		<xs:sequence>
+			<xs:element name="key-identifier" type="key-identifier-type" maxOccurs="1" minOccurs="1" />
+			<xs:element name="tax-code" type="xs:string" maxOccurs="1" minOccurs="0" />
+			<xs:element name="item-pack-qty" type="xs:int" maxOccurs="1" minOccurs="1" />
+			<xs:element name="standard-price" type="xs:decimal" maxOccurs="1" minOccurs="1" />
+			<xs:element name="sale" type="sale-type" maxOccurs="1" minOccurs="0"/>
+			<xs:element name="msrp" type="xs:decimal" maxOccurs="1" minOccurs="0" />
+			<xs:element name="map-price-indicator" type="map-price-indicator-type" maxOccurs="1" minOccurs="0" />
+			<xs:element name="ground-shipping-cost" type="xs:decimal" maxOccurs="1" minOccurs="0" />			
+			<xs:element name="two-day-shipping-cost" type="xs:decimal" maxOccurs="1" minOccurs="0"/>
+			<xs:element name="next-day-shipping-cost" type="xs:decimal" maxOccurs="1" minOccurs="0" />
+			<xs:element name="shipping-restrictions" type="xs:string" maxOccurs="1" minOccurs="0" />
+			<xs:element name="condition" type="condition-type" maxOccurs="1" minOccurs="0" />
+			<xs:element name="condition-note" type="xs:string" maxOccurs="1" minOccurs="0" />
+			<xs:element name="condition-image-url" type="image-type" maxOccurs="1" minOccurs="0" />
+			<xs:element name="item-qty" type="xs:integer" maxOccurs="1" minOccurs="1" /> <!-- Item Inventory level -->
+			<xs:element name="order-prep-time" type="xs:integer" maxOccurs="1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Seller shall provide number of hours, ex: 48 hours for 2 days</xs:documentation>
+				</xs:annotation>		
+			</xs:element>
+			<xs:element name="item-action" type="item-action-type" maxOccurs="1" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="item-id" type="xs:string" use="required" />
+	</xs:complexType>
+	
+	<xs:complexType name="key-identifier-type">
+		<xs:sequence>
+			<xs:choice minOccurs="1" maxOccurs="2">
+				<xs:element name="ssin" type="xs:string" />
+				<xs:element name="brand-mmn-upc" type="brand-mmn-upc-type" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="brand-mmn-upc-type">
+		<xs:sequence>
+			<xs:element name="brand" type="xs:string" maxOccurs="1"	minOccurs="1" />
+			<xs:element name="manufacturer-model-number" type="xs:string" maxOccurs="1" minOccurs="1" />
+			<xs:element name="upc" type="upc-type" maxOccurs="1" minOccurs="0" /> <!-- Strongly desired -->
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="upc-type">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]+" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="sale-type">
+		<xs:sequence>
+			<xs:element name="sale-price" type="xs:decimal" maxOccurs="1" minOccurs="1" />
+			<xs:element name="sale-start-date" type="xs:date" maxOccurs="1" minOccurs="1" />
+			<xs:element name="sale-end-date" type="xs:date" maxOccurs="1" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="map-price-indicator-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="strict" />
+			<xs:enumeration value="non-strict" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="condition-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="New" />
+			<xs:enumeration value="Refurbished" />
+			<xs:enumeration value="Used-General" />
+			<xs:enumeration value="Used-Like New" />
+			<xs:enumeration value="Used-Very Good" />
+			<xs:enumeration value="Used-Good" />
+			<xs:enumeration value="Used-Acceptable" />
+			<xs:enumeration value="Used-Poor" />
+		</xs:restriction>
+	</xs:simpleType>	
+	
+	<xs:complexType name="image-type">
+		<xs:sequence>
+			<xs:element name="url" type="xs:string"></xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="image-attr" />
+	</xs:complexType>
+	
+	<xs:attributeGroup name="image-attr">
+		<xs:attribute name="height" type="xs:positiveInteger" />
+		<xs:attribute name="width" type="xs:positiveInteger" />
+	</xs:attributeGroup>
+	
+	<xs:complexType name="item-action-type">
+		<xs:sequence>
+			<xs:choice maxOccurs="1" minOccurs="1">
+				<xs:element name="reject" type="reject-type" />
+				<xs:element name="upsert-or-delete" type="upsert-or-delete-type" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="upsert-or-delete-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="U" />  <!-- Upsert : Create or Update. The default value, if no item-action-type is provided -->
+			<xs:enumeration value="D" />  <!-- Delete -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="reject-type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="BM" /> <!-- Bad Match -->
+			<xs:enumeration value="UC" /> <!-- Unacceptable Content -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

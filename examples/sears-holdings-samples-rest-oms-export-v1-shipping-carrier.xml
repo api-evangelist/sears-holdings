@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shipping-carriers xmlns="http://seller.marketplace.sears.com/oms/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="rest/oms/export/v1/shipping-carrier.xsd"><!--Generated on host [TVMATP207799D] --><!--Feed write triggered on time: 2015-10-01 12:38:58 -->
+	<shipping-carrier-details>
+		<shipping-carrier>UPS</shipping-carrier>
+		<shipping-carrier-description>United Parcel Service
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Next Day Saver</shipping-method>
+				<shipping-method-description>Next Day Saver (next day after 10am)
+				</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Ground</shipping-method>
+				<shipping-method-description>Standard</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Next Day</shipping-method>
+				<shipping-method-description>Premium</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Second Day</shipping-method>
+				<shipping-method-description>Expedited</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>SurePost</shipping-method>
+				<shipping-method-description>aka Parcel Post (USPS)
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>FDE</shipping-carrier>
+		<shipping-carrier-description>Federal Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Ground</shipping-method>
+				<shipping-method-description>Standard</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Next Day</shipping-method>
+				<shipping-method-description>Premium</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Second Day</shipping-method>
+				<shipping-method-description>Expedited</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>OTH</shipping-carrier>
+		<shipping-carrier-description>Carrier - not in Sears System
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Expedited</shipping-method>
+				<shipping-method-description>Expedited</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Pickup</shipping-method>
+				<shipping-method-description>Pickup</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Standard</shipping-method>
+				<shipping-method-description>Standard</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Premium</shipping-method>
+				<shipping-method-description>Premium</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>USPS</shipping-carrier>
+		<shipping-carrier-description>United States Postal Service
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>First Class</shipping-method>
+				<shipping-method-description>Premium</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Parcel Post</shipping-method>
+				<shipping-method-description>aka Parcel Post (USPS)
+				</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Priority</shipping-method>
+				<shipping-method-description>Expedited</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Standard Mail</shipping-method>
+				<shipping-method-description>Standard</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DELG</shipping-carrier>
+		<shipping-carrier-description>Demar</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Standard</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Premium</shipping-method>
+				<shipping-method-description>LTL Premium
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DHLC</shipping-carrier>
+		<shipping-carrier-description>DHL</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Economy</shipping-method>
+				<shipping-method-description>Standard</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Priority</shipping-method>
+				<shipping-method-description>Premium</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Connect</shipping-method>
+				<shipping-method-description>Expedited</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SMRT</shipping-carrier>
+		<shipping-carrier-description>FedEx SmartPost
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Smart Post</shipping-method>
+				<shipping-method-description>Standard</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>RNLO</shipping-carrier>
+		<shipping-carrier-description>R+L Carriers
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>BEKN</shipping-carrier>
+		<shipping-carrier-description>Home Direct USA
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>White Glove</shipping-method>
+				<shipping-method-description>LTL service
+				</shipping-method-description>
+			</shipping-method-details>
+			<shipping-method-details>
+				<shipping-method>Standard</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SAIA</shipping-carrier>
+		<shipping-carrier-description>SAIA</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>RDWY</shipping-carrier>
+		<shipping-carrier-description>YRC (Formerly Roadway or Yellow)
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>RRTS</shipping-carrier>
+		<shipping-carrier-description>Road Runner
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>ODFL</shipping-carrier>
+		<shipping-carrier-description>Old Dominion
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>PYLE</shipping-carrier>
+		<shipping-carrier-description>A. Duie Pyle
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AIMN</shipping-carrier>
+		<shipping-carrier-description>AIM Transportation
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AIIH</shipping-carrier>
+		<shipping-carrier-description>AIT Worldwide Logistics
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AMKI</shipping-carrier>
+		<shipping-carrier-description>AM Home Delivery
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AVRT</shipping-carrier>
+		<shipping-carrier-description>Averitt Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>BTVP</shipping-carrier>
+		<shipping-carrier-description>Best Overnite
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CUOT</shipping-carrier>
+		<shipping-carrier-description>Ceva Logistics
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CWCE</shipping-carrier>
+		<shipping-carrier-description>Conway</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CRST</shipping-carrier>
+		<shipping-carrier-description>Crystal Motor Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>FBTI</shipping-carrier>
+		<shipping-carrier-description>FOX BROTHERS TRANSFER INCORPORATED
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>LREC</shipping-carrier>
+		<shipping-carrier-description>Land Air Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>LASG</shipping-carrier>
+		<shipping-carrier-description>Lasership</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>MEFE</shipping-carrier>
+		<shipping-carrier-description>Main Freight Inc
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>MFSY</shipping-carrier>
+		<shipping-carrier-description>MANNA FREIGHT SYSTEMS INC
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>NEFW</shipping-carrier>
+		<shipping-carrier-description>New England Freightways
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>OTCL</shipping-carrier>
+		<shipping-carrier-description>ONTRACC LOGISTICS INC
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>PAAF</shipping-carrier>
+		<shipping-carrier-description>Pilot Freight Services
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>PITD</shipping-carrier>
+		<shipping-carrier-description>Pitt Ohio</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SJTT</shipping-carrier>
+		<shipping-carrier-description>S&amp;J Transportation
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SKWE</shipping-carrier>
+		<shipping-carrier-description>SEKO Worldwide
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SEFL</shipping-carrier>
+		<shipping-carrier-description>Southeastern Freight Lines
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>TOWN</shipping-carrier>
+		<shipping-carrier-description>Towne Air Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>USFG</shipping-carrier>
+		<shipping-carrier-description>USF Holland
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>ABFS</shipping-carrier>
+		<shipping-carrier-description>ABF</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>EXLA</shipping-carrier>
+		<shipping-carrier-description>Estes Express Lines
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>FXFT</shipping-carrier>
+		<shipping-carrier-description>FedEx Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>HJBT</shipping-carrier>
+		<shipping-carrier-description>JB Hunt</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AACT</shipping-carrier>
+		<shipping-carrier-description>AAACooper</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AEWS</shipping-carrier>
+		<shipping-carrier-description>American West Worldwide Express, Inc
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AOIT</shipping-carrier>
+		<shipping-carrier-description>A-1 International Inc.
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AVFE</shipping-carrier>
+		<shipping-carrier-description>Air Traffic Services
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>AVRT</shipping-carrier>
+		<shipping-carrier-description>Averitt Trucking
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>BNAF</shipping-carrier>
+		<shipping-carrier-description>DB Schenker
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>BTNB</shipping-carrier>
+		<shipping-carrier-description>Benton Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>BWTQ</shipping-carrier>
+		<shipping-carrier-description>Barrett Distribution
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CAAE</shipping-carrier>
+		<shipping-carrier-description>Campbells Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CCFI</shipping-carrier>
+		<shipping-carrier-description>Central Freight Lines
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CCYQ</shipping-carrier>
+		<shipping-carrier-description>CrossCountryCourier
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CEMF</shipping-carrier>
+		<shipping-carrier-description>CMS Logistics
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CETR</shipping-carrier>
+		<shipping-carrier-description>Central Transport Inc
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CIAF</shipping-carrier>
+		<shipping-carrier-description>Cavalier Logistics
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CIIP</shipping-carrier>
+		<shipping-carrier-description>CRST Specialized Transportation, Inc.
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CNWQ</shipping-carrier>
+		<shipping-carrier-description>Crane Worldwide
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CNWY</shipping-carrier>
+		<shipping-carrier-description>Con-way Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>COOG</shipping-carrier>
+		<shipping-carrier-description>CorTrans</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CTBV</shipping-carrier>
+		<shipping-carrier-description>Custom Companies
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>CXIT</shipping-carrier>
+		<shipping-carrier-description>CXI Trucking
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DAFG</shipping-carrier>
+		<shipping-carrier-description>Dayton Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DHRN</shipping-carrier>
+		<shipping-carrier-description>Dohrn Transfer Company
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DOLR</shipping-carrier>
+		<shipping-carrier-description>Dot-Line Transportation
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DPHE</shipping-carrier>
+		<shipping-carrier-description>Dependable Highway Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DYLT</shipping-carrier>
+		<shipping-carrier-description>Daylight Transport
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>DYXE</shipping-carrier>
+		<shipping-carrier-description>DYNAMEX</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>GLDF</shipping-carrier>
+		<shipping-carrier-description>Gold Coast Freightways
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>HLDS</shipping-carrier>
+		<shipping-carrier-description>Hotline Delivery Systems
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>HRCF</shipping-carrier>
+		<shipping-carrier-description>Hercules Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>HWDQ</shipping-carrier>
+		<shipping-carrier-description>Hollywood Delivery Service
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>ICAO</shipping-carrier>
+		<shipping-carrier-description>ICAT Logistics
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>LKVL</shipping-carrier>
+		<shipping-carrier-description>Lakeville Motor Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>LSOV</shipping-carrier>
+		<shipping-carrier-description>Lone Star Overnight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>MLXP</shipping-carrier>
+		<shipping-carrier-description>Milan Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>MSIF</shipping-carrier>
+		<shipping-carrier-description>MSI</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>MTJG</shipping-carrier>
+		<shipping-carrier-description>Moran Transportation
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>MTVL</shipping-carrier>
+		<shipping-carrier-description>Mountain Valley Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>NDSN</shipping-carrier>
+		<shipping-carrier-description>National Delivery Systems
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>NEMF</shipping-carrier>
+		<shipping-carrier-description>New England Motor Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>NPME</shipping-carrier>
+		<shipping-carrier-description>New Penn Motor Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>NSD</shipping-carrier>
+		<shipping-carrier-description>Nonstop Delivery
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>OAKH</shipping-carrier>
+		<shipping-carrier-description>Oak Harbor Freight Lines
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>PFEG</shipping-carrier>
+		<shipping-carrier-description>Performance Freight Systems
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>PUTB</shipping-carrier>
+		<shipping-carrier-description>Peninsula Trucklines
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>RETL</shipping-carrier>
+		<shipping-carrier-description>USF Reddaway
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SBAG</shipping-carrier>
+		<shipping-carrier-description>SBA Global
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SDVE</shipping-carrier>
+		<shipping-carrier-description>Star Delivery Solutions
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SHFT</shipping-carrier>
+		<shipping-carrier-description>Shift Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SLSV</shipping-carrier>
+		<shipping-carrier-description>States Logistics
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SMTL</shipping-carrier>
+		<shipping-carrier-description>Southwestern Motor Transport
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>SPDD</shipping-carrier>
+		<shipping-carrier-description>Spee Dee Delivery Service
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Parcel</shipping-method>
+				<shipping-method-description>aka Parcel Post (USPS)
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>TECH</shipping-carrier>
+		<shipping-carrier-description>TechTrans</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>TOWE</shipping-carrier>
+		<shipping-carrier-description>Towne Aire
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>TRLN</shipping-carrier>
+		<shipping-carrier-description>Trail Lines
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>UDSL</shipping-carrier>
+		<shipping-carrier-description>United Delivery Service
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>UPGF</shipping-carrier>
+		<shipping-carrier-description>UPS Freight
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>UPSI</shipping-carrier>
+		<shipping-carrier-description>UPS i-parcel
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Parcel</shipping-method>
+				<shipping-method-description>aka Parcel Post (USPS)
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>UPSM</shipping-carrier>
+		<shipping-carrier-description>UPS Mail Innovations
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>Parcel</shipping-method>
+				<shipping-method-description>aka Parcel Post (USPS)
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>VITR</shipping-carrier>
+		<shipping-carrier-description>Vitran Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>VOLP</shipping-carrier>
+		<shipping-carrier-description>Volpe Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>VOLT</shipping-carrier>
+		<shipping-carrier-description>Volunteer Express
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>WARD</shipping-carrier>
+		<shipping-carrier-description>Ward Trucking
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>WKSH</shipping-carrier>
+		<shipping-carrier-description>Watkins and Shepard
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>WTVA</shipping-carrier>
+		<shipping-carrier-description>Wilson Trucking Corp
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+	<shipping-carrier-details>
+		<shipping-carrier>XGSI</shipping-carrier>
+		<shipping-carrier-description>Xpress Global
+		</shipping-carrier-description>
+		<shipping-methods>
+			<shipping-method-details>
+				<shipping-method>LTL</shipping-method>
+				<shipping-method-description>LTL Standard
+				</shipping-method-description>
+			</shipping-method-details>
+		</shipping-methods>
+	</shipping-carrier-details>
+</shipping-carriers>

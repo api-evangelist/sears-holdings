@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<remittance-response xmlns="http://seller.marketplace.sears.com/oms/v6" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://seller.marketplace.sears.com/oms/v6 ../../../../../rest/oms/export/v6/remittance-response.xsd">
+
+
+  <!--Generated on host [spapp422p.prod.ch4.s.com]-->
+  <!--Feed write triggered on time: 2018-09-03 06:23:23-->
+  <remittance>
+    <program>FBM</program>
+    <po-number>0777777</po-number>
+    <po-date>
+      <![CDATA[2017-08-16]]>
+    </po-date>
+    <sellpo-invoice-id>11633366</sellpo-invoice-id>
+    <naps-invoice-number>06X4EY</naps-invoice-number>
+    <type>Order</type>
+    <invoice-date>
+      <![CDATA[2017-08-17]]>
+    </invoice-date>
+    <invoice-amount>9.09</invoice-amount>
+    <eft-number>E93291 </eft-number>
+    <eft-date>
+      <![CDATA[2017-08-30]]>
+    </eft-date>
+    <eft-amount>9.09</eft-amount>
+    <site>Sears</site>
+    <customer-order-confirmation-number>854433313</customer-order-confirmation-number>
+    <total-selling-price>9.99</total-selling-price>
+    <commission-to-sears>0.90</commission-to-sears>
+    <total-shipping-fee>0.00</total-shipping-fee>
+    <total-shipping-tax>0.00</total-shipping-tax>
+    <total-sales-tax>0.00</total-sales-tax>
+    <total-fee>0.00</total-fee>
+    <balance-to-seller>9.09</balance-to-seller>
+  </remittance>
+  <remittance>
+    <program>FBM</program>
+    <po-number>0080272</po-number>
+    <po-date>
+      <![CDATA[2017-08-18]]>
+    </po-date>
+    <sellpo-invoice-id>11366316</sellpo-invoice-id>
+    <naps-invoice-number>06Y7P0</naps-invoice-number>
+    <type>Order</type>
+    <invoice-date>
+      <![CDATA[2017-08-18]]>
+    </invoice-date>
+    <invoice-amount>12.73</invoice-amount>
+    <eft-number>E97367</eft-number>
+    <eft-date>
+      <![CDATA[2017-08-31]]>
+    </eft-date>
+    <eft-amount>12.73</eft-amount>
+    <site>Sears</site>
+    <customer-order-confirmation-number>854247353</customer-order-confirmation-number>
+    <total-selling-price>13.99</total-selling-price>
+    <commission-to-sears>1.26</commission-to-sears>
+    <total-shipping-fee>0.00</total-shipping-fee>
+    <total-shipping-tax>0.00</total-shipping-tax>
+    <total-sales-tax>0.00</total-sales-tax>
+    <total-fee>0.00</total-fee>
+    <balance-to-seller>12.73</balance-to-seller>
+  </remittance>
+</remittance-response>

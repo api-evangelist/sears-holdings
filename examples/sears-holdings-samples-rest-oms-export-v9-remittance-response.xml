@@ -1,0 +1,113 @@
+<remittance-response xmlns="http://seller.marketplace.sears.com/oms/v9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="rest/oms/export/v9/remittance-response.xsd">
+<remittance>
+<program>FBM</program>
+<po-number>3067498</po-number>
+<po-date>
+...
+</po-date>
+<sellpo-invoice-id>7212</sellpo-invoice-id>
+<naps-invoice-number>0005KC</naps-invoice-number>
+<type>Order</type>
+<invoice-date>
+<![CDATA[ 2019-10-28 ]]>
+</invoice-date>
+<invoice-amount>209.40</invoice-amount>
+<eft-number>E46951 </eft-number>
+<eft-date>
+<![CDATA[ 2019-10-29 ]]>
+</eft-date>
+<eft-amount>695.33</eft-amount>
+<site>Sears</site>
+<customer-order-confirmation-number>842002561</customer-order-confirmation-number>
+<total-selling-price>239.00</total-selling-price>
+<commission-to-sears>35.85</commission-to-sears>
+<shipping-commission>0.00</shipping-commission>
+<total-shipping-fee>6.25</total-shipping-fee>
+<total-shipping-tax>0.00</total-shipping-tax>
+<total-sales-tax>0.00</total-sales-tax>
+<total-fee>0.00</total-fee>
+<balance-to-seller>209.40</balance-to-seller>
+<tax-certicate-url>https://t5.testtempoe.com/api/Middleware/api/v1.0/Tax/Taxes/GetDocument?id=C7ADF02EB2468400A1009D78F862BCDC</tax-certicate-url>
+<tax-remitted-to-seller>N</tax-remitted-to-seller>
+<lease-order>Y</lease-order>
+</remittance>
+<remittance>
+<program>FBM</program>
+<po-number>3166810</po-number>
+<po-date>
+<![CDATA[ 2019-10-28 ]]>
+</po-date>
+<sellpo-invoice-id>7216</sellpo-invoice-id>
+<naps-invoice-number>0005KG</naps-invoice-number>
+<type>Order</type>
+<invoice-date>
+<![CDATA[ 2019-10-29 ]]>
+</invoice-date>
+<invoice-amount>276.54</invoice-amount>
+<eft-number>E46952 </eft-number>
+<eft-date>
+<![CDATA[ 2019-10-29 ]]>
+</eft-date>
+<eft-amount>695.34</eft-amount>
+<site>Sears</site>
+<customer-order-confirmation-number>842023263</customer-order-confirmation-number>
+<total-selling-price>317.99</total-selling-price>
+<commission-to-sears>47.70</commission-to-sears>
+<shipping-commission>0.00</shipping-commission>
+<total-shipping-fee>6.25</total-shipping-fee>
+<total-shipping-tax>0.00</total-shipping-tax>
+<total-sales-tax>0.00</total-sales-tax>
+<total-fee>0.00</total-fee>
+<balance-to-seller>276.54</balance-to-seller>
+<tax-certicate-url>https://t5.testtempoe.com/api/Middleware/api/v1.0/Tax/Taxes/GetDocument?id=D91851E697F0B3F60C26B6AC55C9DBC1</tax-certicate-url>
+<tax-remitted-to-seller>N</tax-remitted-to-seller>
+<lease-order>Y</lease-order>
+</remittance>
+<remittance>
+<program>FBM</program>
+<po-number>3166909</po-number>
+<po-date>
+<![CDATA[ 2019-10-28 ]]>
+</po-date>
+<sellpo-invoice-id>7215</sellpo-invoice-id>
+<naps-invoice-number>0005KF</naps-invoice-number>
+<type>Order</type>
+<invoice-date>
+<![CDATA[ 2019-10-29 ]]>
+</invoice-date>
+<invoice-amount>209.40</invoice-amount>
+<eft-number>E46953 </eft-number>
+<eft-date>
+<![CDATA[ 2019-10-29 ]]>
+</eft-date>
+<eft-amount>695.33</eft-amount>
+<site>Sears</site>
+<customer-order-confirmation-number>842023585</customer-order-confirmation-number>
+<total-selling-price>239.00</total-selling-price>
+<commission-to-sears>35.85</commission-to-sears>
+<shipping-commission>0.00</shipping-commission>
+<total-shipping-fee>6.25</total-shipping-fee>
+<total-shipping-tax>0.00</total-shipping-tax>
+<total-sales-tax>0.00</total-sales-tax>
+<total-fee>0.00</total-fee>
+<balance-to-seller>209.40</balance-to-seller>
+<tax-certicate-url>https://t5.testtempoe.com/api/Middleware/api/v1.0/Tax/Taxes/GetDocument?id=FE1D2A4421954A64C42BD25D33C00423</tax-certicate-url>
+<tax-remitted-to-seller>N</tax-remitted-to-seller>
+<lease-order>Y</lease-order>
+</remittance>
+<remittance>
+<po-number>0000009</po-number>
+<sellpo-invoice-id>O90480001</sellpo-invoice-id>
+<naps-invoice-number>480001</naps-invoice-number>
+<type>MP Monthly Program Fee</type>
+<invoice-date>
+<![CDATA[ 2019-10-01 ]]>
+</invoice-date>
+<invoice-amount>-39.99</invoice-amount>
+<eft-number>E47537 </eft-number>
+<eft-date>
+<![CDATA[ 2019-10-03 ]]>
+</eft-date>
+<eft-amount>580.01</eft-amount>
+</remittance>
+</remittance-response>

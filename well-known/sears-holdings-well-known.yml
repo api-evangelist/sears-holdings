@@ -1,0 +1,117 @@
+generated: '2026-08-28'
+method: probed
+source: live GET probes on 2026-08-28
+hit_count: 0
+note: >-
+  Every /.well-known/ path was probed on every host in this profile and nothing was served. Two
+  distinct negative shapes are recorded below and neither is a hit. marketplace.sears.com and
+  seller.marketplace.sears.com return honest 404s. sellersandbox.sears.com, www.sears.com and
+  www.kmart.com sit behind an edge that answers 403 to a non-browser client for every path,
+  including paths that exist. www.sears.com and www.kmart.com additionally return HTTP 200 with a
+  ~72KB single-page-app HTML shell for /llms.txt and for /graphql - a catch-all, not a document -
+  so no LLMsTxt or GraphQL surface is credited from them. No WellKnown and no SecurityTxt pointer
+  is emitted for this provider: the manifest records an absence, not a presence.
+soft_404_control:
+  url: https://www.sears.com/llms.txt
+  status: 200
+  bytes: 71928
+  content_type: text/html; charset=utf-8
+  body_starts: '<!DOCTYPE html><html id="html-tag-parent-wrapper"'
+  verdict: catch-all SPA shell, not a document
+hosts:
+  - host: https://marketplace.sears.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://seller.marketplace.sears.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://sellersandbox.sears.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+  - host: https://www.sears.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+  - host: https://www.kmart.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+  - host: https://transformco.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404

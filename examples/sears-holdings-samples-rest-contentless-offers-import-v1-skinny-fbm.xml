@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog-feed xmlns="http://seller.marketplace.sears.com/catalog/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://seller.marketplace.sears.com/catalog/v1 ../../../../../rest/contentless-offers/import/v1/skinny-fbm.xsd">
+	<fbm-catalog>
+		<items>
+			<item item-id="FBMItem1">
+				<key-identifier>
+					<ssin>123345663</ssin>
+					<brand-mmn-upc>
+						<brand>testBrandNew22</brand>
+						<manufacturer-model-number>testMMN22</manufacturer-model-number>
+						<upc>123456777745</upc>
+					</brand-mmn-upc>
+				</key-identifier>
+				<item-pack-qty>10</item-pack-qty>
+				<standard-price>12.00</standard-price>
+				<sale>
+					<sale-price>10.0</sale-price>
+					<sale-start-date>2015-11-30</sale-start-date>
+					<sale-end-date>2015-12-30</sale-end-date>
+				</sale>
+				<msrp>2</msrp>
+				<map-price-indicator>non-strict</map-price-indicator>
+				<ground-shipping-cost>2</ground-shipping-cost>
+				<two-day-shipping-cost>2</two-day-shipping-cost>
+				<next-day-shipping-cost>3</next-day-shipping-cost>
+				<condition>New</condition>
+				<condition-note>New Item</condition-note>
+				<item-qty>10</item-qty>
+				<order-prep-time>2</order-prep-time>
+				<item-action>
+					<upsert-or-delete>U</upsert-or-delete>
+				</item-action>
+			</item>
+			<item item-id="FBMItem2">
+				<key-identifier>
+					<brand-mmn-upc>
+						<brand>L.A.M.B.</brand>
+						<manufacturer-model-number>DNA02212-14</manufacturer-model-number>
+						<upc>097257610403</upc>
+					</brand-mmn-upc>
+				</key-identifier>
+				<item-pack-qty>10</item-pack-qty>
+				<standard-price>13.00</standard-price>
+				<sale>
+					<sale-price>10.0</sale-price>
+					<sale-start-date>2015-11-30</sale-start-date>
+					<sale-end-date>2015-12-30</sale-end-date>
+				</sale>
+				<msrp>2</msrp>
+				<map-price-indicator>non-strict</map-price-indicator>
+				<ground-shipping-cost>4.0</ground-shipping-cost>
+				<two-day-shipping-cost>5.0</two-day-shipping-cost>
+				<next-day-shipping-cost>6.0</next-day-shipping-cost>
+				<condition>New</condition>
+				<condition-note>New Item</condition-note>
+				<item-qty>10</item-qty>
+				<order-prep-time>2</order-prep-time>
+				<item-action>
+					<reject>BM</reject>
+				</item-action>
+			</item>
+			<item item-id="FBMItem3">
+				<key-identifier>
+					<ssin>123345665</ssin>
+				</key-identifier>
+				<item-pack-qty>10</item-pack-qty>
+				<standard-price>13.00</standard-price>
+				<sale>
+					<sale-price>10.0</sale-price>
+					<sale-start-date>2015-11-30</sale-start-date>
+					<sale-end-date>2015-12-30</sale-end-date>
+				</sale>
+				<msrp>2</msrp>
+				<map-price-indicator>non-strict</map-price-indicator>
+				<ground-shipping-cost>4.0</ground-shipping-cost>
+				<two-day-shipping-cost>5.0</two-day-shipping-cost>
+				<next-day-shipping-cost>6.0</next-day-shipping-cost>
+				<condition>New</condition>
+				<condition-note>New Item</condition-note>
+				<item-qty>10</item-qty>
+				<order-prep-time>2</order-prep-time>
+				<item-action>
+					<reject>BM</reject>
+				</item-action>
+			</item>
+		</items>
+	</fbm-catalog>
+</catalog-feed>

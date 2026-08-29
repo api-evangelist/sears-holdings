@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/oms/v8"
+	targetNamespace="http://seller.marketplace.sears.com/oms/v8" elementFormDefault="qualified">
+	<xs:include schemaLocation="../../../../shared/oms/common-fields-v8.xsd" />
+	<xs:element name="remittance-response">
+        <xs:complexType>
+            <xs:sequence>
+            	<xs:element name="deprecated" type="xs:date" minOccurs="0" maxOccurs="1" />
+                <xs:element name="remittance" type="remittance-type" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="remittance-type">
+        <xs:sequence>
+          <xs:element ref="program"  minOccurs="0" maxOccurs="1" />
+            <xs:element ref="po-number" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="po-date" minOccurs="0" maxOccurs="1"/>       
+            <xs:element ref="sellpo-invoice-id" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="naps-invoice-number" type="invoice-number-type" minOccurs="0" maxOccurs="1"/>  
+            <xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="1"/> 
+            <xs:element name="invoice-date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="invoice-amount" type="invoice-amount-type" minOccurs="1" maxOccurs="1"/> 
+            <xs:element  name="eft-number" type="eft-number-type" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="eft-date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="eft-amount" type="eft-amount-type" minOccurs="1" maxOccurs="1"/> 
+            <xs:element ref="site" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="rma-number" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="seller-invoice-number"  minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="customer-order-confirmation-number" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="total-selling-price" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="commission-to-sears" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="shipping-commission" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="total-shipping-fee" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="total-shipping-tax" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="total-sales-tax" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="total-fee" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="balance-to-seller" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="return-reason-code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			 <xs:element name="tax-certificate-url" type="xs:string" minOccurs="0" maxOccurs="1"/>
+         	<xs:element name="tax-remitted-to-seller" type="xs:string" minOccurs="0" maxOccurs="1"/>
+         </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="invoice-amount-type">
+        <xs:restriction base="xs:decimal">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="eft-number-type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="32"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="eft-amount-type">
+        <xs:restriction base="xs:decimal">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

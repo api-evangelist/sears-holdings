@@ -1,0 +1,183 @@
+generated: '2026-08-28'
+method: searched
+source: https://marketplace.sears.com/docs/api-guide/
+host: https://seller.marketplace.sears.com
+schema_root: /SellerPortal/s/schema/
+note: >-
+  XML Schema Definitions (XSD) published by Sears Marketplace as the machine-readable contract for
+  the Sears Marketplace Seller API. Every file listed here was fetched verbatim, unauthenticated,
+  from seller.marketplace.sears.com on 2026-08-28 and returned HTTP 200. The provider publishes no
+  OpenAPI, no GraphQL SDL, no WSDL and no protobuf on any Sears, Kmart or Transformco host — these
+  XSDs plus the API Guide PDF are the whole published contract.
+ownership: >-
+  seller.marketplace.sears.com is the Sears brand seller portal. The API Guide these schemas are
+  referenced from is copyrighted "Transform SR Brands LLC", the operating entity of Transformco,
+  which acquired the Sears and Kmart retail operations out of the Sears Holdings Chapter 11 estate
+  in 2019 — so this contract belongs to the successor of the company this repo profiles.
+count: 33
+schemas:
+  - path: /SellerPortal/s/schema/rest/attribute/export/v4/attribute-library.xsd
+    file: xsd/sears-holdings-rest-attribute-export-v4-attribute-library.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/attribute/export/v4/attribute-library.xsd
+    status: 200
+    bytes: 4187
+  - path: /SellerPortal/s/schema/rest/catalog/import/v1/service-item.xsd
+    file: xsd/sears-holdings-rest-catalog-import-v1-service-item.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/catalog/import/v1/service-item.xsd
+    status: 200
+    bytes: 3294
+  - path: /SellerPortal/s/schema/rest/catalog/import/v22/lmp-item.xsd
+    file: xsd/sears-holdings-rest-catalog-import-v22-lmp-item.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/catalog/import/v22/lmp-item.xsd
+    status: 200
+    bytes: 22898
+  - path: /SellerPortal/s/schema/rest/catalog/import/v24/lmp-item.xsd
+    file: xsd/sears-holdings-rest-catalog-import-v24-lmp-item.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/catalog/import/v24/lmp-item.xsd
+    status: 200
+    bytes: 28293
+  - path: /SellerPortal/s/schema/rest/catalog/import/v25/lmp-item.xsd
+    file: xsd/sears-holdings-rest-catalog-import-v25-lmp-item.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/catalog/import/v25/lmp-item.xsd
+    status: 200
+    bytes: 27567
+  - path: /SellerPortal/s/schema/rest/contentless-offers/import/v1/skinny-fbm.xsd
+    file: xsd/sears-holdings-rest-contentless-offers-import-v1-skinny-fbm.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/contentless-offers/import/v1/skinny-fbm.xsd
+    status: 200
+    bytes: 5674
+  - path: /SellerPortal/s/schema/rest/inventory/export/v5/item-inventory-public.xsd
+    file: xsd/sears-holdings-rest-inventory-export-v5-item-inventory-public.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/inventory/export/v5/item-inventory-public.xsd
+    status: 200
+    bytes: 2897
+  - path: /SellerPortal/s/schema/rest/inventory/import/v7/inventory.xsd
+    file: xsd/sears-holdings-rest-inventory-import-v7-inventory.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/inventory/import/v7/inventory.xsd
+    status: 200
+    bytes: 1765
+  - path: /SellerPortal/s/schema/rest/inventory/import/v7/store-inventory.xsd
+    file: xsd/sears-holdings-rest-inventory-import-v7-store-inventory.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/inventory/import/v7/store-inventory.xsd
+    status: 200
+    bytes: 2294
+  - path: /SellerPortal/s/schema/rest/itemclass/export/v2/itemclass-library.xsd
+    file: xsd/sears-holdings-rest-itemclass-export-v2-itemclass-library.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/itemclass/export/v2/itemclass-library.xsd
+    status: 200
+    bytes: 2177
+  - path: /SellerPortal/s/schema/rest/oms/export/v1/order-cancellation-request-to-seller.xsd
+    file: xsd/sears-holdings-rest-oms-export-v1-order-cancellation-request-to-seller.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v1/order-cancellation-request-to-seller.xsd
+    status: 200
+    bytes: 4131
+  - path: /SellerPortal/s/schema/rest/oms/export/v1/order-return-request-to-seller.xsd
+    file: xsd/sears-holdings-rest-oms-export-v1-order-return-request-to-seller.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v1/order-return-request-to-seller.xsd
+    status: 200
+    bytes: 4761
+  - path: /SellerPortal/s/schema/rest/oms/export/v1/shipping-carrier.xsd
+    file: xsd/sears-holdings-rest-oms-export-v1-shipping-carrier.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v1/shipping-carrier.xsd
+    status: 200
+    bytes: 1435
+  - path: /SellerPortal/s/schema/rest/oms/export/v13/purchase-order.xsd
+    file: xsd/sears-holdings-rest-oms-export-v13-purchase-order.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v13/purchase-order.xsd
+    status: 200
+    bytes: 9781
+  - path: /SellerPortal/s/schema/rest/oms/export/v15/purchase-order.xsd
+    file: xsd/sears-holdings-rest-oms-export-v15-purchase-order.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v15/purchase-order.xsd
+    status: 200
+    bytes: 10247
+  - path: /SellerPortal/s/schema/rest/oms/export/v18/purchase-order.xsd
+    file: xsd/sears-holdings-rest-oms-export-v18-purchase-order.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v18/purchase-order.xsd
+    status: 200
+    bytes: 10590
+  - path: /SellerPortal/s/schema/rest/oms/export/v19/purchase-order.xsd
+    file: xsd/sears-holdings-rest-oms-export-v19-purchase-order.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v19/purchase-order.xsd
+    status: 200
+    bytes: 10674
+  - path: /SellerPortal/s/schema/rest/oms/export/v5/remittance-response.xsd
+    file: xsd/sears-holdings-rest-oms-export-v5-remittance-response.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v5/remittance-response.xsd
+    status: 200
+    bytes: 3018
+  - path: /SellerPortal/s/schema/rest/oms/export/v6/remittance-response.xsd
+    file: xsd/sears-holdings-rest-oms-export-v6-remittance-response.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v6/remittance-response.xsd
+    status: 200
+    bytes: 3300
+  - path: /SellerPortal/s/schema/rest/oms/export/v7/remittance-response.xsd
+    file: xsd/sears-holdings-rest-oms-export-v7-remittance-response.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v7/remittance-response.xsd
+    status: 200
+    bytes: 3489
+  - path: /SellerPortal/s/schema/rest/oms/export/v8/remittance-response.xsd
+    file: xsd/sears-holdings-rest-oms-export-v8-remittance-response.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v8/remittance-response.xsd
+    status: 200
+    bytes: 3588
+  - path: /SellerPortal/s/schema/rest/oms/export/v9/remittance-response.xsd
+    file: xsd/sears-holdings-rest-oms-export-v9-remittance-response.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/export/v9/remittance-response.xsd
+    status: 200
+    bytes: 3676
+  - path: /SellerPortal/s/schema/rest/oms/import/v1/order-cancel.xsd
+    file: xsd/sears-holdings-rest-oms-import-v1-order-cancel.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/import/v1/order-cancel.xsd
+    status: 200
+    bytes: 2489
+  - path: /SellerPortal/s/schema/rest/oms/import/v1/order-returns-response-from-seller.xsd
+    file: xsd/sears-holdings-rest-oms-import-v1-order-returns-response-from-seller.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/import/v1/order-returns-response-from-seller.xsd
+    status: 200
+    bytes: 2773
+  - path: /SellerPortal/s/schema/rest/oms/import/v4/order-adjustment.xsd
+    file: xsd/sears-holdings-rest-oms-import-v4-order-adjustment.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/import/v4/order-adjustment.xsd
+    status: 200
+    bytes: 6401
+  - path: /SellerPortal/s/schema/rest/oms/import/v5/order-adjustment.xsd
+    file: xsd/sears-holdings-rest-oms-import-v5-order-adjustment.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/import/v5/order-adjustment.xsd
+    status: 200
+    bytes: 7097
+  - path: /SellerPortal/s/schema/rest/oms/import/v7/asn.xsd
+    file: xsd/sears-holdings-rest-oms-import-v7-asn.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/oms/import/v7/asn.xsd
+    status: 200
+    bytes: 2647
+  - path: /SellerPortal/s/schema/rest/pricing/import/v6/pricing.xsd
+    file: xsd/sears-holdings-rest-pricing-import-v6-pricing.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/pricing/import/v6/pricing.xsd
+    status: 200
+    bytes: 4956
+  - path: /SellerPortal/s/schema/rest/reports/export/v1/content-match-report.xsd
+    file: xsd/sears-holdings-rest-reports-export-v1-content-match-report.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/reports/export/v1/content-match-report.xsd
+    status: 200
+    bytes: 2653
+  - path: /SellerPortal/s/schema/rest/reports/export/v1/removed-items-report.xsd
+    file: xsd/sears-holdings-rest-reports-export-v1-removed-items-report.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/reports/export/v1/removed-items-report.xsd
+    status: 200
+    bytes: 6545
+  - path: /SellerPortal/s/schema/rest/sopt/import/v3/item-sopt-details.xsd
+    file: xsd/sears-holdings-rest-sopt-import-v3-item-sopt-details.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/rest/sopt/import/v3/item-sopt-details.xsd
+    status: 200
+    bytes: 3492
+  - path: /SellerPortal/s/schema/shared/api-response-v1.xsd
+    file: xsd/sears-holdings-shared-api-response-v1.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/shared/api-response-v1.xsd
+    status: 200
+    bytes: 721
+  - path: /SellerPortal/s/schema/shared/seller-error-report-v1.xsd
+    file: xsd/sears-holdings-shared-seller-error-report-v1.xsd
+    url: https://seller.marketplace.sears.com/SellerPortal/s/schema/shared/seller-error-report-v1.xsd
+    status: 200
+    bytes: 4418

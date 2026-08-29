@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order-adjustment-feed xmlns="http://seller.marketplace.sears.com/oms/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://seller.marketplace.sears.com/oms/v2 order-adjustment.xsd ">
+  <date-time-stamp>2012-12-16T12:00:00</date-time-stamp>
+  <order-adjustment>
+    <oa-header>
+      <po-number>7234233</po-number>
+      <po-date>2012-01-08</po-date>
+    </oa-header>
+    <oa-detail>
+      <sale-adjustment>
+        <line-number>2</line-number>
+        <item-id>EXTPROD12345</item-id>
+        <return>
+        <return-unique-id>42422244</return-unique-id>
+          <return-amount>
+            <amount-in-dollars>77.34</amount-in-dollars>
+          </return-amount>
+          <return-reason>ARRIVED-TOO-LATE</return-reason>
+          <return-date>2012-12-16</return-date>
+          <quantity>1</quantity>
+          <memo>
+            <internal-memo>Wrong shipping method</internal-memo>
+            <external-memo>Shipping Delay</external-memo>
+          </memo>
+        </return>
+      </sale-adjustment>
+      <sale-adjustment>
+        <line-number>2</line-number>
+        <item-id>EXTPROD14422</item-id>
+        <return>
+        <return-unique-id>42428472</return-unique-id>
+          <return-amount>
+            <amount-in-dollars>77.34</amount-in-dollars>
+          </return-amount>
+          <return-reason>ARRIVED-TOO-LATE</return-reason>
+          <return-date>2012-12-16</return-date>
+          <quantity>1</quantity>
+          <memo>
+            <internal-memo>Wrong shipping method</internal-memo>
+            <external-memo>Shipping Delay</external-memo>
+          </memo>
+        </return>
+      </sale-adjustment>
+    </oa-detail>
+  </order-adjustment>
+</order-adjustment-feed>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://seller.marketplace.sears.com/catalog/v2"
+           targetNamespace="http://seller.marketplace.sears.com/catalog/v2" elementFormDefault="qualified">
+
+    <xs:complexType name="commission-rates-type">
+        <xs:sequence>
+            <xs:element name="commission-rate" type="commission-rate-type" maxOccurs="unbounded" minOccurs="0" /> 
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="commission-rate-type" mixed="true">
+    	<xs:attribute name="site-name" type="xs:string" use="required" />
+    	<xs:attribute name="program-type" type="xs:string" use="required" />
+    </xs:complexType>
+    <xs:complexType name="used-or-refurbished-eligibility-type">
+    	<xs:sequence>
+            <xs:element name="program" type="xs:string" maxOccurs="unbounded" minOccurs="1" /> 
+        </xs:sequence>
+    </xs:complexType>
+  	<xs:complexType name="item-class-type">
+		<xs:sequence>
+  			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+  			<xs:element name="commission-rates" type="commission-rates-type" maxOccurs="1" minOccurs="0">
+	            <xs:annotation>
+    		        <xs:documentation>Commission rate expressed as percentage in decimal form. Example: 0.30 for 30%</xs:documentation>
+        		</xs:annotation>
+            </xs:element>
+			<xs:element name="used-or-refurbished-eligibility" type="used-or-refurbished-eligibility-type" maxOccurs="1" minOccurs="0">
+	            <xs:annotation>
+    		        <xs:documentation>This populates the eligible programs (fbm, fbs, etc..) to sell used/refurbished items in an item class.</xs:documentation>
+        		</xs:annotation>
+         	</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+	</xs:complexType>
+	<xs:element name="item-class-library">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="deprecated" type="xs:date" minOccurs="0" maxOccurs="1" />
+				<xs:element name="item-class" type="item-class-type" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

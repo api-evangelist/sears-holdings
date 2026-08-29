@@ -1,0 +1,30 @@
+generated: '2026-08-28'
+method: searched
+source: registry searches on npm, PyPI and RubyGems 2026-08-28 plus https://marketplace.sears.com/integration-partners/
+official_count: 0
+note: >-
+  Sears Marketplace ships no first-party client library in any language. npm, PyPI and RubyGems
+  were searched on 2026-08-28 and no package published by Sears, Sears Holdings, Transformco or
+  Transform SR Brands exists on any of them; pypi.org/pypi/sears-marketplace, /searsmarketplace
+  and /sears all return 404. The provider's own integration story is a directory of third-party
+  channel-integration vendors rather than an SDK, so no SDKs pointer is emitted. The single
+  registry entry below is community-authored and is recorded for completeness, not credited.
+packages:
+  - language: ruby
+    registry: rubygems
+    name: sears-api
+    url: https://rubygems.org/gems/sears-api
+    install: gem install sears-api
+    official: false
+    version: 0.3.0
+    published: null
+    note: >-
+      Third-party wrapper found by RubyGems search on 2026-08-28, described by its own author as
+      "just your basic wrapper". Not published by Sears or Transformco. The RubyGems search
+      endpoint does not return a release date and none was recorded rather than guessed.
+integration_partners:
+  approach: >-
+    Instead of SDKs, Sears Marketplace directs sellers to certified integration providers that
+    already speak the XML API.
+  directory: https://marketplace.sears.com/integration-partners/
+  status: 200

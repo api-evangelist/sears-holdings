@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory-feed xmlns="http://seller.marketplace.sears.com/inventory/v7"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://seller.marketplace.sears.com/inventory/v7 ../../../../../rest/inventory/import/v7/inventory.xsd">
+    <fbm-inventory>
+        <item item-id="123456">
+            <quantity>4000</quantity>
+            <low-inventory-threshold>10</low-inventory-threshold>
+            <inventory-timestamp>2012-03-30T09:05:30</inventory-timestamp>
+        </item>
+        <item item-id="123457">
+            <quantity>40030</quantity>
+        </item>
+    </fbm-inventory>
+</inventory-feed> 
