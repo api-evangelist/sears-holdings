@@ -7,8 +7,26 @@
       "title": "",
       "saved": 0,
       "method": "feed"
+    },
+    {
+      "source": "https://www.sears.com/",
+      "feed_url": "https://www.sears.com/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://www.sears.com//blog",
+      "feed_url": "https://www.sears.com//blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://www.sears-holdings.com",
+      "error": "URLError"
     }
   ],
-  "fetched": "2026-08-22T20:20:02Z",
+  "fetched": "2026-08-30T22:33:40Z",
   "post_count": 16
 }
