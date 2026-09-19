@@ -77,6 +77,14 @@ apis:
   - Inventory
   - Product Catalog
   - Returns
+  - Remittances
+  - XML
+  tags_raw:
+  - Marketplace
+  - Order Management
+  - Inventory
+  - Product Catalog
+  - Returns
   - Remittance
   - XML
   properties:
