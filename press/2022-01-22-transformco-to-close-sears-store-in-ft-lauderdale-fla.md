@@ -1,7 +1,9 @@
 ---
 title: Transformco to Close Sears Store in Ft. Lauderdale, Fla.
 url: https://transformco.com/press-releases/pr/2153
-date: '2022-01-22'
+published: ''
+date_basis: harvested
+harvested: '2022-01-22'
 author: ''
 feed_url: http://www.searsholdings.com/press-releases/feed
 ---

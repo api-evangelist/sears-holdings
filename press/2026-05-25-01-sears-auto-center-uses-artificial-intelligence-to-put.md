@@ -1,7 +1,9 @@
 ---
 title: Sears Auto Center Uses Artificial Intelligence To Put ...
 url: https://searsholdings.com/press-releases/pr/2026
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Sears Holdings" press release artificial intelligence'
 position: 1
 source: serpapi-google

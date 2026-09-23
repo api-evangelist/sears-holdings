@@ -1,7 +1,9 @@
 ---
 title: Stanley Black & Decker Completes Purchase Of Craftsman ...
 url: https://www.aftermarketnews.com/stanley-black-decker-completes-purchase-craftsman-brand-sears-holdings/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Sears Holdings" press release artificial intelligence'
 position: 4
 source: serpapi-google

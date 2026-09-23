@@ -2,7 +2,9 @@
 title: How Sears Home Services Helped Keep Puerto Rico's Appliances Running When It
   Mattered Most
 url: https://transformco.com/press-releases/pr/2151
-date: '2021-07-01'
+published: ''
+date_basis: harvested
+harvested: '2021-07-01'
 author: ''
 feed_url: http://www.searsholdings.com/press-releases/feed
 ---

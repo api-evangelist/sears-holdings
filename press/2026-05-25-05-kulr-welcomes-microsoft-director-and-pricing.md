@@ -1,7 +1,9 @@
 ---
 title: KULR Welcomes Microsoft Director and Pricing ...
 url: https://www.sec.gov/Archives/edgar/data/1662684/000110465926049843/tm2612908d1_ex99-1.htm
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Sears Holdings" press release artificial intelligence'
 position: 5
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: Transformco Completes Sale Of Five Kmart Store Leases
 url: https://transformco.com/press-releases/pr/2149
-date: '2021-01-15'
+published: ''
+date_basis: harvested
+harvested: '2021-01-15'
 author: ''
 feed_url: http://www.searsholdings.com/press-releases/feed
 ---

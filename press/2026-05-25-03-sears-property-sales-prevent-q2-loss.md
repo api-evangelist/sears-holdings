@@ -1,7 +1,9 @@
 ---
 title: Sears' Property Sales Prevent Q2 Loss
 url: https://www.cfo.com/news/sears-property-sales-prevent-q2-loss/663426/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Sears Holdings" press release artificial intelligence'
 position: 3
 source: serpapi-google
