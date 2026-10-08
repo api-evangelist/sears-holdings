@@ -69,3 +69,17 @@ commissions:
   exact_rates_note: >-
     Per-subcategory rates are published only inside Seller Portal as a downloadable Item Class
     Commissions Table, which requires a seller login. The category rates above are the public set.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  units: []
+  plans:
+  - name: Sears Marketplace Seller Program
+    access: other
+    model: hybrid
+    model_how: derived
+    units: []
+    periods:
+    - month
