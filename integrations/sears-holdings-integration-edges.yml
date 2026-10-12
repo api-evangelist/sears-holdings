@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/sears-holdings/integrations
+- https://n8n.io/integrations/sears-holdings/
+- https://composio.dev/toolkits/sears-holdings
+- https://monid.ai/tools/sears-holdings
+checked:
+- https://composio.dev/toolkits/sears-holdings
+- https://monid.ai/tools/sears-holdings
+- https://n8n.io/integrations/sears-holdings/
+- https://zapier.com/apps/sears-holdings/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
