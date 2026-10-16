@@ -9,15 +9,11 @@
       "method": "none"
     },
     {
-      "source": "https://www.sears.com/",
-      "feed_url": "https://www.sears.com/",
+      "source": "https://www.sears.com//blog/feed/",
+      "feed_url": "https://www.sears.com//blog/feed/",
       "title": "",
       "saved": 0,
       "method": "none"
-    },
-    {
-      "source": "https://www.sears-holdings.com",
-      "error": "URLError"
     },
     {
       "source": "http://www.searsholdings.com/blog/feed",
@@ -25,9 +21,16 @@
       "title": "",
       "saved": 0,
       "method": "feed"
+    },
+    {
+      "source": "https://www.sears.com/",
+      "feed_url": "https://www.sears.com/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-10-03T12:30:02Z",
+  "fetched": "2026-10-10T13:15:00Z",
   "post_count": 16,
   "feed_nature": "vendor-blog",
   "feed_nature_basis": "path_blog",
