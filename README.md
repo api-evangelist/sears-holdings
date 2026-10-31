@@ -64,12 +64,76 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-This is a repository for tracking the APIs, SDKs, and other developer resources for Sears Holdings.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-## APIs
+Sears Holdings was the American holding company behind the Sears and Kmart department store chains. It filed for Chapter 11 in October 2018 and its retail operations were acquired in 2019 by Transform Holdco LLC, which trades as Transformco (Transform SR Brands LLC), the entity that operates Sears.com, Kmart.com and ShopYourWay.com today. The live developer surface carried forward from that estate is the Sears Marketplace Seller API — a versioned XML-over-HTTPS integration for third-party sellers covering catalog and item management, item class and attribute libraries, inventory, pricing, purchase order retrieval, order cancellations, returns and partial or full refunds, ASN and shipment updates, order prep time, installation service items, and remittance, removed-item, content-match and processing reports. Every API is published with a downloadable XSD and a sample XML document, both fetchable without credentials from seller.marketplace.sears.com, and calls are signed with an HMAC-SHA256 authorization header rather than OAuth. There is no OpenAPI, GraphQL, MCP server or A2A agent card on any Sears, Kmart or Transformco host.
 
-No APIs have been documented yet. Check back for updates.
+**Areas:** Fortune 100 · Retail · E-Commerce · Marketplace · Order Management · Inventory · Product Catalog · Seller Integration · XML · Defunct
 
-## Properties
+## Sears Holdings on APIs.io (historical record)
 
-- [Website](https://www.sears-holdings.com)
+Everything profiled for Sears Holdings is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sears-holdings/](https://apis.io/providers/sears-holdings/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Sears Marketplace Seller API](https://apis.io/apis/sears-holdings/sears-marketplace-seller-api/) — Versioned XML-over-HTTPS API for third-party sellers on Sears Marketplace (Sears.com, Kmart.com, ShopYourWay.com). GET calls export purchase orders,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [sears-marketplace-seller](https://apis.io/servers/sears-holdings/sears-marketplace-seller/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Sears Holdings Authentication](https://apis.io/security/sears-holdings/sears-holdings-authentication/)
+- [Sears Holdings Domain Security](https://apis.io/security/sears-holdings/sears-holdings-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Sears Holdings Plans Pricing](https://apis.io/plans/sears-holdings/sears-holdings-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Sears Holdings Rate Limits](https://apis.io/rate-limits/sears-holdings/sears-holdings-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.sears.com/)
+- [Documentation](https://marketplace.sears.com/docs/)
+- [Getting started](https://marketplace.sears.com/docs/api-guide/using-sear-marketplace-apis-for-xml-integration/)
+- [API reference](https://marketplace.sears.com/docs/api-guide/)
+- [Pricing](https://marketplace.sears.com/sell-on-sears/program-fees/)
+- [Sign up](https://marketplace.sears.com/sell-on-sears/)
+- [Support](https://marketplace.sears.com/support/)
+- [Blog](https://www.sears.com//blog)
+- [Terms of service](https://marketplace.sears.com/terms-of-use/)
+- [Privacy policy](https://www.sears.com/en_us/customer-service/policies/privacy-policy.html)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Sears Holdings: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sears-holdings/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
